@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dynamicreports-adhoc" />
+        <module name="dynamicreports-core" />
+        <module name="dynamicreports-examples" />
+        <module name="dynamicreports-googlecharts" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dynamicreports-adhoc" target="1.7" />
+      <module name="dynamicreports-core" target="1.7" />
+      <module name="dynamicreports-examples" target="1.7" />
+      <module name="dynamicreports-googlecharts" target="1.7" />
+      <module name="dynamicreports-parent" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
