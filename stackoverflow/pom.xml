@@ -35,6 +35,7 @@
 		<module>dynamicreports-adhoc</module>
 		<module>dynamicreports-googlecharts</module>
 		<module>dynamicreports-examples</module>
+        <module>joe-program</module>
 	</modules>
  
 	<developers>
