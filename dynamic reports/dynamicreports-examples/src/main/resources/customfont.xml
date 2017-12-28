@@ -19,6 +19,15 @@
 		<pdfEmbedded>true</pdfEmbedded>
 	</fontFamily>
 
+    <fontFamily name="sbd">
+        <normal>net/sf/dynamicreports/examples/fonts/sbd.ttf</normal>
+        <bold>net/sf/dynamicreports/examples/fonts/sbd.ttf</bold>
+        <italic>net/sf/dynamicreports/examples/fonts/sbd.ttf</italic>
+        <boldItalic>net/sf/dynamicreports/examples/fonts/sbd.ttf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+    
     <fontFamily name="krt">
         <normal>net/sf/dynamicreports/examples/fonts/kr.ttf</normal>
         <bold>net/sf/dynamicreports/examples/fonts/kr.ttf</bold>

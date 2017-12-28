@@ -41,10 +41,10 @@ public class FontsReport {
 	}
 
 	private void build() {
-        JasperPdfExporterBuilder pdfExporter = export.pdfExporter("/Users/qiaoyunlai/opt/test/test.pdf");
+        JasperPdfExporterBuilder pdfExporter = export.pdfExporter("/Users/qiaoyunlai/opt/test/test1.pdf");
 
-        StyleBuilder plainStyle = stl.style();
-			//.setFontName("chinese");
+        StyleBuilder plainStyle = stl.style()
+			.setFontName("chinese");
 		StyleBuilder boldStyle = stl.style(plainStyle)
 			.bold();
 		StyleBuilder italicStyle = stl.style(plainStyle)
@@ -54,12 +54,13 @@ public class FontsReport {
 
 		try {
 			report()
+                    .setTemplate(Templates.reportTemplate)
 			  .title(
 			  	Templates.createTitleComponent("Fonts"),
-			  	cmp.text("FreeUnive中为'\\'文r묘사(하다sal わすfont - plain").setStyle(plainStyle),
-			  	cmp.text("FreeUniversal font - bold").setStyle(boldStyle),
-			  	cmp.text("FreeUniversal font - italic").setStyle(italicStyle),
-			  	cmp.text("FreeUniversal font - bolditalic").setStyle(boldItalicStyle))
+			  	cmp.text("Ich bin nicht gut FreeU Manière significativenive中为'\\'文r묘사(하다sal わすfont - plain").setStyle(plainStyle),
+			  	cmp.text("Io non sono buono, ahimè.FreeUniversal хEu não sou bomахаха, ты рывком. font - bold").setStyle(boldStyle),
+			  	cmp.text("FreeUniversal foЗначительноnt - italic").setStyle(italicStyle),
+			  	cmp.text("FreeUnive簡體字,點下面繁體rsal font - bolditalic").setStyle(boldItalicStyle))
 			  .toPdf(pdfExporter);
                     //.show();
 		} catch (DRException e) {

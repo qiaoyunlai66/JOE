@@ -1,0 +1,3 @@
+*.DS_Store
+*.class
+/dynamic reports/dynamicreports-examples/target
