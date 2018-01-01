@@ -2,14 +2,44 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>dynamicreports-parent</artifactId>
-        <groupId>net.sourceforge.dynamicreports</groupId>
-        <version>5.0.0</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>joe.qiao.program</groupId>
+        <artifactId>stackoverflow</artifactId>
+        <version>1.0</version>
+    </parent>
+    
+    <!--<groupId>joe.qiao.program</groupId>-->
+    <version>1.0</version>
     <artifactId>joe-program</artifactId>
-
-
+    
+    <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>commons-lang</groupId>-->
+            <!--<artifactId>commons-lang</artifactId>-->
+            <!--<version>2.6</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>joe.qiao.program</groupId>
+            <artifactId>dynamicreports-examples</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>joe.qiao.program</groupId>-->
+            <!--<artifactId>stackoverflow</artifactId>-->
+            <!--<version>1.0</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.4</version>
+        </dependency>
+    </dependencies>
+    
 </project>

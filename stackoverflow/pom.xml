@@ -8,9 +8,9 @@
 		<version>7</version>
 	</parent>
     
-	<groupId>net.sourceforge.dynamicreports</groupId>
-	<artifactId>dynamicreports-parent</artifactId>
-	<version>5.0.0</version>
+	<groupId>joe.qiao.program</groupId>
+	<artifactId>stackoverflow</artifactId>
+	<version>1.0</version>
 	<packaging>pom</packaging>
 
 	<name>DynamicReports - parent</name>

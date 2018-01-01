@@ -3,6 +3,7 @@ package net.sf.dynamicreports.examples.templatedesign;
 
 import net.sf.dynamicreports.examples.StyleFontTemplate;
 import net.sf.dynamicreports.examples.Templates;
+import org.apache.commons.lang.StringUtils;
 import net.sf.dynamicreports.jasper.builder.JasperReportBuilder;
 import net.sf.dynamicreports.jasper.builder.export.JasperPdfExporterBuilder;
 import net.sf.dynamicreports.report.builder.component.ComponentBuilder;

@@ -37,6 +37,8 @@ import net.sf.dynamicreports.report.builder.tableofcontents.TableOfContentsCusto
 import net.sf.dynamicreports.report.constant.HorizontalTextAlignment;
 import net.sf.dynamicreports.report.constant.VerticalTextAlignment;
 import net.sf.dynamicreports.report.definition.ReportParameters;
+import org.apache.commons.lang.StringUtils;
+
 
 /**
  * @author Ricardo Mariaca (r.mariaca@dynamicreports.org)
