@@ -1,19 +1,20 @@
-package com.joe.qiao.tools;
+package com.joe.qiao.tools.http;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.ParseException;
+import org.apache.http.*;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
+import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.auth.BasicScheme;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.List;
 
 /**
  * Created by Joe Qiao on 2017/4/24.
@@ -118,6 +119,34 @@ public class RestClient {
         }
     }
 
+    public int executeRestGetFilterMethod(String restAction, List<NameValuePair> paramPairs) throws ParseException, IOException {
+        this.latestReq = restAction;
+        if (!restHost.toLowerCase().startsWith("http")) {
+            restHost = "https://" + restHost;
+        }
+        URL url = new URL(restHost);
+        CloseableHttpClient httpClient = HttpClientUtil.getHttpClient();
+        try {
+            URIBuilder uriBuilder = new URIBuilder();
+            uriBuilder.setScheme(url.getProtocol()).setHost(url.getHost()).setPath(restAction);
+            uriBuilder.setParameters(paramPairs);
+            HttpGet httpGet = new HttpGet(uriBuilder.build());
+            httpGet.addHeader(getAuthenticate());
+            HttpResponse httpResponse = httpClient.execute(httpGet);
+            restStatusCode = httpResponse.getStatusLine().getStatusCode();
+            HttpEntity httpEntity = httpResponse.getEntity();
+            restResultMessage = EntityUtils.toString(httpEntity);
+            return restStatusCode;
+        } catch(Exception e){
+            restResultMessage = e.toString();
+            return NO_WEB_SERVER;
+        }finally {
+            if (httpClient != null) {
+                httpClient.close();
+            }
+        }
+    }
+
     public int executeRestPostMethod(String restAction, String ticketJson) throws Exception {
         this.latestReq = restAction;
         this.ticketJson = ticketJson;
@@ -146,6 +175,34 @@ public class RestClient {
         }
     }
 
+    public int executeRestPutMethod(String restAction, String ticketJson) throws Exception{
+        this.latestReq=restAction;
+        this.ticketJson=ticketJson;
+        if (!restHost.toLowerCase().startsWith("http")) {
+            restHost = "https://" + restHost;
+        }
+        CloseableHttpClient httpClient = HttpClientUtil.getHttpClient();
+        try {
+            HttpPut httpPut = new HttpPut(restHost + restAction);
+            httpPut.addHeader(getAuthenticate());
+            StringEntity entity = new StringEntity(ticketJson);
+            entity.setContentType("application/json");
+            httpPut.setEntity(entity);
+            HttpResponse httpResponse = httpClient.execute(httpPut);
+            restStatusCode = httpResponse.getStatusLine().getStatusCode();
+            HttpEntity httpEntity = httpResponse.getEntity();
+            restResultMessage = EntityUtils.toString(httpEntity);
+            return restStatusCode;
+        } catch(Exception e){
+            restResultMessage = e.toString();
+            return NO_WEB_SERVER;
+        }finally {
+            if (httpClient != null) {
+                httpClient.close();
+            }
+        }
+    }
+    
     public Header getAuthenticate() {
         if (StringUtils.isEmpty(domain)) {
             domain = "training";

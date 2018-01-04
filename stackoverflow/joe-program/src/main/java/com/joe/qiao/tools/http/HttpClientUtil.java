@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.joe.qiao.tools;
+package com.joe.qiao.tools.http;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.HttpHost;
