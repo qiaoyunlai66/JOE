@@ -1,0 +1,54 @@
+[
+  {
+    "id": 71,
+    "name": "DEV_Joe_5.0",
+    "type": {
+      "id": 22,
+      "name": "Cymphonix Device",
+      "_info": {
+        "type_href": "https://api-staging.connectwisedev.com/v4_6_release/apis/3.0/company/configurations/types/22"
+      }
+    },
+    "status": {
+      "id": 1,
+      "name": "Active",
+      "_info": {
+        "status_href": "https://api-staging.connectwisedev.com/v4_6_release/apis/3.0/company/configurations/statuses/1"
+      }
+    },
+    "company": {
+      "id": 6,
+      "identifier": "BlueLightCo",
+      "name": "Blue Light, Co.",
+      "_info": {
+        "company_href": "https://api-staging.connectwisedev.com/v4_6_release/apis/3.0/company/companies/6"
+      }
+    },
+    "contact": {
+      "id": 15,
+      "name": "Gordon Packard",
+      "_info": {
+        "contact_href": "https://api-staging.connectwisedev.com/v4_6_release/apis/3.0/company/contacts/15"
+      }
+    },
+    "locationId": 2,
+    "businessUnitId": 10,
+    "serialNumber": "",
+    "modelNumber": "",
+    "tagNumber": "1234",
+    "installationDate": "2017-04-13T18:00:01Z",
+    "notes": "",
+    "billFlag": false,
+    "ipAddress": "10.30.20.226",
+    "osType": "",
+    "osInfo": "",
+    "activeFlag": true,
+    "mobileGuid": "7a790ebe-dc91-4172-adba-96f0bfb575d2",
+    "_info": {
+      "lastUpdated": "2017-12-26T03:48:04Z",
+      "updatedBy": "Admin1",
+      "dateEntered": "2017-12-26T03:48:04Z",
+      "enteredBy": "Admin1"
+    }
+  }
+]

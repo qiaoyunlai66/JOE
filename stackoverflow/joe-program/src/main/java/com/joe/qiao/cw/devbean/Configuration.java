@@ -1,6 +1,7 @@
 package com.joe.qiao.cw.devbean;
 
-import com.accelops.phoenix.connectwise.incbean.Company;
+
+import com.joe.qiao.cw.incbean.Company;
 
 /**
  * Created by Joe Qiao on 2017/5/10.

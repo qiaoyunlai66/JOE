@@ -1,0 +1,26 @@
+{
+  "id": 71,
+  "name": "VM55.accelops.net.cn",
+  "type": {
+    "id": 22,
+    "name": "Cymphonix Device"
+  },
+  "vendor": {},
+  "company": {
+    "id": 6,
+    "identifier": "BlueLightCo",
+    "name": "Blue Light, Co."
+  },
+  "status": {
+    "id": 1
+  },
+  "billFlag": false,
+  "notes": "VMware ESXi 5.5.0 build-1331820 VMware, Inc. x86_64",
+  "modelNumber": "",
+  "serialNumber": "",
+  "ipAddress": "10.30.20.226",
+  "osType": "",
+  "osInfo": "",
+  "tagNumber": "6.2",
+  "installationDate": "2018-01-02T07:07:54z"
+}
