@@ -209,6 +209,16 @@ public class HashMapStructure<K,V> extends HashMap{
      * cheapest possible way to reduce systematic lossage, as well as
      * to incorporate impact of the highest bits that would otherwise
      * never be used in index calculations because of table bounds.
+     * 这里通过key.hashCode()计算出key的哈希值，然后将哈希值h右移16位，
+     * 再与原来的h做异或^运算——这一步是高位运算。设想一下，如果没有高位运算，
+     * 那么hash值将是一个int型的32位数。而从2的-31次幂到2的31次幂之间，有将近几十亿的空间，
+     * 如果我们的HashMap的table有这么长，内存早就爆了。所以这个散列值不能直接用来最终的取模运算，
+     * 而需要先加入高位运算，将高16位和低16位的信息"融合"到一起，也称为"扰动函数"。
+     * 这样才能保证hash值所有位的数值特征都保存下来而没有遗漏，从而使映射结果尽可能的松散。
+     * 最后，根据 n-1 做与操作的取模运算。这里也能看出为什么HashMap要限制table的长度为2的n次幂，
+     * 因为这样，n-1可以保证二进制展示形式是（以16为例）0000 0000 0000 0000 0000 0000 0000 1111。
+     * 在做"与"操作时，就等同于截取hash二进制值得后四位数据作为下标。这里也可以看出"扰动函数"的重要性了，
+     * 如果高位不参与运算，那么高16位的hash特征几乎永远得不到展现，发生hash碰撞的几率就会增大，从而影响性能。
      */
     static final int hash(Object key) {
         int h;
