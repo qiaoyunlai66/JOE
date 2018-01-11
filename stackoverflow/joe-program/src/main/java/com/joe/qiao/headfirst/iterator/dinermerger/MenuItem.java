@@ -1,4 +1,4 @@
-package headfirst.iterator.dinermerger;
+package com.joe.qiao.headfirst.iterator.dinermerger;
 
 public class MenuItem {
 	String name;

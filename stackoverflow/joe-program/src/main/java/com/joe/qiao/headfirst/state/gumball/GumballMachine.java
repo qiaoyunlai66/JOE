@@ -1,4 +1,4 @@
-package headfirst.state.gumball;
+package com.joe.qiao.headfirst.state.gumball;
 
 public class GumballMachine {
  

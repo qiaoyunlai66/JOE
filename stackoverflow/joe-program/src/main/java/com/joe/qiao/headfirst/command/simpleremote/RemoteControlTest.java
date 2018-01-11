@@ -1,4 +1,4 @@
-package headfirst.command.simpleremote;
+package com.joe.qiao.headfirst.command.simpleremote;
 
 public class RemoteControlTest {
 	public static void main(String[] args) {

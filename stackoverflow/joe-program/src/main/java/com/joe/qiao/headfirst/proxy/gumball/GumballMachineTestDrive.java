@@ -1,4 +1,4 @@
-package headfirst.proxy.gumball;
+package com.joe.qiao.headfirst.proxy.gumball;
 import java.rmi.*;
 
 public class GumballMachineTestDrive {

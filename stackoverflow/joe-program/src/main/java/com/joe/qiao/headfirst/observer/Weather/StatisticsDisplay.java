@@ -1,6 +1,4 @@
-package headfirst.observer.Weather;
-
-import java.util.*;
+package com.joe.qiao.headfirst.observer.Weather;
 
 public class StatisticsDisplay implements Observer, DisplayElement {
 	private float maxTemp = 0.0f;

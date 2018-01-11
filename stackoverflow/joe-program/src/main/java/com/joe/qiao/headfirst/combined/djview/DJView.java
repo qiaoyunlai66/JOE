@@ -1,4 +1,4 @@
-package headfirst.combined.djview;
+package com.joe.qiao.headfirst.combined.djview;
     
 import java.awt.*;
 import java.awt.event.*;

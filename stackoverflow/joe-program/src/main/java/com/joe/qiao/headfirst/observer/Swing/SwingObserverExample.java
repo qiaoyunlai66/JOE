@@ -1,10 +1,9 @@
-package headfirst.observer.swing;
+package com.joe.qiao.headfirst.observer.Swing;
 	
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.*;
-	
+
 public class SwingObserverExample {
 	JFrame frame;
 	

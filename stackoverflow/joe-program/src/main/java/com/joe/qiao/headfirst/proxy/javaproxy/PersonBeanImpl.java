@@ -1,4 +1,4 @@
-package headfirst.proxy.javaproxy;
+package com.joe.qiao.headfirst.proxy.javaproxy;
 
 public class PersonBeanImpl implements PersonBean {
 	String name;

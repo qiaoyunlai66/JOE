@@ -1,4 +1,4 @@
-package headfirst.observer.weatherobservable;
+package com.joe.qiao.headfirst.observer.WeatherStationObservable;
 
 public class WeatherStation {
 

@@ -1,4 +1,4 @@
-package headfirst.observer.Weather;
+package com.joe.qiao.headfirst.observer.Weather;
 
 public interface Subject {
 	public void registerObserver(Observer o);

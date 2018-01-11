@@ -1,4 +1,4 @@
-package headfirst.proxy.javaproxy;
+package com.joe.qiao.headfirst.proxy.javaproxy;
  
 import java.lang.reflect.*;
  

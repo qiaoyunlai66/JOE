@@ -1,4 +1,4 @@
-package headfirst.observer.Weather;
+package com.joe.qiao.headfirst.observer.Weather;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package headfirst.adapter.iterenum;
+package com.joe.qiao.headfirst.adapter.iterenum;
 
 import java.util.*;
 

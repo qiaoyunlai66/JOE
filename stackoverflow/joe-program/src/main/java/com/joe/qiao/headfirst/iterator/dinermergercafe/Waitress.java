@@ -1,4 +1,4 @@
-package headfirst.iterator.dinermergercafe;
+package com.joe.qiao.headfirst.iterator.dinermergercafe;
 
 import java.util.Iterator;
   

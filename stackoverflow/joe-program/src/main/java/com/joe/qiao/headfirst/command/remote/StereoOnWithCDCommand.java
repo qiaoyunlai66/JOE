@@ -1,4 +1,4 @@
-package headfirst.command.remote;
+package com.joe.qiao.headfirst.command.remote;
 
 public class StereoOnWithCDCommand implements Command {
 	Stereo stereo;

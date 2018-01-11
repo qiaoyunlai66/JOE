@@ -1,4 +1,4 @@
-package headfirst.iterator.dinermergeri;
+package com.joe.qiao.headfirst.iterator.dinermergeri;
  
 import java.util.Iterator;
   

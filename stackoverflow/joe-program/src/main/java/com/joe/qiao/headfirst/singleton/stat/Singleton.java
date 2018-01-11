@@ -1,4 +1,4 @@
-package headfirst.singleton.stat;
+package com.joe.qiao.headfirst.singleton.stat;
 
 public class Singleton {
 	private static Singleton uniqueInstance = new Singleton();

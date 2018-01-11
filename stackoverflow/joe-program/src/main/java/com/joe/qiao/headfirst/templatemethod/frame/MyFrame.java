@@ -1,4 +1,4 @@
-package headfirst.templatemethod.frame;
+package com.joe.qiao.headfirst.templatemethod.frame;
 
 import java.awt.*;
 import javax.swing.*;

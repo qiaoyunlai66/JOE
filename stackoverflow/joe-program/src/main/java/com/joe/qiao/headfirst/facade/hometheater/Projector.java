@@ -1,4 +1,4 @@
-package headfirst.facade.hometheater;
+package com.joe.qiao.headfirst.facade.hometheater;
 
 public class Projector {
 	String description;

@@ -1,4 +1,4 @@
-package headfirst.combining.observer;
+package com.joe.qiao.headfirst.combining.observer;
 
 public class DecoyDuck implements Quackable {
 	Observable observable;

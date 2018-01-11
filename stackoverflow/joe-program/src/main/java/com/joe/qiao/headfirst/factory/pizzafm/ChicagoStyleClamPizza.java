@@ -1,4 +1,4 @@
-package headfirst.factory.pizzafm;
+package com.joe.qiao.headfirst.factory.pizzafm;
 
 public class ChicagoStyleClamPizza extends Pizza {
 	public ChicagoStyleClamPizza() {

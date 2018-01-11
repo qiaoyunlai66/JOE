@@ -1,4 +1,4 @@
-package headfirst.observer.Weather;
+package com.joe.qiao.headfirst.observer.Weather;
 	
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
 	private float temperature;

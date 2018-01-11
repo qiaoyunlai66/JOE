@@ -1,4 +1,4 @@
-package headfirst.templatemethod.simplebarista;
+package com.joe.qiao.headfirst.templatemethod.simplebarista;
 
 public class Tea {
  

@@ -1,4 +1,4 @@
-package headfirst.combining.adapter;
+package com.joe.qiao.headfirst.combining.adapter;
 
 public class MallardDuck implements Quackable {
 	public void quack() {

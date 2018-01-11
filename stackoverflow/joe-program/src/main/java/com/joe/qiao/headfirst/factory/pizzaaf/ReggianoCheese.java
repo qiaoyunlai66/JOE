@@ -1,4 +1,4 @@
-package headfirst.factory.pizzaaf;
+package com.joe.qiao.headfirst.factory.pizzaaf;
 
 public class ReggianoCheese implements Cheese {
 

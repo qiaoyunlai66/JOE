@@ -1,4 +1,4 @@
-package headfirst.combining.composite;
+package com.joe.qiao.headfirst.combining.composite;
 
 public class DuckCall implements Quackable {
  

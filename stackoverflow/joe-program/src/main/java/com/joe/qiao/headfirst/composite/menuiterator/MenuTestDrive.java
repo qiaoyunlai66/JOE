@@ -1,6 +1,4 @@
-package headfirst.composite.menuiterator;
-
-import java.util.*;
+package com.joe.qiao.headfirst.composite.menuiterator;
 
 public class MenuTestDrive {
 	public static void main(String args[]) {

@@ -1,6 +1,4 @@
-package headfirst.command.remote;
-
-import java.util.*;
+package com.joe.qiao.headfirst.command.remote;
 
 //
 // This is the invoker

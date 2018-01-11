@@ -1,4 +1,4 @@
-package headfirst.factory.pizzafm;
+package com.joe.qiao.headfirst.factory.pizzafm;
 
 public abstract class PizzaStore {
  

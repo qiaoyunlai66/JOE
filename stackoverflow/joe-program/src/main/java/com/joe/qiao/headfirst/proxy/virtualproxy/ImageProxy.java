@@ -1,4 +1,4 @@
-package headfirst.proxy.virtualproxy;
+package com.joe.qiao.headfirst.proxy.virtualproxy;
 
 import java.net.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package headfirst.command.party;
+package com.joe.qiao.headfirst.command.party;
 
 public class LivingroomLightOnCommand implements Command {
 	Light light;

@@ -1,6 +1,4 @@
-package headfirst.command.party;
-
-import java.util.*;
+package com.joe.qiao.headfirst.command.party;
 
 //
 // This is the invoker

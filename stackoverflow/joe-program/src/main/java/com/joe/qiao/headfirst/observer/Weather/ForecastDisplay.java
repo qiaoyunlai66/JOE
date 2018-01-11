@@ -1,6 +1,4 @@
-package headfirst.observer.Weather;
-
-import java.util.*;
+package com.joe.qiao.headfirst.observer.Weather;
 
 public class ForecastDisplay implements Observer, DisplayElement {
 	private float currentPressure = 29.92f;  

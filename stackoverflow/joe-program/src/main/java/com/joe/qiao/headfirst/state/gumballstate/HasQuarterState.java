@@ -1,6 +1,4 @@
-package headfirst.state.gumballstate;
-
-import java.util.Random;
+package com.joe.qiao.headfirst.state.gumballstate;
 
 public class HasQuarterState implements State {
 	GumballMachine gumballMachine;

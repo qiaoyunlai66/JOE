@@ -1,6 +1,4 @@
-package headfirst.iterator.dinermergercafe;
-
-import java.util.*;
+package com.joe.qiao.headfirst.iterator.dinermergercafe;
 
 public class MenuTestDrive {
 	public static void main(String args[]) {

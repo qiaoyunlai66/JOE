@@ -1,4 +1,4 @@
-package headfirst.command.undo;
+package com.joe.qiao.headfirst.command.undo;
 
 public class CeilingFanHighCommand implements Command {
 	CeilingFan ceilingFan;

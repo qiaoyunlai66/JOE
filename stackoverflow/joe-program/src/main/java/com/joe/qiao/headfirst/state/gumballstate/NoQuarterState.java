@@ -1,4 +1,4 @@
-package headfirst.state.gumballstate;
+package com.joe.qiao.headfirst.state.gumballstate;
 
 public class NoQuarterState implements State {
     GumballMachine gumballMachine;

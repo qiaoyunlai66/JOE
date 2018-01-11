@@ -1,4 +1,4 @@
-package headfirst.composite.menu;
+package com.joe.qiao.headfirst.composite.menu;
 
 import java.util.Iterator;
 import java.util.ArrayList;

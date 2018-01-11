@@ -1,4 +1,4 @@
-package headfirst.combining.decorator;
+package com.joe.qiao.headfirst.combining.decorator;
 
 public class RedheadDuck implements Quackable {
 	public void quack() {

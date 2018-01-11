@@ -1,4 +1,4 @@
-package headfirst.singleton.subclass;
+package com.joe.qiao.headfirst.singleton.subclass;
 
 public class SingletonTestDrive {
 	public static void main(String[] args) {

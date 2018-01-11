@@ -1,4 +1,4 @@
-package headfirst.strategy;
+package com.joe.qiao.headfirst.strategy;
 
 public class MuteQuack implements QuackBehavior {
 	public void quack() {

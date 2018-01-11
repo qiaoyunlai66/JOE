@@ -1,7 +1,5 @@
-package headfirst.composite.menu;
+package com.joe.qiao.headfirst.composite.menu;
 
-import java.util.Iterator;
-  
 public class Waitress {
 	MenuComponent allMenus;
  

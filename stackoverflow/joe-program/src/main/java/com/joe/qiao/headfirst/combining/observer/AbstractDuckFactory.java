@@ -1,4 +1,4 @@
-package headfirst.combining.observer;
+package com.joe.qiao.headfirst.combining.observer;
 
 public abstract class AbstractDuckFactory {
  

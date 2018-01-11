@@ -1,4 +1,4 @@
-package headfirst.strategy;
+package com.joe.qiao.headfirst.strategy;
 
 public class ModelDuck extends Duck {
 	public ModelDuck() {

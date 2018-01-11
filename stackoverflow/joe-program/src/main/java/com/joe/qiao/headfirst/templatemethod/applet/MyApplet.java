@@ -1,4 +1,4 @@
-package headfirst.templatemethod.applet;
+package com.joe.qiao.headfirst.templatemethod.applet;
 
 import java.applet.Applet;
 import java.awt.Graphics;

@@ -1,4 +1,4 @@
-package headfirst.proxy.gumballmonitor;
+package com.joe.qiao.headfirst.proxy.gumballmonitor;
 
 public class SoldOutState implements State {
     GumballMachine gumballMachine;

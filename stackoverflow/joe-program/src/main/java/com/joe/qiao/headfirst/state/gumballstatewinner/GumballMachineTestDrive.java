@@ -1,4 +1,4 @@
-package headfirst.state.gumballstatewinner;
+package com.joe.qiao.headfirst.state.gumballstatewinner;
 
 public class GumballMachineTestDrive {
 

@@ -1,7 +1,4 @@
-package headfirst.composite.menu;
-
-import java.util.Iterator;
-import java.util.ArrayList;
+package com.joe.qiao.headfirst.composite.menu;
 
 public class MenuItem extends MenuComponent {
 	String name;

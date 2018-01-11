@@ -1,4 +1,4 @@
-package headfirst.decorator.io;
+package com.joe.qiao.headfirst.decorator.io;
 
 import java.io.*;
 

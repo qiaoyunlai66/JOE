@@ -1,4 +1,4 @@
-package headfirst.combining.factory;
+package com.joe.qiao.headfirst.combining.factory;
 
 public class DuckSimulator {
 	public static void main(String[] args) {

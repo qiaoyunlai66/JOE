@@ -1,4 +1,4 @@
-package headfirst.command.undo;
+package com.joe.qiao.headfirst.command.undo;
 
 public class CeilingFan {
 	public static final int HIGH = 3;

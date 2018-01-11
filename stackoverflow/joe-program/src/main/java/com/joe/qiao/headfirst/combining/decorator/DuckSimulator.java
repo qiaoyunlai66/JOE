@@ -1,4 +1,4 @@
-package headfirst.combining.decorator;
+package com.joe.qiao.headfirst.combining.decorator;
 
 public class DuckSimulator {
 	public static void main(String[] args) {

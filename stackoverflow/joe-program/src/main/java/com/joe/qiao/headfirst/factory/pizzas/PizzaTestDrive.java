@@ -1,4 +1,4 @@
-package headfirst.factory.pizzas;
+package com.joe.qiao.headfirst.factory.pizzas;
 
 public class PizzaTestDrive {
  

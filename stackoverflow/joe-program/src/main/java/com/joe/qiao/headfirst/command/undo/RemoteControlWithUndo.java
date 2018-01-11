@@ -1,6 +1,4 @@
-package headfirst.command.undo;
-
-import java.util.*;
+package com.joe.qiao.headfirst.command.undo;
 
 //
 // This is the invoker

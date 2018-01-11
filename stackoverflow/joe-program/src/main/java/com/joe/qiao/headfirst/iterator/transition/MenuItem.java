@@ -1,4 +1,4 @@
-package headfirst.iterator.transition;
+package com.joe.qiao.headfirst.iterator.transition;
 
 public class MenuItem {
 	String name;

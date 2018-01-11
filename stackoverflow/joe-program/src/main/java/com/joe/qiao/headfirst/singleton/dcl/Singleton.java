@@ -1,4 +1,4 @@
-package headfirst.singleton.dcl;
+package com.joe.qiao.headfirst.singleton.dcl;
 
 //
 // Danger!  This implementation of Singleton not

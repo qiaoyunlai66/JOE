@@ -1,4 +1,4 @@
-package headfirst.command.party;
+package com.joe.qiao.headfirst.command.party;
 
 public class CeilingFan {
 	public static final int HIGH = 3;

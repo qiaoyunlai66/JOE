@@ -1,4 +1,4 @@
-package headfirst.singleton.classic;
+package com.joe.qiao.headfirst.singleton.classic;
 
 // NOTE: This is not thread safe!
 
