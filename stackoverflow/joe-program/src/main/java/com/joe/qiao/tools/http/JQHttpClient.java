@@ -2,14 +2,17 @@ package com.joe.qiao.tools.http;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.*;
+import org.apache.http.auth.AuthenticationException;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.methods.*;
 import org.apache.http.impl.auth.BasicScheme;
+import org.apache.http.impl.client.BasicAuthCache;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
 
 /**
  * Created by Joe Qiao on 2017/4/24.
@@ -23,6 +26,10 @@ public class JQHttpClient {
         return httpBean;
     }
 
+    public String getResultMessage() {
+        return resultMessage;
+    }
+
     public void setHttpBean(HttpBean httpBean) {
         this.httpBean = httpBean;
     }
@@ -30,7 +37,8 @@ public class JQHttpClient {
     public JQHttpClient(HttpBean httpBean){
         this.httpBean = httpBean;
     }
-    public int executeGetMethod() throws IOException {
+   
+    public int executeGetMethod() throws IOException, AuthenticationException {
         if(!initHttpClient()){
             return HttpStatus.SC_BAD_REQUEST;
         }
@@ -47,7 +55,7 @@ public class JQHttpClient {
         }
     }
 
-    public int executeDeleteMethod() throws IOException {
+    public int executeDeleteMethod() throws IOException, AuthenticationException {
         if(!initHttpClient()){
             return HttpStatus.SC_BAD_REQUEST;
         }
@@ -99,19 +107,16 @@ public class JQHttpClient {
             }
         }
     }
+    
+    public Header getAuthenticate(HttpRequestBase httpRequestBase) throws AuthenticationException {
+        BasicScheme basicScheme = new BasicScheme(StandardCharsets.UTF_8);
+        UsernamePasswordCredentials creds=new UsernamePasswordCredentials(httpBean.getUser(),httpBean.getPassword());
+        basicScheme.authenticate(creds,httpRequestBase,null);
+        return BasicScheme.authenticate(new UsernamePasswordCredentials("fortinet_f+8osRhQPXt6dI1ykl", "esjEnde9VTanEeo2"), "UTF-8", false);
+    }
 
-    /**
-     * @deprecated should not put Anthen to header
-     * @return
-     */
-//    public Header getAuthenticate() {
-//        if (StringUtils.isEmpty(domain)) {
-//            domain = "training";
-//        }
-//        return BasicScheme.authenticate(new UsernamePasswordCredentials(domain + "+" + user, password), "UTF-8", false);
-//    }
-
-    private int execute(HttpRequestBase httpRequestBase) throws IOException {
+    private int execute(HttpRequestBase httpRequestBase) throws IOException, AuthenticationException {
+        httpRequestBase.addHeader(getAuthenticate(httpRequestBase));
         HttpResponse httpResponse = httpClient.execute(httpRequestBase);
         HttpEntity httpEntity = httpResponse.getEntity();
         resultMessage = EntityUtils.toString(httpEntity);
@@ -122,7 +127,7 @@ public class JQHttpClient {
         if(httpBean==null||httpBean.getUri()==null){
             return false;
         }
-        if(httpClient!=null)httpClient = HttpClientUtil.getHttpClient(httpBean.getUser(),httpBean.getPassword());
+        if(httpClient==null)httpClient = HttpClientUtil.getHttpClient();
         return true;
     }
 }
