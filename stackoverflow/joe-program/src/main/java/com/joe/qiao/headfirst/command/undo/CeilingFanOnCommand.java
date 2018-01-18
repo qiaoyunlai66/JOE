@@ -1,5 +1,8 @@
 package headfirst.command.undo;
 
+import com.joe.qiao.headfirst.command.undo.CeilingFan;
+import com.joe.qiao.headfirst.command.undo.Command;
+
 public class CeilingFanOnCommand implements Command {
 	CeilingFan ceilingFan;
 

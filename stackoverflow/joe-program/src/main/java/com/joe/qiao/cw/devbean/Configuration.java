@@ -13,7 +13,6 @@ public class Configuration {
     private Vendor vendor;
     private Company company;
     private Boolean billFlag;
-    private String contact;
     private String notes;
     private String modelNumber;
     private String serialNumber;
@@ -63,14 +62,6 @@ public class Configuration {
 
     public void setBillFlag(Boolean billFlag) {
         this.billFlag = billFlag;
-    }
-
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
     }
 
     public String getNotes() {

@@ -1,5 +1,6 @@
-package com.joe.qiao.cw.resttools;
+package com.joe.qiao.cw.core;
 
+import com.joe.qiao.cw.core.CWRestOperator;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 

@@ -1,14 +1,10 @@
 package com.joe.qiao;
 
-import com.joe.qiao.cw.resttools.CWRestOperator;
-import com.joe.qiao.cw.resttools.RestParmeter;
-import com.joe.qiao.tools.fileparser.FileParser;
-import com.joe.qiao.tools.http.RestClient;
+import com.joe.qiao.cw.core.CWRestOperator;
+import com.joe.qiao.cw.core.RestParmeter;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * Created by Joe Qiao on 03/01/2018.
@@ -19,7 +15,7 @@ public class MainTestRest {
         //new MainTestRest().executeRestGetFilter();
 
         try {
-            new MainTestRest().executeRestPut();
+            new MainTestRest().testUrl();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -31,29 +27,34 @@ public class MainTestRest {
 //        }
     }
 
+   private void testUrl() throws MalformedURLException {
+       URL url =new URL("https:/172.30.57.27/phoenix/genCMDBReport?key=report--1491929312157.pdf");
+       System.out.println(url.getQuery());
+   } 
+    
     private void executeRestPut() throws Exception {
-        RestClient restClient = new RestClient();
-        restClient.setRestHost("https://staging.connectwisedev.com");
-        restClient.setUser("8osRhQPXt6dI1ykl");
-        restClient.setDomain("fortinet_f");
-        restClient.setPassword("esjEnde9VTanEeo2");
-        restClient.executeRestPutMethod("/v4_6_release/apis/3.0/company/configurations/71", FileParser.readFile(new File("/Users/qiaoyunlai/opt/phoenix/project-joe/JOE/stackoverflow/joe-program/src/main/resources/com/joe/qiao/json/configurationPut.json")));
+  //      JQHttpClient restClient = new JQHttpClient();
+//        restClient.setRestHost("https://staging.connectwisedev.com");
+//        restClient.setUser("8osRhQPXt6dI1ykl");
+//        restClient.setDomain("fortinet_f");
+//        restClient.setPassword("esjEnde9VTanEeo2");
+//        restClient.executeRestPutMethod("/v4_6_release/apis/3.0/company/configurations/71", FileParser.readFile(new File("/Users/qiaoyunlai/opt/phoenix/project-joe/JOE/stackoverflow/joe-program/src/main/resources/com/joe/qiao/json/configurationPut.json")));
     }
     
     private void executeRestGetFilter() {
         RestParmeter restParmeter = new RestParmeter();
         restParmeter.addConditionsParm("ipAddress","10.30.30.143",true, CWRestOperator.AND);
         restParmeter.addConditionsParm("company/identifier","YourCompany",true,CWRestOperator.AND);
-        RestClient restClient = new RestClient();
-        restClient.setRestHost("http://staging.connectwisedev.com");
-        restClient.setUser("8osRhQPXt6dI1ykl");
-        restClient.setDomain("fortinet_f");
-        restClient.setPassword("esjEnde9VTanEeo2");
-        try {
-            restClient.executeRestGetFilterMethod("/v4_6_release/apis/3.0/company/configurations",restParmeter.buildParams());
-            System.out.println("result message :"+restClient.getRestResultMessage());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        JQHttpClient restClient = new JQHttpClient();
+//        restClient.setRestHost("http://staging.connectwisedev.com");
+//        restClient.setUser("8osRhQPXt6dI1ykl");
+//        restClient.setDomain("fortinet_f");
+//        restClient.setPassword("esjEnde9VTanEeo2");
+//        try {
+//            restClient.executeRestGetFilterMethod("/v4_6_release/apis/3.0/company/configurations",restParmeter.buildParams());
+//            System.out.println("result message :"+restClient.getResultMessage());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 }

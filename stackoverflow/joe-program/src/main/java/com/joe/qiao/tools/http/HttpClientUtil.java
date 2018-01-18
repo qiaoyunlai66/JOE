@@ -61,17 +61,17 @@ public class HttpClientUtil {
         
         RequestConfig config;
         CredentialsProvider credsProvider = new BasicCredentialsProvider();
-        if (hasProxy) {
-            HttpHost proxy = new HttpHost(proxyHost, Integer.valueOf(proxyPort));
-            config = RequestConfig.custom().setProxy(proxy).build();
-            if (StringUtils.isNotBlank(proxyUser)) {
-                credsProvider.setCredentials(
-                        new AuthScope(proxyHost, Integer.valueOf(proxyPort)),
-                        new UsernamePasswordCredentials(proxyUser, proxyPassword));
-            }
-        } else {
+//        if (hasProxy) {
+//            HttpHost proxy = new HttpHost(proxyHost, Integer.valueOf(proxyPort));
+//            config = RequestConfig.custom().setProxy(proxy).build();
+//            if (StringUtils.isNotBlank(proxyUser)) {
+//                credsProvider.setCredentials(
+//                        new AuthScope(proxyHost, Integer.valueOf(proxyPort)),
+//                        new UsernamePasswordCredentials(proxyUser, proxyPassword));
+//            }
+//        } else {
             config = RequestConfig.DEFAULT;
-        }
+     //   }
         cb.setDefaultRequestConfig(config);
         
         

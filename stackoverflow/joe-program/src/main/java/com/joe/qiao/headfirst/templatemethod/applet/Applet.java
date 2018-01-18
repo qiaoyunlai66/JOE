@@ -1,5 +1,8 @@
-package java.applet;
+package com.joe.qiao.headfirst.templatemethod.applet;
 
+import java.applet.AppletContext;
+import java.applet.AppletStub;
+import java.applet.AudioClip;
 import java.awt.*;
 import java.awt.image.ColorModel;
 import java.net.URL;
@@ -77,7 +80,8 @@ public class Applet extends Panel {
       return locale;
     }
     public String[][] getParameterInfo() {
-    return null;
+        return null;
+    }
     public void play(URL url) {
     AudioClip clip = getAudioClip(url);
     if (clip != null) {

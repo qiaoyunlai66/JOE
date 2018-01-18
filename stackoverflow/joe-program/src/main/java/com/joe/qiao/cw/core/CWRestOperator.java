@@ -1,4 +1,4 @@
-package com.joe.qiao.cw.resttools;
+package com.joe.qiao.cw.core;
 
 /**
  * Created by Joe Qiao on 02/01/2018.

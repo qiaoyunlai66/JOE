@@ -119,7 +119,7 @@ public class JQHttpClient {
         httpRequestBase.addHeader(getAuthenticate(httpRequestBase));
         HttpResponse httpResponse = httpClient.execute(httpRequestBase);
         HttpEntity httpEntity = httpResponse.getEntity();
-        resultMessage = EntityUtils.toString(httpEntity);
+        if(httpEntity!=null)resultMessage = EntityUtils.toString(httpEntity);
         return httpResponse.getStatusLine().getStatusCode();
     }
     
@@ -127,7 +127,7 @@ public class JQHttpClient {
         if(httpBean==null||httpBean.getUri()==null){
             return false;
         }
-        if(httpClient==null)httpClient = HttpClientUtil.getHttpClient();
+        if(httpClient==null)httpClient = HttpClientUtil.getHttpClient(httpBean.getUser(),httpBean.getPassword());
         return true;
     }
 }
