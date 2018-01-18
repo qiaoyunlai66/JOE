@@ -11,7 +11,7 @@ package com.joe.qiao.oozinoz.oozinoz.machine;
  * restriction that you may not claim that you wrote it.
  */
 
-import com.oozinoz.planning.*;
+import com.joe.qiao.oozinoz.oozinoz.planning.*;
 
 /**
  * An unload buffer is a conveyor that contains bins of completed material.

@@ -1,4 +1,4 @@
-package com.joe.qiao.cw.core;
+package com.joe.qiao.cw.core.assist;
 
 /**
  * Created by Joe Qiao on 02/01/2018.

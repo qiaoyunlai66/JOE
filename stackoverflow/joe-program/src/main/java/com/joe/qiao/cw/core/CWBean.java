@@ -1,6 +1,6 @@
 package com.joe.qiao.cw.core;
 
-import com.joe.qiao.tools.http.HttpBean;
+import com.joe.qiao.cw.core.assist.RestParmeter;
 
 /**
  * @author Joe Qiao

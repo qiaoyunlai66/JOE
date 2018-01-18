@@ -11,7 +11,7 @@ package com.joe.qiao.oozinoz.oozinoz.credit.ca;
  * restriction that you may not claim that you wrote it.
  */
 
-import com.oozinoz.credit.*;
+import com.joe.qiao.oozinoz.oozinoz.credit.*;
 
 /**
  * This factory supplies objects that can check credit, billing addresses, and

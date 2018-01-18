@@ -127,6 +127,7 @@ public class JQHttpClient {
         if(httpBean==null||httpBean.getUri()==null){
             return false;
         }
+        System.out.println("URL : "+httpBean.getUri());
         if(httpClient==null)httpClient = HttpClientUtil.getHttpClient(httpBean.getUser(),httpBean.getPassword());
         return true;
     }

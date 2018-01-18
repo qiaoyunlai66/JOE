@@ -11,9 +11,9 @@ package com.joe.qiao.oozinoz.oozinoz.testing;
  * restriction that you may not claim that you wrote it.
  */
 
-import junit.framework.TestCase;
 import com.joe.qiao.oozinoz.oozinoz.chemical.ChemicalFactory;
 import com.joe.qiao.oozinoz.oozinoz.chemical2.ChemicalFactory2;
+import junit.framework.TestCase;
 
 public class ChemicalFactoryTest extends TestCase {
     public void testGetFactory() {

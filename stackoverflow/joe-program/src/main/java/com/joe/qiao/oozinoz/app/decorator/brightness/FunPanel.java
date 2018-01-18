@@ -13,7 +13,7 @@ package com.joe.qiao.oozinoz.app.decorator.brightness;
 
 import java.awt.*;
 import javax.swing.*;
-import com.oozinoz.function.*;
+import com.joe.qiao.oozinoz.oozinoz.function.*;
 
 /**
  * Plots a curve given parametric functions x and y that are parameterized on

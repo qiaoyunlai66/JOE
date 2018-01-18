@@ -8,7 +8,7 @@ package com.joe.qiao.oozinoz.app.builder;
  * claim that you wrote it.
  */
 
-import com.oozinoz.reservation.*;
+import com.joe.qiao.oozinoz.oozinoz.reservation.*;
 
 public class ShowForgiving {
     public static void main(String[] args) {

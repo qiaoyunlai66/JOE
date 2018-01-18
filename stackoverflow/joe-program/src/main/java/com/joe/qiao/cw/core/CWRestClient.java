@@ -1,5 +1,7 @@
 package com.joe.qiao.cw.core;
 
+import com.joe.qiao.cw.core.assist.RestParmeter;
+import com.joe.qiao.tools.http.HttpBean;
 import com.joe.qiao.tools.http.HttpClientUtil;
 import com.joe.qiao.tools.http.JQHttpClient;
 import org.apache.commons.lang.StringUtils;
@@ -26,6 +28,7 @@ import java.util.List;
  */
 public class CWRestClient {
     private JQHttpClient jqHttpClient;
+    private CWBean cwBean;
     protected String user = "";
     protected String password = "";
     protected String domain = "";
@@ -35,8 +38,9 @@ public class CWRestClient {
     public final static int NO_WEB_SERVER=404;
     final static String NO_CLIENT="No JQHTTPCLient Found";
     
-    public CWRestClient(HttpGen jqHttpClientFactory){
-        this.jqHttpClient=jqHttpClientFactory.getJQHttpClient();
+    public CWRestClient(CWBean cwBean){
+        this.cwBean=cwBean;
+        init();
     }
     
     public void setUser(String value) {
@@ -189,4 +193,27 @@ public class CWRestClient {
         return null;
     }
 
+    public void init() {
+        HttpBean httpBean = null;
+        try {
+            URIBuilder uriBuilder = new URIBuilder();
+            RestParmeter restParmeter = cwBean.getRestParmeter();
+            uriBuilder.setScheme(cwBean.getScheme());
+            uriBuilder.setHost(cwBean.getHost());
+            uriBuilder.setPath(cwBean.getPath());
+            if(restParmeter!=null){
+                uriBuilder.setParameters(restParmeter.buildParams());
+            }
+            httpBean=new HttpBean();
+            httpBean.setUri(uriBuilder.build());
+            httpBean.setUser(cwBean.getDomain()+"+"+cwBean.getPublicKey());
+            httpBean.setPassword(cwBean.getPrivateKey());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        if(jqHttpClient==null){
+            jqHttpClient = new JQHttpClient(httpBean);
+        }
+    }
+    
 }

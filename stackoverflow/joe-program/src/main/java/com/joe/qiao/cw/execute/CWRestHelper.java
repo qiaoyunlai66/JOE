@@ -1,7 +1,7 @@
-package com.joe.qiao.cw.core;
+package com.joe.qiao.cw.execute;
 
-import com.joe.qiao.tools.http.HttpBean;
-import org.apache.http.client.utils.URIBuilder;
+import com.joe.qiao.cw.core.CWBean;
+import com.joe.qiao.cw.core.assist.RestParmeter;
 
 import java.net.URISyntaxException;
 

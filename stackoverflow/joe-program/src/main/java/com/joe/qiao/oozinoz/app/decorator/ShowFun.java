@@ -13,7 +13,7 @@ package com.joe.qiao.oozinoz.app.decorator;
 
 import com.joe.qiao.oozinoz.app.decorator.brightness.FunPanel;
 
-import com.oozinoz.function.*;
+import com.joe.qiao.oozinoz.oozinoz.function.*;
 import com.joe.qiao.oozinoz.oozinoz.ui.SwingFacade;
 
 public class ShowFun {

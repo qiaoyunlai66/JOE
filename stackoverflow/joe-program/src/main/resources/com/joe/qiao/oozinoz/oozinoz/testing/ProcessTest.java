@@ -11,12 +11,11 @@ package com.joe.qiao.oozinoz.oozinoz.testing;
  * restriction that you may not claim that you wrote it.
  */
 
-import junit.framework.TestCase;
-
 import com.joe.qiao.oozinoz.oozinoz.process.ProcessComponent;
 import com.joe.qiao.oozinoz.oozinoz.process.ProcessSequence;
 import com.joe.qiao.oozinoz.oozinoz.process.ProcessStep;
 import com.joe.qiao.oozinoz.oozinoz.process.ShellProcess;
+import junit.framework.TestCase;
 
 /**
 *  Test the ProcessComponent hierarchy, especially its ability

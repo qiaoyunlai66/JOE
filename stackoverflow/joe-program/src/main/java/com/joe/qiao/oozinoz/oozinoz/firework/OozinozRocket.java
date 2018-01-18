@@ -11,7 +11,7 @@ package com.joe.qiao.oozinoz.oozinoz.firework;
  * restriction that you may not claim that you wrote it.
  */
 
-import com.oozinoz.simulation.*;
+import com.joe.qiao.oozinoz.oozinoz.simulation.*;
 
 /**
 *  An adapter that lets a rocket participate in a simulation.

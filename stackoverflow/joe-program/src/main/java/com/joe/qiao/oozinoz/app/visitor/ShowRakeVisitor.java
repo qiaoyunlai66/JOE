@@ -11,7 +11,7 @@ package com.joe.qiao.oozinoz.app.visitor;
  * restriction that you may not claim that you wrote it.
  */
 
-import com.oozinoz.machine.*;
+import com.joe.qiao.oozinoz.oozinoz.machine.*;
 
 import java.io.*;
 import com.joe.qiao.oozinoz.oozinoz.filter.WrapFilter;

@@ -11,7 +11,7 @@ package com.joe.qiao.oozinoz.oozinoz.planning;
  * restriction that you may not claim that you wrote it.
  */
 
-import com.oozinoz.machine.*;
+import com.joe.qiao.oozinoz.oozinoz.machine.*;
 
 /**
  * This planner predicts when a star press will become available. A complete

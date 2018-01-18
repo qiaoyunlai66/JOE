@@ -11,10 +11,9 @@ package com.joe.qiao.oozinoz.oozinoz.testing;
  * restriction that you may not claim that you wrote it.
  */
 
-import junit.framework.TestCase;
-
 import com.joe.qiao.oozinoz.oozinoz.firework.OozinozSkyrocket;
 import com.joe.qiao.oozinoz.oozinoz.firework.PhysicalRocket;
+import junit.framework.TestCase;
 
 /**
 *  Test the Simulation package and the Fireworks classes that support it.

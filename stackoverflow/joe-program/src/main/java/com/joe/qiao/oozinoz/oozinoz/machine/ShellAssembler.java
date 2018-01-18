@@ -11,7 +11,7 @@ package com.joe.qiao.oozinoz.oozinoz.machine;
  * restriction that you may not claim that you wrote it.
  */
 
-import com.oozinoz.planning.*;
+import com.joe.qiao.oozinoz.oozinoz.planning.*;
 
 /**
  * A shell assembler assemebles stars, gunpowder and paper casing into an aerial

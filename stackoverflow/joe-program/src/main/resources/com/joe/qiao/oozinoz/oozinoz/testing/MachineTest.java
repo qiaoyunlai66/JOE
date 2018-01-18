@@ -11,13 +11,8 @@ package com.joe.qiao.oozinoz.oozinoz.testing;
  * restriction that you may not claim that you wrote it.
  */
 
+import com.joe.qiao.oozinoz.oozinoz.machine.*;
 import junit.framework.TestCase;
-
-import com.joe.qiao.oozinoz.oozinoz.machine.Fuser;
-import com.joe.qiao.oozinoz.oozinoz.machine.Machine;
-import com.joe.qiao.oozinoz.oozinoz.machine.MachineComponent;
-import com.joe.qiao.oozinoz.oozinoz.machine.MachineComposite;
-import com.joe.qiao.oozinoz.oozinoz.machine.OozinozFactory;
 
 /**
 *  Test the MachineComponent hierarchy, especially its ability

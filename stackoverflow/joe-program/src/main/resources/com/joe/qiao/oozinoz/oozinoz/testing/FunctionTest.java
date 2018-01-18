@@ -11,12 +11,11 @@ package com.joe.qiao.oozinoz.oozinoz.testing;
  * restriction that you may not claim that you wrote it.
  */
 
-import junit.framework.TestCase;
-
 import com.joe.qiao.oozinoz.oozinoz.function.Arithmetic;
 import com.joe.qiao.oozinoz.oozinoz.function.Constant;
 import com.joe.qiao.oozinoz.oozinoz.function.Function;
 import com.joe.qiao.oozinoz.oozinoz.function.Scale;
+import junit.framework.TestCase;
 
 /**
 *  A few tests of Function wrappers.

@@ -13,7 +13,7 @@ package com.joe.qiao.oozinoz.oozinoz.ozAster;
 
 import com.joe.qiao.oozinoz.aster.AsterStarPress;
 
-import com.oozinoz.businessCore.*;
+import com.joe.qiao.oozinoz.oozinoz.businessCore.*;
 
 public class OzAsterStarPress extends AsterStarPress {
     /**

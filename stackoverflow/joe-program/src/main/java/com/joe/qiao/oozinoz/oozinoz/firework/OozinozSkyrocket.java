@@ -11,7 +11,7 @@ package com.joe.qiao.oozinoz.oozinoz.firework;
  * restriction that you may not claim that you wrote it.
  */
 
-import com.oozinoz.simulation.*;
+import com.joe.qiao.oozinoz.oozinoz.simulation.*;
 
 /**
  * Instances of this class qualify as Skyrocket objects, but use information

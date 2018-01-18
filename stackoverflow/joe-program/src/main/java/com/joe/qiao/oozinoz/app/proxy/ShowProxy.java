@@ -14,8 +14,8 @@ package com.joe.qiao.oozinoz.app.proxy;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import com.oozinoz.ui.*;
-import com.oozinoz.imaging.*;
+import com.joe.qiao.oozinoz.oozinoz.ui.*;
+import com.joe.qiao.oozinoz.oozinoz.imaging.*;
 
 /**
  * Show the use of ImageIconProxy. This application is discussed in the "Proxy"

@@ -11,8 +11,8 @@ package com.joe.qiao.oozinoz.app.interpreter;
  * restriction that you may not claim that you wrote it.
  */
 
-import com.oozinoz.machine.*;
-import com.oozinoz.robotInterpreter2.*;
+import com.joe.qiao.oozinoz.oozinoz.machine.*;
+import com.joe.qiao.oozinoz.oozinoz.robotInterpreter2.*;
 
 /**
  * Show the use of a "while" interpreter.

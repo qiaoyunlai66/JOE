@@ -1,7 +1,7 @@
 package com.joe.qiao;
 
-import com.joe.qiao.cw.core.CWRestOperator;
-import com.joe.qiao.cw.core.RestParmeter;
+import com.joe.qiao.cw.core.assist.CWRestOperator;
+import com.joe.qiao.cw.core.assist.RestParmeter;
 
 import java.net.MalformedURLException;
 import java.net.URL;

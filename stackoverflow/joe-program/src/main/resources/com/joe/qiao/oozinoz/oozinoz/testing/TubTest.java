@@ -11,9 +11,8 @@ package com.joe.qiao.oozinoz.oozinoz.testing;
  * restriction that you may not claim that you wrote it.
  */
 
-import junit.framework.TestCase;
-
 import com.oozinoz.machine.*;
+import junit.framework.TestCase;
 
 /**
 *  Test Machine/Tub relationships.

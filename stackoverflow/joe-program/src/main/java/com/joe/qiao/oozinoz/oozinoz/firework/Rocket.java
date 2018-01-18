@@ -11,7 +11,7 @@ package com.joe.qiao.oozinoz.oozinoz.firework;
  * restriction that you may not claim that you wrote it.
  */
 
-import com.oozinoz.utility.*;
+import com.joe.qiao.oozinoz.oozinoz.utility.*;
 
 /**
  * A self-propelled firework.

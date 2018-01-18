@@ -13,7 +13,7 @@ package com.joe.qiao.oozinoz.oozinoz.visualization;
 
 import java.awt.event.*;
 import javax.swing.*;
-import com.oozinoz.ui.*;
+import com.joe.qiao.oozinoz.oozinoz.ui.*;
 
 /**
  * This version of the visualization adds a menu that

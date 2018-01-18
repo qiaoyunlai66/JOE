@@ -11,7 +11,7 @@ package com.joe.qiao.oozinoz.app.composite;
  * restriction that you may not claim that you wrote it.
  */
 
-import com.oozinoz.machine.*;
+import com.joe.qiao.oozinoz.oozinoz.machine.*;
 
 /**
 *  This class sets up a challenge in the Composite chapter.

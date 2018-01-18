@@ -11,7 +11,7 @@ package com.joe.qiao.oozinoz.app.decorator.brightness;
  * restriction that you may not claim that you wrote it.
  */
 
-import com.oozinoz.function.*;
+import com.joe.qiao.oozinoz.oozinoz.function.*;
 import com.joe.qiao.oozinoz.oozinoz.ui.SwingFacade;
 
 /**

@@ -11,11 +11,11 @@ package com.joe.qiao.oozinoz.app.templateMethod;
  * restriction that you may not claim that you wrote it.
  */
 
-import aster2.*;
+import com.joe.qiao.oozinoz.aster2.*;
 
 import com.joe.qiao.oozinoz.aster2.AsterStarPress;
 import com.joe.qiao.oozinoz.aster2.Hook;
-import com.oozinoz.businessCore.*;
+import com.joe.qiao.oozinoz.oozinoz.businessCore.*;
 
 public class ShowHook {
    public static void main(String[] args) {

@@ -11,17 +11,12 @@ package com.joe.qiao.oozinoz.oozinoz.testing;
  * restriction that you may not claim that you wrote it.
  */
 
-import java.text.ParseException;
-import java.util.Date;
-
+import com.joe.qiao.oozinoz.oozinoz.reservation.*;
+import com.joe.qiao.oozinoz.oozinoz.utility.Dollars;
 import junit.framework.TestCase;
 
-import com.joe.qiao.oozinoz.oozinoz.reservation.BuilderException;
-import com.joe.qiao.oozinoz.oozinoz.reservation.ForgivingBuilder;
-import com.joe.qiao.oozinoz.oozinoz.reservation.Reservation;
-import com.joe.qiao.oozinoz.oozinoz.reservation.ReservationBuilder;
-import com.joe.qiao.oozinoz.oozinoz.reservation.ReservationParser;
-import com.joe.qiao.oozinoz.oozinoz.utility.Dollars;
+import java.text.ParseException;
+import java.util.Date;
 
 /**
 *  Test that a forgiving builder builds correctly.
