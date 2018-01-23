@@ -24,14 +24,16 @@ public class JSONHelper {
         return serialized;
     }
 
-    //API gson
+    /**
+     * @deprecated 
+     *  API gson
+     */
     public static <T> List<T> fromJson(String json, Class<T> clazz) throws Exception{
         List<T> rets = (List<T>) new Gson().fromJson(json, new TypeToken<List<T>>(){}.getType());
         return rets;
     }
 
     /**
-     * @deprecated
      * @API gson
      */
     public static <T> List<T> fromJsonForObjList(String json, Class<T> clazz) throws Exception {

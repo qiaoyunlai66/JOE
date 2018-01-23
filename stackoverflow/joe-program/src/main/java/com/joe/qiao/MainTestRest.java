@@ -38,7 +38,7 @@ public class MainTestRest {
 //        restClient.setUser("8osRhQPXt6dI1ykl");
 //        restClient.setDomain("fortinet_f");
 //        restClient.setPassword("esjEnde9VTanEeo2");
-//        restClient.executeRestPutMethod("/v4_6_release/apis/3.0/company/configurations/71", FileParser.readFile(new File("/Users/qiaoyunlai/opt/phoenix/project-joe/JOE/stackoverflow/joe-program/src/main/resources/com/joe/qiao/json/configurationPut.json")));
+//        restClient.executeRestPutMethod("/v4_6_release/apis/3.0/company/configurations/71", FileReaderHelper.readFile(new File("/Users/qiaoyunlai/opt/phoenix/project-joe/JOE/stackoverflow/joe-program/src/main/resources/com/joe/qiao/json/configurationPut.json")));
     }
     
     private void executeRestGetFilter() {

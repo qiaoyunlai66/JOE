@@ -11,7 +11,9 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
+import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -127,7 +129,11 @@ public class JQHttpClient {
         if(httpBean==null||httpBean.getUri()==null){
             return false;
         }
-        System.out.println("URL : "+httpBean.getUri());
+        try {
+            System.out.println("URL : "+ URLDecoder.decode(httpBean.getUri().toString(),"UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         if(httpClient==null)httpClient = HttpClientUtil.getHttpClient(httpBean.getUser(),httpBean.getPassword());
         return true;
     }

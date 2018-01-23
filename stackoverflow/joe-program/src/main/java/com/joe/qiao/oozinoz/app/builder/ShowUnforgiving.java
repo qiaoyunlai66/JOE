@@ -12,7 +12,7 @@ import com.joe.qiao.oozinoz.oozinoz.reservation.*;
 
 public class ShowUnforgiving {
     public static void main(String[] args) {
-        /* Remove "DollarsPerHead, 9.95" to see exception message when that field is omitted. */
+        /* Remove "DollarsPerHead, 9.95" to see exception message when that impl is omitted. */
         String sample = "Date, November 5, Headcount, 250, "
                 + "City, Springfield, DollarsPerHead, 9.95, HasSite, False";
         ReservationBuilder builder = new UnforgivingBuilder();

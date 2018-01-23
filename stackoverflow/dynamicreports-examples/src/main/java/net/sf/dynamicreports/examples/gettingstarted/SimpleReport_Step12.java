@@ -62,7 +62,7 @@ public class SimpleReport_Step12 {
 		                                    .setVerticalTextAlignment(VerticalTextAlignment.MIDDLE)
 		                                    .setFontSize(15);
 
-		//                                                           title,     field name     data type
+		//                                                           title,     impl name     data type
 		TextColumnBuilder<String>     itemColumn      = col.column("Item",       "item",      type.stringType()).setStyle(boldStyle);
 		TextColumnBuilder<Integer>    quantityColumn  = col.column("Quantity",   "quantity",  type.integerType());
 		TextColumnBuilder<BigDecimal> unitPriceColumn = col.column("Unit price", "unitprice", currencyType);

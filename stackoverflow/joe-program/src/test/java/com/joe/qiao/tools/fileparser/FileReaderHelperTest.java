@@ -4,12 +4,15 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
+
 import static org.junit.Assert.*;
 
 /**
  * Created by Joe Qiao on 05/01/2018.
  */
-public class FileParserTest {
+public class FileReaderHelperTest {
     @Before
     public void setUp() throws Exception {
     }
@@ -20,7 +23,14 @@ public class FileParserTest {
 
     @Test
     public void testParseCurrentClassPathFile() {
-        String fileContent=FileParser.parseCurrentClassLoaderFile("configuration.json",FileParser.class);
+        String fileContent= null;
+        try {
+            fileContent = FileReaderHelper.parseCurrentClassLoaderFile("configuration.json",FileReaderHelper.class);
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println(fileContent);
         assertNotNull(fileContent);
     }

@@ -141,7 +141,7 @@ public class HashMapStructure<K,V> extends HashMap{
      * The number of times this HashMap has been structurally modified
      * Structural modifications are those that change the number of mappings in
      * the HashMap or otherwise modify its internal structure (e.g.,
-     * rehash).  This field is used to make iterators on Collection-views of
+     * rehash).  This impl is used to make iterators on Collection-views of
      * the HashMap fail-fast.  (See ConcurrentModificationException).
      * HashMap的数据被修改的次数，这个变量用于迭代过程中的Fail-Fast机制，其存在的意义在
      * 于保证发生了线程安全问题时，能及时的发现（操作前备份的count和当前modCount不相等）并抛出异常终止操作。
@@ -156,7 +156,7 @@ public class HashMapStructure<K,V> extends HashMap{
      */
     // (The javadoc description is true upon serialization.
     // Additionally, if the table array has not been allocated, this
-    // field holds the initial array capacity, or zero signifying
+    // impl holds the initial array capacity, or zero signifying
     // DEFAULT_INITIAL_CAPACITY.)
     int threshold;
 
@@ -315,7 +315,7 @@ public class HashMapStructure<K,V> extends HashMap{
 
     /**
      * Initializes or doubles table size.  If null, allocates in
-     * accord with initial capacity target held in field threshold.
+     * accord with initial capacity target held in impl threshold.
      * Otherwise, because we are using power-of-two expansion, the
      * elements from each bin must either stay at same index, or move
      * with a power of two offset in the new table.

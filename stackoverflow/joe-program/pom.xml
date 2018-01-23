@@ -15,11 +15,13 @@
     <artifactId>joe-program</artifactId>
     
     <dependencies>
+        <!--commons-lang-->
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
             <version>2.6</version>
         </dependency>
+        
         <!--JACKSON-->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -47,24 +49,59 @@
                 <version>1.9.13</version>
             </dependency>
         <!--JACKSON-->
+        
         <!--GSON-->
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
                 <version>2.3.1</version>
             </dependency>
-        <!--GSON-->
+
+        <!--JSON -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20171018</version>
+        </dependency>
+
+
+        <!--junit-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.4</version>
             <scope>test</scope>
         </dependency>
+        
+        <!--dynamicreports-->
+        <dependency>
+            <groupId>net.sourceforge.dynamicreports</groupId>
+            <artifactId>dynamicreports-core</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+        
+        <!--httpClient-->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.2</version>
         </dependency>
+
+        <!--pdfview-->
+        <dependency>
+            <groupId>com.kenai.nbpwr</groupId>
+            <artifactId>com-sun-pdfview</artifactId>
+            <version>1.0.5-201003191900</version>
+            <type>nbm</type>
+        </dependency>
+        
+        <!--log4j-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+       
     </dependencies>
     
 </project>

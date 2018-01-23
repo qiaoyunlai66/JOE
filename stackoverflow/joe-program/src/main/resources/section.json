@@ -1,0 +1,29 @@
+ [
+      {
+        "position": 0,
+        "type": "png",
+        "path": "/Users/qiaoyunlai/opt/test/image/fortinet.png",
+        "width": 160,
+        "height": 32,
+        "fixed": true,
+        "horizontalAlignment": "LEFT"
+      },
+      {
+        "position": 1,
+        "type": "png",
+        "path": "/Users/qiaoyunlai/opt/test/image/cover.png",
+        "width": 550,
+        "height": 400,
+        "fixed": true
+      },
+      {
+        "position": 2,
+        "type": "string",
+        "content": "Monthly Report October 2017",
+        "bold":true,
+        "italic":false,
+        "size":16,
+        "color":"#8d9161",
+        "horizontalAlignment": "LEFT"
+      }
+ ]

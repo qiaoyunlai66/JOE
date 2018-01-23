@@ -105,7 +105,7 @@ public class GeoMapBuilder extends DimensionComponentBuilder<GeoMapBuilder, DRGe
 	}
 
 	public GeoMapBuilder setLocation(FieldBuilder<String> field) {
-		Validate.notNull(field, "field must not be null");
+		Validate.notNull(field, "impl must not be null");
 		getDataset().setLocationExpression(field.build());
 		return this;
 	}
@@ -127,7 +127,7 @@ public class GeoMapBuilder extends DimensionComponentBuilder<GeoMapBuilder, DRGe
 	}
 
 	public GeoMapBuilder setValue(FieldBuilder<? extends Number> field) {
-		Validate.notNull(field, "field must not be null");
+		Validate.notNull(field, "impl must not be null");
 		getDataset().setValueExpression(field.build());
 		return this;
 	}
@@ -155,7 +155,7 @@ public class GeoMapBuilder extends DimensionComponentBuilder<GeoMapBuilder, DRGe
 	}
 
 	public GeoMapBuilder setLabel(FieldBuilder<String> field) {
-		Validate.notNull(field, "field must not be null");
+		Validate.notNull(field, "impl must not be null");
 		getDataset().setLabelExpression(field.build());
 		return this;
 	}

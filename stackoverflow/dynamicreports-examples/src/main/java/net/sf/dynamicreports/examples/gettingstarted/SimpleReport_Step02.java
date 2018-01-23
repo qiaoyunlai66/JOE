@@ -53,7 +53,7 @@ public class SimpleReport_Step02 {
 			  .setColumnTitleStyle(columnTitleStyle)
 			  .highlightDetailEvenRows()
 			  .columns(//add columns
-			  	//            title,     field name     data type
+			  	//            title,     impl name     data type
 			  	col.column("Item",       "item",      type.stringType()),
 			  	col.column("Quantity",   "quantity",  type.integerType()),
 			  	col.column("Unit price", "unitprice", type.bigDecimalType()))

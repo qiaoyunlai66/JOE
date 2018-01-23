@@ -1,4 +1,4 @@
-package headfirst.command.undo;
+package com.joe.qiao.headfirst.command.undo;
 
 import com.joe.qiao.headfirst.command.undo.CeilingFan;
 import com.joe.qiao.headfirst.command.undo.Command;

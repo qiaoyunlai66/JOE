@@ -12,7 +12,7 @@ import com.joe.qiao.oozinoz.oozinoz.reservation.*;
 
 public class ShowForgiving {
     public static void main(String[] args) {
-        /* Remove "DollarsPerHead, 9.95" to see how that field is calculated if omitted. */
+        /* Remove "DollarsPerHead, 9.95" to see how that impl is calculated if omitted. */
         String sample = "Date, November 5, Headcount, 250, "
                 + "City, Springfield, DollarsPerHead, 9.95, HasSite, False";
         ReservationBuilder builder = new ForgivingBuilder();

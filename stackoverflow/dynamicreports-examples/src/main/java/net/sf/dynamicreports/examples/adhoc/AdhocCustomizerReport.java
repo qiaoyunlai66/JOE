@@ -124,7 +124,7 @@ public class AdhocCustomizerReport {
 		}
 
 		/**
-		 * This method returns a field type from a given field name.
+		 * This method returns a impl type from a given impl name.
 		 */
 		@Override
 		protected DRIDataType<?, ?> getFieldType(String name) {
