@@ -1,9 +1,11 @@
 package com.joe.qiao.tools.json.serialized.annotations;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.introspect.AnnotatedMember;
 import com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;
+import com.fasterxml.jackson.databind.type.CollectionLikeType;
 import com.joe.qiao.tools.json.JSONHelper;
 
 import java.io.File;
@@ -19,10 +21,11 @@ import java.util.List;
 public class Execute {
     public static void main(String[] args) {
         Execute e = new Execute();
-       // e.testAnnotation();
+      //  e.testAnnotation();
        // e.testMixin();
        // e.testAnnotationIntrospector();
-        e.noArgConstructorTest();
+       // e.noArgConstructorTest();
+        e.testList();
     }
     private void testAnnotation(){
         Car car = new Car("Mercedes-Benz", "S500", 5, 250.0);
@@ -181,6 +184,46 @@ public class Execute {
         }
     }
 
+    /**
+     * unmarshall json array to List<Interface>
+     */
+    private void testList(){
+        Car car = new Car("Mercedes-Benz", "S500", 5, 250.0);
+        Truck truck = new Truck("Isuzu", "NQR", 7500.0);
+
+        List<Top> tops =  new ArrayList<>();
+        tops.add(car);
+        tops.add(truck);
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            CollectionLikeType collectionLikeType = objectMapper.getTypeFactory().constructCollectionType(
+                    List.class, Top.class);
+            /**
+             * 以下两种皆可以
+             */
+          //  String jsonDataString = objectMapper.writerFor(collectionLikeType).writeValueAsString(tops);
+            String jsonDataString = objectMapper.writerFor(new TypeReference<List<Top>>() {}).writeValueAsString(tops);
+            System.out.println("to Json... ");
+            System.out.println(jsonDataString);
+            /**
+             * 以下两种皆可以
+             */
+            List<Top> deserializedFleet = objectMapper.readValue(jsonDataString, collectionLikeType);
+           // List<Top> deserializedFleet = objectMapper.readValue(jsonDataString, new TypeReference<List<Top>>() {});
+            System.out.println("from Json: ");
+            System.out.println(JSONHelper.toJsonJackSon(deserializedFleet));
+            System.out.println("success");
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
 }
 
 /**
