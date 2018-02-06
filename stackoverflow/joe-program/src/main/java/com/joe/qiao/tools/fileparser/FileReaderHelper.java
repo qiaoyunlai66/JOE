@@ -32,6 +32,24 @@ public class FileReaderHelper {
 
     /**
      * @param fileName
+     *        like "fileName.extension" under resources corresponding to targetClass path
+     *        read from current class path
+     * @param targetClass
+     * @return
+     * @throws URISyntaxException
+     * @throws IOException
+     */
+    public static Object getSerializeObjectFromCurrentClassPath(String fileName, Class targetClass) throws URISyntaxException, IOException, ClassNotFoundException {
+        //get current class load path
+        URL url = targetClass.getResource(fileName);
+        System.out.println("read from: "+url.getPath());
+        URI uri = url.toURI();
+        File file = new File(uri);
+        return objectRead(file);
+    }
+    
+    /**
+     * @param fileName
      *          like "fileName.extension","section.json" or "jsonAnnotationParser.json" under resources
      *          read from class root path
      * @return
@@ -75,5 +93,30 @@ public class FileReaderHelper {
             line = br.readLine();
         }
         return sb.toString();
+    }
+
+    private static Object objectRead(File file) throws IOException, ClassNotFoundException {
+        FileInputStream fileInputStream=null;
+        ObjectInputStream objectInputStream = null;
+        try {
+            fileInputStream = new FileInputStream(file);
+            objectInputStream = new ObjectInputStream(fileInputStream);
+            return objectInputStream.readObject();
+        }finally {
+            if(objectInputStream!=null){
+                try {
+                    objectInputStream.close();
+                }catch (IOException e){
+                    System.out.println("objectInputStream close error");
+                }
+            }
+            if(fileInputStream!=null){
+                try {
+                    fileInputStream.close();
+                }catch (IOException e){
+                    System.out.println("fileInputStream close error");
+                }
+            }
+        }
     }
 }

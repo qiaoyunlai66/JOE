@@ -136,6 +136,7 @@ public class FileWriterHelper {
             fileOutputStream = new FileOutputStream(file);
             objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(o);
+            objectOutputStream.flush();
         }finally {
             if(objectOutputStream!=null){
                 try {
