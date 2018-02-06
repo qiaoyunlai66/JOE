@@ -91,7 +91,27 @@
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>	
 		</dependency>
-	</dependencies>
+<!--for SVG -->
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-dom</artifactId>
+            <version>1.9.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-svg-dom</artifactId>
+            <version>1.9.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-bridge</artifactId>
+            <version>1.9.1</version>
+        </dependency>
+ <!-- ....... for SVG .........-->
+
+    </dependencies>
 
 	<build>
 		<plugins>
