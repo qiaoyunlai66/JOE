@@ -1,9 +1,7 @@
 package com.joe.qiao.tools.fileparser;
 
 import java.io.*;
-import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 
 /**
  * Created by Joe Qiao on 04/01/2018.
@@ -22,11 +20,28 @@ public class FileWriterHelper {
     public static boolean writeToCurrentClassPath(String fileName, Class targetClass,String s) throws URISyntaxException, IOException {
         //get current class load path
         String path = targetClass.getResource("").getPath()+fileName;
-        System.out.println("write to: "+path);
+        System.out.println("bufferWrite to: "+path);
         File file = new File(path);
-        return write(file,s);
+        return bufferWrite(file,s);
     }
 
+    /**
+     * @param fileName
+     *        like "fileName.extension" under resources corresponding to targetClass path
+     *        read from current class path
+     * @param targetClass
+     * @return
+     * @throws URISyntaxException
+     * @throws IOException
+     */
+    public static boolean writeSerializeObjectToCurrentClassPath(String fileName, Class targetClass,Object o) throws URISyntaxException, IOException {
+        //get current class load path
+        String path = targetClass.getResource("").getPath()+fileName;
+        System.out.println("writeSerializeObjectToCurrentClassPath to: "+path);
+        File file = new File(path);
+        return objectWrite(file,o);
+    }
+    
     /**
      * @param s
      * @return
@@ -34,9 +49,9 @@ public class FileWriterHelper {
      * @throws IOException
      */
     public static boolean writeToPath(String path,String s) throws URISyntaxException, IOException {
-        System.out.println("write to: "+path);
+        System.out.println("bufferWrite to: "+path);
         File file = new File(path);
-        return write(file,s);
+        return bufferWrite(file,s);
     }
     
     /**
@@ -51,30 +66,36 @@ public class FileWriterHelper {
         //get class root path
         ClassLoader clazzLoader=FileWriterHelper.class.getClassLoader();
         String path = clazzLoader.getResource("").getPath()+fileName;
-        System.out.println("write to： "+path);
+        System.out.println("bufferWrite to： "+path);
         File file = new File(path);
-        return write(file,s);
+        return bufferWrite(file,s);
 
     }
-//    
-//    public static String getCurrentClassLoaderPath(){
-//        return FileWriterHelper.class.getClassLoader().getResource("").getPath();
-//    }
-//    
-//    public static String parseFile(String path) throws IOException {
-//        File file = new File(path);
-//        return readFile(file);
-//    }
 
     /**
-     * write a file
+     * java serializable
+     * @param s
+     * @return
+     * @throws URISyntaxException
+     * @throws IOException
+     */
+    public static boolean writeObjectSerializePath(String path,Object o) throws URISyntaxException, IOException {
+        System.out.println("writeObjectSerializePath to: "+path);
+        File file = new File(path);
+        return objectWrite(file,0);
+    }
+    
+    
+
+    /**
+     * bufferWrite a file
      * @param file
      * @param s
      * append    boolean if <code>true</code>, then data will be written
      *                  to the end of the file rather than the beginning.
      * @throws IOException
      */
-    private static boolean write(File file,String s) throws IOException {
+    private static boolean bufferWrite(File file, String s) throws IOException {
         FileWriter fileWriter=null;
         BufferedWriter bufferedWriter = null;
         try {
@@ -100,4 +121,38 @@ public class FileWriterHelper {
         }
         return true;
     }
+
+    /**
+     * java serializable
+     * @param file
+     * @param o
+     * @return
+     * @throws IOException
+     */
+    private static boolean objectWrite(File file, Object o) throws IOException {
+        FileOutputStream fileOutputStream=null;
+        ObjectOutputStream objectOutputStream = null;
+        try {
+            fileOutputStream = new FileOutputStream(file);
+            objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(o);
+        }finally {
+            if(objectOutputStream!=null){
+                try {
+                    objectOutputStream.close();
+                }catch (IOException e){
+                    System.out.println("objectOutputStream close error");
+                }
+            }
+            if(fileOutputStream!=null){
+                try {
+                    fileOutputStream.close();
+                }catch (IOException e){
+                    System.out.println("fileOutputStream close error");
+                }
+            }
+        }
+        return true;
+    }
+    
 }
