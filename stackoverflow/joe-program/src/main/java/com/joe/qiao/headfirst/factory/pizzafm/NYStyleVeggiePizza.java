@@ -3,7 +3,7 @@ package com.joe.qiao.headfirst.factory.pizzafm;
 public class NYStyleVeggiePizza extends Pizza {
 
 	public NYStyleVeggiePizza() {
-		name = "NY Style Veggie Pizza";
+		name = "NY DRStyle Veggie Pizza";
 		dough = "Thin Crust Dough";
 		sauce = "Marinara Sauce";
  

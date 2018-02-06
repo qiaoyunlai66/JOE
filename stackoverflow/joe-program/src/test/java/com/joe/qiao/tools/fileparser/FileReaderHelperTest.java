@@ -25,7 +25,7 @@ public class FileReaderHelperTest {
     public void testParseCurrentClassPathFile() {
         String fileContent= null;
         try {
-            fileContent = FileReaderHelper.parseCurrentClassLoaderFile("configuration.json",FileReaderHelper.class);
+            fileContent = FileReaderHelper.getFromCurrentClassPath("configuration.json",FileReaderHelper.class);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -37,6 +37,8 @@ public class FileReaderHelperTest {
 
     @Test
     public void testParseCurrentClassLoaderFile() throws Exception {
+//        String s = FileReaderHelper.getFromCurrentClassPath("query.json");
+//        System.out.println(s);
     }
 
     @Test

@@ -1,5 +1,6 @@
-package com.joe.qiao.drreports.impl;
+package com.joe.qiao.drreports.section;
 
+import com.joe.qiao.drreports.core.ComponentSectional;
 import com.joe.qiao.drreports.core.Element;
 import com.joe.qiao.drreports.core.Sectional;
 import net.sf.dynamicreports.report.builder.component.ComponentBuilder;
@@ -8,34 +9,48 @@ import net.sf.dynamicreports.report.builder.component.VerticalListBuilder;
 import java.util.ArrayList;
 import java.util.List;
 
-import static net.sf.dynamicreports.report.builder.DynamicReports.*;
+import static net.sf.dynamicreports.report.builder.DynamicReports.cmp;
 
 /**
  * @author Joe Qiao
- * @Date 21/01/2018.
+ * @Date 24/01/2018.
  */
-public class NormalSectional implements Sectional {
+public class CoverPageSectional extends ComponentSectional{
     private List<Element> elements;
-    
     @Override
-    public ComponentBuilder integrate() {
+    public boolean integrate() {
         if(elements==null||elements.size()<1){
             System.out.println("No element fond in section...");
-            return null;
+            return false;
         }
         VerticalListBuilder verticalListBuilder = cmp.verticalList();
         for(Element element:elements){
             ComponentBuilder componentBuilder = element.build();
             if(componentBuilder!=null)verticalListBuilder.add(componentBuilder);
         }
-        return verticalListBuilder;
+        componentBuilder=verticalListBuilder;
+        return true;
     }
 
-    @Override
     public void addElement(Element e) {
         if(elements == null){
             elements = new ArrayList<>();
         }
         elements.add(e);
+    }
+
+    public List<Element> getElements() {
+        return elements;
+    }
+
+    public void setElements(List<Element> elements) {
+        this.elements = elements;
+    }
+
+    public ComponentBuilder getComponentBuilder() {
+        if(componentBuilder==null){
+            componentBuilder = cmp.horizontalList();
+        }
+        return componentBuilder;
     }
 }

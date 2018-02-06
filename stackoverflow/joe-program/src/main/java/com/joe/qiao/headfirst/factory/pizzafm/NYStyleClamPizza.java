@@ -3,7 +3,7 @@ package com.joe.qiao.headfirst.factory.pizzafm;
 public class NYStyleClamPizza extends Pizza {
 
 	public NYStyleClamPizza() {
-		name = "NY Style Clam Pizza";
+		name = "NY DRStyle Clam Pizza";
 		dough = "Thin Crust Dough";
 		sauce = "Marinara Sauce";
  

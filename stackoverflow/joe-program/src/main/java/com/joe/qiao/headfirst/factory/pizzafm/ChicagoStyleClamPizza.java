@@ -2,7 +2,7 @@ package com.joe.qiao.headfirst.factory.pizzafm;
 
 public class ChicagoStyleClamPizza extends Pizza {
 	public ChicagoStyleClamPizza() {
-		name = "Chicago Style Clam Pizza";
+		name = "Chicago DRStyle Clam Pizza";
 		dough = "Extra Thick Crust Dough";
 		sauce = "Plum Tomato Sauce";
  

@@ -8,7 +8,7 @@ import java.util.List;
  * @author Joe Qiao
  * @Date 22/01/2018.
  */
-public interface FileParser {
+public interface Parser {
     boolean parse();
-    List<Sectional> getSectionalList();
+    Object getResult(Object o);
 }

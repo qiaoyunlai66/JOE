@@ -3,12 +3,15 @@ package com.joe.qiao.drreports.element;
 import static net.sf.dynamicreports.report.builder.DynamicReports.*;
 
 import com.joe.qiao.drreports.core.Element;
+import com.joe.qiao.drreports.global.GlobalContext;
+import com.joe.qiao.drreports.global.TOCLevel;
 import com.joe.qiao.tools.fileparser.FileReaderHelper;
 import net.sf.dynamicreports.report.builder.component.ComponentBuilder;
 import net.sf.dynamicreports.report.builder.component.TextFieldBuilder;
 import net.sf.dynamicreports.report.builder.style.StyleBuilder;
 
 import java.awt.*;
+import java.io.File;
 
 /**
  * @author Joe Qiao
@@ -19,10 +22,16 @@ public class TextElement implements Element {
     private String path;
     private Integer size;
     private String colorHex;
+    private String bgColorHex;
     private Boolean bold;
     private Boolean italic;
+    private Integer padding;
     private Integer leftPadding;
-    
+    private Integer rightPadding;
+    private Integer topPadding;
+    private Integer bottomPadding;
+    private TOCLevel tocLevel;
+    private String tocLable;
     @Override
     public ComponentBuilder build() {
         TextFieldBuilder textBuilder = null;
@@ -30,7 +39,8 @@ public class TextElement implements Element {
             textBuilder = cmp.text(text);
         }else if(path!=null){
             try {
-                textBuilder = cmp.text(FileReaderHelper.parseFile(path));
+                String globalPath = GlobalContext.getGlobalContext().getGlobalPath();
+                textBuilder = cmp.text(FileReaderHelper.parseFile(globalPath==null?path:globalPath+ File.separator+path));
             } catch (Exception e) {
                 System.out.println("parse text path error: "+e.toString());
                 return null;
@@ -40,11 +50,30 @@ public class TextElement implements Element {
             return null;
         }
         StyleBuilder styleBuilder = stl.style();
+        if(tocLevel!=null){
+            switch (tocLevel){
+                case FIRST:styleBuilder.setParentStyle(GlobalContext.getGlobalContext().getTocFirstLevelStyle());
+                            break;
+                case SECOND:styleBuilder.setParentStyle(GlobalContext.getGlobalContext().getTocSecondLevelStyle());
+                            break;
+            }
+            textBuilder.setTableOfContentsHeading(tocLevel.getLevel());
+            if(tocLable!=null){
+                tocLevel.getLevel().setLabel(tocLable);
+            }
+        }else{
+            styleBuilder.setParentStyle(GlobalContext.getGlobalContext().getDocumentTextStyle());
+        }
         if(size!=null)styleBuilder.setFontSize(size);
         if(colorHex!=null)styleBuilder.setForegroundColor(Color.decode(colorHex));
         if(bold!=null)styleBuilder.setBold(bold);
         if(italic!=null)styleBuilder.setItalic(italic);
+        if(padding!=null)styleBuilder.setPadding(padding);
         if(leftPadding!=null)styleBuilder.setLeftPadding(leftPadding);
+        if(rightPadding!=null)styleBuilder.setRightPadding(rightPadding);
+        if(topPadding!=null)styleBuilder.setTopPadding(topPadding);
+        if(bottomPadding!=null)styleBuilder.setBottomPadding(bottomPadding);
+        if(bgColorHex!=null)styleBuilder.setBackgroundColor(Color.decode(bgColorHex));
         textBuilder.setStyle(styleBuilder);
         return textBuilder;
     }
@@ -103,5 +132,61 @@ public class TextElement implements Element {
 
     public void setLeftPadding(Integer leftPadding) {
         this.leftPadding = leftPadding;
+    }
+
+    public Integer getPadding() {
+        return padding;
+    }
+
+    public void setPadding(Integer padding) {
+        this.padding = padding;
+    }
+
+    public TOCLevel getTocLevel() {
+        return tocLevel;
+    }
+
+    public void setTocLevel(TOCLevel tocLevel) {
+        this.tocLevel = tocLevel;
+    }
+
+    public String getTocLable() {
+        return tocLable;
+    }
+
+    public void setTocLable(String tocLable) {
+        this.tocLable = tocLable;
+    }
+
+    public String getBgColorHex() {
+        return bgColorHex;
+    }
+
+    public void setBgColorHex(String bgColorHex) {
+        this.bgColorHex = bgColorHex;
+    }
+
+    public Integer getRightPadding() {
+        return rightPadding;
+    }
+
+    public void setRightPadding(Integer rightPadding) {
+        this.rightPadding = rightPadding;
+    }
+
+    public Integer getTopPadding() {
+        return topPadding;
+    }
+
+    public void setTopPadding(Integer topPadding) {
+        this.topPadding = topPadding;
+    }
+
+    public Integer getBottomPadding() {
+        return bottomPadding;
+    }
+
+    public void setBottomPadding(Integer bottomPadding) {
+        this.bottomPadding = bottomPadding;
     }
 }

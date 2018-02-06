@@ -1,0 +1,757 @@
+[
+  {
+    "class":"Global",
+    "tocFirstLevelStyle": {
+      "bold": true,
+      "size": 20,
+      "colorHex": "#0e5891",
+      "padding": 20
+    },
+    "tocSecondLevelStyle": {
+      "bold": true,
+      "size": 18,
+      "colorHex": "#0e5891",
+      "leftPadding": 20
+    },
+    "documentTextStyle": {
+      "size": 10,
+      "padding": 3,
+      "leftPadding":20
+    },
+    "pngStyle":{
+      "horizontalImage":"CENTER"
+    },
+    "tocCustomize":{
+      "title":"Contents",
+      "titleStyle":{
+        "size":18,
+        "bold":true,
+        "topPadding":20,
+        "leftPadding":40,
+        "rightPadding":40,
+        "colorHex":"#0e5891",
+        "horizontal":"LEFT"
+      }
+    },
+    "globalPath":"/opt/phoenix/config/dynamicreports/globalpath"
+  },
+  {
+    "class":"CoverPage",
+    "elements": [
+      {
+        "class": "Gap",
+        "verticalGap": 80,
+        "horizontalGap": 40
+      },
+      {
+        "class": "Png",
+        "path": "fortinet.png",
+        "width": 160,
+        "height": 32,
+        "fixedSize": true,
+        "horizontal": "LEFT"
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 10
+      },
+      {
+        "class": "Png",
+        "path": "cover.png",
+        "width": 500,
+        "height": 400,
+        "fixedSize": true
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 70
+      },
+      {
+        "class": "Text",
+        "text": "Monthly Report October 2017",
+        "bold": true,
+        "italic": false,
+        "size": 16,
+        "colorHex": "#8d9161",
+        "leftPadding": 40
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 40
+      },
+      {
+        "class": "Text",
+        "text": "Prepared for",
+        "bold": false,
+        "italic": false,
+        "size": 10,
+        "leftPadding": 40
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 40
+      },
+      {
+        "class": "Text",
+        "text": "Fourteen Foods, United States of America",
+        "bold": true,
+        "italic": false,
+        "size": 10,
+        "colorHex": "#8d9161",
+        "leftPadding": 40
+      }
+    ]
+  },
+  {
+    "name":"Section_1",
+    "class":"TOC",
+    "heading":{
+      "class":"Text",
+      "text":"1  FortiCare 360 Monthly report",
+      "tocLevel":"FIRST"
+    },
+    "class":"TOC",
+    "elements":[
+
+    ],
+    "subSections":[
+      {
+        "name":"Section_1_1",
+        "heading":{
+          "class":"Text",
+          "text":"1.1  Purpose",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class": "Text",
+            "path": "desc1_1.txt",
+            "leftPadding":20,
+            "rightPadding":20
+          },
+          {
+            "class": "Pdf",
+            "path": "pdffile.pdf",
+            "width" : 400,
+            "height": 600,
+            "fixedSize":true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Section_2",
+    "class":"TOC",
+    "heading":{
+      "class":"Text",
+      "text":"2  Analysis Details",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class": "KeyValueNest",
+        "map": {
+          "Customer":"Fourteen Foods",
+          "Location":"AMER-PUBLISH - USA",
+          "Analysis Start Date":"1st October 2017",
+          "Duration":"30 Days",
+          "Number of Monitored Sites":"1",
+          "Number of FortiCare 360 Collectors":"1",
+          "Number of Contracted Fortinet Devices":"11"
+        }
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 10
+      }
+    ],
+    "subSections":[
+      {
+        "name":"Section_2_1",
+        "heading":{
+          "class":"Text",
+          "text":"2.1  Device Inventory Hardware Details",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class": "Text",
+            "text": "The devices under management are as follows:"
+          },
+          {
+            "class": "Gap",
+            "horizontalGap": 10
+          },
+          {
+            "class": "Png",
+            "path": "section2_1.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          },
+          {
+            "class": "Text",
+            "text": "Recommendations",
+            "bold":true,
+            "size":10,
+            "topPadding":3
+          },
+          {
+            "class":"Gap",
+            "verticalGap": 10
+          },
+          {
+            "class": "Text",
+            "path": "desc2_1_recommend.txt",
+            "padding":1,
+            "leftPadding":4
+          },
+          {
+            "class":"Gap",
+            "verticalGap": 10,
+            "horizontalGap":40
+          },
+          {
+            "class": "Text",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "Text",
+            "path": "sec_2_1_observation.txt",
+            "size":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "Png",
+            "path": "section2_1_obs.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          }
+        ]
+      },
+      {
+        "name":"Section_2_2",
+        "heading":{
+          "class":"Text",
+          "text":"2.2  Device Inventory Software Details",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The software versions of the devices under management are as follows:"
+          },
+          {
+            "class": "Png",
+            "path": "2_2.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          },
+          {
+            "class":"Text",
+            "path": "2_2_remediation.txt"
+          },
+          {
+            "class": "Text",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "Text",
+            "path": "sec_2_1_observation.txt",
+            "size":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "Png",
+            "path": "section2_1_obs.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          }
+        ]
+      }
+
+    ]
+  },
+  {
+    "class":"TOC",
+    "name": "Section_3",
+    "heading":{
+      "class":"Text",
+      "text":"3  Device Utilization",
+      "tocLevel":"FIRST"
+    },
+    "elements":[
+    ],
+    "subSections":[
+      {
+        "name":"Section_3_1",
+        "heading":{
+          "class":"Text",
+          "text":"3.1  Device Uptime",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The table below illustrates the last reported uptime of each Fortinet device"
+          },
+          {
+            "class":"FSTable",
+            "start":0,
+            "size":10
+          },
+          {
+            "class":"Text",
+            "text":"Recommendations",
+            "bold":true
+          },
+          {
+            "class":"Text",
+            "text":"If any device has a reported uptime of less than 30 days and no downtime was planned ins  previous report, then it is recommended to review events such as hardware freezes, HA failover, and reboots by reviewing the following logs: crashlogs, comlogs."
+          },
+          {
+            "class":"Text",
+            "text":"Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          }
+        ]
+      },
+      {
+        "name":"Section_3_2",
+        "heading":{
+          "class":"Text",
+          "text":"3.2  CPU Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The graphs below illustrate the average and maximum CPU utilization trend over the last 30 days"
+          },
+          {
+            "class":"Text",
+            "text":"The table below shows the 30 day CPU summary data values."
+          },
+          {
+            "class":"FSTable",
+            "start":10,
+            "size":30
+          },
+          {
+            "class":"Text",
+            "text":"If CPU utilization thresholds have been breached in the last 30 days the alert counts are summarized in the table below\n\n-No Event Data received this period.-"
+          },
+          {
+            "class":"Text",
+            "text":"Recommendations",
+            "bold":true
+          },
+          {
+            "class":"Text",
+            "text":"CPU Utilization is expected to follow a trend aligned to business schedules. Multiple high usage peaks that breach thresholds should be investigated for possible causes such as certain traffic peaks or specific traffic types, or even DDOS attacks; also by investigating CPU utilization per process with monitoring tools. "
+          },
+          {
+            "class": "Text",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          }
+        ]
+      },
+      {
+        "name":"Section_3_3",
+        "heading":{
+          "class":"Text",
+          "text":"3.3  Memory Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The graphs below illustrate the average and maximum Memory utilization trend over the last 30 days."
+          },
+          {
+            "class":"Png",
+            "path":"section3.3_chart.png",
+            "width":400,
+            "height":260,
+            "fixedSize":true
+          },
+          {
+            "class":"Text",
+            "text":"The table below shows the 30 day Memory summary data values."
+          },
+          {
+            "class":"FSTable",
+            "start":10,
+            "size":40
+          },
+          {
+            "class":"Text",
+            "text":"NOTE: A temporary system issue is preventing the collection of memory information. This has been resolved and will display in subsequent periods."
+          },
+          {
+            "class": "Text",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          }
+        ]
+      },
+      {
+        "name":"Section_3_4",
+        "heading":{
+          "class":"Text",
+          "text":"3.4  Disk Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The table below shows the current disk utilization and free disk values of the devices."
+          },
+          {
+            "class":"Png",
+            "path":"section3.3_table.png",
+            "width":400,
+            "height":150,
+            "fixedSize":true
+          },
+          {
+            "class":"Text",
+            "text":"Recommendations",
+            "bold":true
+          },
+          {
+            "class":"Text",
+            "text":"High disk utilization, or reduced free disk trends may be a result of device logging and log data storage; it is recommended to review logging configuration and retention policy."
+          },
+          {
+            "class": "Text",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Section_4",
+    "heading":{
+      "class":"Text",
+      "text":"4  Interface Performance",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Text",
+        "text":"The data in this section represents the devices network interface behavior"
+      }
+    ],
+    "subSections":[
+      {
+        "name":"Section_4_1",
+        "heading":{
+          "class":"Text",
+          "text":"4.1  Interface Down Alerts",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The graphs below illustrate the interface down alert events trends over the last 30 days"
+          },
+          {
+            "class":"Png",
+            "path":"section4.1_chart.png",
+            "width":400,
+            "height":200,
+            "fixedSize":true
+          },
+          {
+            "class":"Text",
+            "text":"The table below shows the total interface down events per device over the last 30 days"
+          },
+          {
+            "class":"FSTable"
+          }
+        ]
+      },
+      {
+        "name":"Section_4_2",
+        "heading":{
+          "class":"Text",
+          "text":"4.2  Interface Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The table below illustrates the interfaces average In and Out utilization and average send and received bit rate values over the last 30 days."
+          },
+          {
+            "class":"Png",
+            "path":"section4.2_chart1.png",
+            "width":400,
+            "height":200,
+            "fixedSize":true
+          },
+          {
+            "class":"Png",
+            "path":"section4.2_chart2.png",
+            "width":400,
+            "height":200,
+            "fixedSize":true
+          },
+          {
+            "class":"Png",
+            "path":"section4.2_chart3.png",
+            "width":400,
+            "height":200,
+            "fixedSize":true
+          },
+          {
+            "class":"Png",
+            "path":"section4.2_chart4.png",
+            "width":400,
+            "height":200,
+            "fixedSize":true
+          },
+          {
+            "class":"Png",
+            "path":"section4.2_chart5.png",
+            "width":400,
+            "height":200,
+            "fixedSize":true
+          },
+          {
+            "class":"Text",
+            "text":"Recommendations",
+            "bold":true
+          },
+          {
+            "class":"Text",
+            "text":"If any device has a reported uptime of less than 30 days and no downtime was planned ins  previous report, then it is recommended to review events such as hardware freezes, HA failover, and reboots by reviewing the following logs: crashlogs, comlogs."
+          },
+          {
+            "class":"Text",
+            "text":"Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          }
+        ]
+      }
+
+    ]
+  },
+  {
+    "name": "Section_5",
+    "heading":{
+      "class":"Text",
+      "text":"5  Firewall Session Counts",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Text",
+        "text":"The table below illustrates lowest, average and maximum firewall session counts for each firewall device measured over the 30 day period"
+      },
+      {
+        "class":"FSTable",
+        "start":20,
+        "size":5
+      },
+      {
+        "class":"Text",
+        "text":"Recommendations",
+        "bold":true
+      },
+      {
+        "class":"Text",
+        "text":"If any device has a reported uptime of less than 30 days and no downtime was planned ins  previous report, then it is recommended to review events such as hardware freezes, HA failover, and reboots by reviewing the following logs: crashlogs, comlogs."
+      },
+      {
+        "class":"Text",
+        "text":"Observations",
+        "bold":true,
+        "size":10,
+        "topPadding":3,
+        "bottomPadding":10,
+        "bgColorHex":"#b3d6f2"
+      }
+    ],
+    "subSections":[
+    ]
+  },
+  {
+    "name": "Section_6",
+    "heading":{
+      "class":"Text",
+      "text":"6  High Availability Performance",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Text",
+        "path":"section6_text.txt"
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 20
+      },
+      {
+        "class":"Text",
+        "text":"Recommendations",
+        "bold":true
+      },
+      {
+        "class":"Text",
+        "text":"If any device has a reported uptime of less than 30 days and no downtime was planned ins  previous report, then it is recommended to review events such as hardware freezes, HA failover, and reboots by reviewing the following logs: crashlogs, comlogs."
+      },
+      {
+        "class":"Text",
+        "text":"Observations",
+        "bold":true,
+        "size":10,
+        "topPadding":3,
+        "bottomPadding":10,
+        "bgColorHex":"#b3d6f2"
+      }
+    ],
+    "subSections":[
+    ]
+  },
+  {
+    "name": "Section_7",
+    "heading":{
+      "class":"Text",
+      "text":"7  Other Device Environmental Warnings",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Text",
+        "path":"section7_text.txt"
+      }
+    ],
+    "subSections":[
+    ]
+  },
+  {
+    "name": "Section_8",
+    "heading":{
+      "class":"Text",
+      "text":"8  Country Current Threat Intelligence",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Text",
+        "text":"This section provides a summary of the Fortinet Threat Intelligence most relevant to the device location geography for the last 30 day period"
+      },
+      {
+        "class":"Png",
+        "path":"section8_chart.png",
+        "width":400,
+        "height":400,
+        "fixedSize":true
+      }
+    ],
+    "subSections":[
+    ]
+  },
+  {
+    "name": "Section_9",
+    "heading":{
+      "class":"Text",
+      "text":"9  Security Observations",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Text",
+        "text":"This section provides a summary of the security issues detected by the Fortinet devices over the last 30 days."
+      }
+    ],
+    "subSections":[
+      {
+        "name":"Section_9_1",
+        "heading":{
+          "class":"Text",
+          "text":"9.1  Top 10 Malware Detected",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"-No Event Data received this period.-"
+          }
+        ]
+      },
+      {
+        "name":"Section_9_2",
+        "heading":{
+          "class":"Text",
+          "text":"9.2  Top Devices by Malware Events",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"-No Event Data received this period.-"
+          }
+        ]
+      }
+
+    ]
+  }
+]

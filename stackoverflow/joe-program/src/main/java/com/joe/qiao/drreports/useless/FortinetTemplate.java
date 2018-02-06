@@ -1,8 +1,6 @@
-package com.joe.qiao.drreports;
+package com.joe.qiao.drreports.useless;
 
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import net.sf.dynamicreports.jasper.builder.JasperReportBuilder;
 import net.sf.dynamicreports.jasper.builder.export.JasperPdfExporterBuilder;
 import net.sf.dynamicreports.report.builder.component.*;

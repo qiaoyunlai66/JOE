@@ -1,0 +1,48 @@
+{
+  "vehicles": [
+    "java.util.ArrayList",
+    [
+      [
+        "com.joe.qiao.tools.json.transferinterface.Car",
+        {
+          "make": "Mercedes-Benz",
+          "model": "S500",
+          "seatingCapacity": 5,
+          "topSpeed": 250.0,
+          "name": null
+        }
+      ],
+      [
+        "com.joe.qiao.tools.json.transferinterface.Truck",
+        {
+          "make": "Isuzu",
+          "model": "NQR",
+          "payloadCapacity": 7500.0
+        }
+      ]
+    ]
+  ],
+  "top": [
+    "java.util.ArrayList",
+    [
+      [
+        "com.joe.qiao.tools.json.transferinterface.Car",
+        {
+          "make": "Mercedes-Benz",
+          "model": "S500",
+          "seatingCapacity": 5,
+          "topSpeed": 250.0,
+          "name": null
+        }
+      ],
+      [
+        "com.joe.qiao.tools.json.transferinterface.Truck",
+        {
+          "make": "Isuzu",
+          "model": "NQR",
+          "payloadCapacity": 7500.0
+        }
+      ]
+    ]
+  ]
+}

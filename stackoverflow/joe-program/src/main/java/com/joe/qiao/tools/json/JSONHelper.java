@@ -5,11 +5,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.apache.commons.lang.StringUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Joe Qiao on 19/12/2017.
@@ -116,5 +117,18 @@ public class JSONHelper {
         }
         T obj = new Gson().fromJson(json, clazz);
         return obj;
+    }
+
+    public static Map<String, String> getMapFromJson(String json, String keyName, String valName) throws Exception {
+        Map<String, String> ret = new HashMap<>();
+        if(StringUtils.isEmpty(json)){
+            return ret;
+        }
+        JSONArray jsonArray=new JSONArray(json);
+        for(Iterator it = jsonArray.iterator(); it.hasNext();){
+            JSONObject jsonObejct= (JSONObject) it.next();
+            ret.put(jsonObejct.get(keyName).toString(),jsonObejct.get(valName).toString());
+        }
+        return ret;
     }
 }

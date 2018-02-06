@@ -1,29 +1,49 @@
 package com.joe.qiao.tools.fileparser;
 
+import jdk.management.resource.ResourceType;
+
 import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 
 /**
  * Created by Joe Qiao on 04/01/2018.
  */
 public class FileReaderHelper {
-    
-    //current class load path
-    public static String parseCurrentClassLoaderFile(String fileName, Class targetClass) throws URISyntaxException, IOException {
+
+    /**
+     * @param fileName
+     *        like "fileName.extension" under resources corresponding to targetClass path
+     *        read from current class path
+     * @param targetClass
+     * @return
+     * @throws URISyntaxException
+     * @throws IOException
+     */
+    public static String getFromCurrentClassPath(String fileName, Class targetClass) throws URISyntaxException, IOException {
         //get current class load path
-        System.out.println("current class load path: "+targetClass.getResource("").getPath());
-        URI uri = targetClass.getResource(fileName).toURI();
+        URL url = targetClass.getResource(fileName);
+        System.out.println("read from: "+url.getPath());
+        URI uri = url.toURI();
         File file = new File(uri);
         return readFile(file);
     }
 
-    //current classpath
-    public static String parseCurrentClassLoaderFile(String path) throws URISyntaxException, IOException {
-        //get classpath
+    /**
+     * @param fileName
+     *          like "fileName.extension","section.json" or "jsonAnnotationParser.json" under resources
+     *          read from class root path
+     * @return
+     * @throws URISyntaxException
+     * @throws IOException
+     */
+    public static String getFromClassRootPath(String fileName) throws URISyntaxException, IOException {
+        //get class root path
         ClassLoader clazzLoader=FileReaderHelper.class.getClassLoader();
-        System.out.println("classpath path： "+clazzLoader.getResource("").getPath());
-        URI uri = clazzLoader.getResource(path).toURI();
+        URL url = clazzLoader.getResource(fileName);
+        System.out.println("read from： "+url.getPath());
+        URI uri = url.toURI();
         File file = new File(uri);
         return readFile(file);
       
@@ -37,8 +57,13 @@ public class FileReaderHelper {
         File file = new File(path);
         return readFile(file);
     }
-    
-    //read a file to String
+
+    /**
+     * read a file to String
+     * @param file
+     * @return
+     * @throws IOException
+     */
     private static String readFile(File file) throws IOException {
         FileReader fd=new FileReader(file);
         StringBuilder sb = new StringBuilder();

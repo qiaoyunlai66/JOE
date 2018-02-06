@@ -1,6 +1,7 @@
 package com.joe.qiao.cw.incbean;
 
-import org.codehaus.jackson.annotate.JsonProperty;
+
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
  * Created by Joe Qiao on 2017/5/3.
@@ -97,7 +98,7 @@ public class Note {
     public void setExternalFlag(Boolean externalFlag) {
         this.externalFlag = externalFlag;
     }
-    @JsonProperty("_info")
+    @JsonPropertyOrder ("_info")
     public Note getNote() {
         return note;
     }

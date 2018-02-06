@@ -1,0 +1,918 @@
+[
+  {
+    "tocFirstLevelStyle": {
+      "bold": true,
+      "size": 20,
+      "colorHex": "#0e5891",
+      "padding": 20
+    },
+    "tocSecondLevelStyle": {
+      "bold": true,
+      "size": 18,
+      "colorHex": "#0e5891",
+      "leftPadding": 20
+    },
+    "documentTextStyle": {
+      "size": 10,
+      "padding": 1
+    },
+    "sectionPackage":"com.joe.qiao.drreports.section",
+    "elementPackage":"com.joe.qiao.drreports.element"
+  },
+  {
+    "name":"CoverPage",
+    "elements": [
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 80,
+        "horizontalGap": 40
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.PngElement",
+        "path": "/Users/qiaoyunlai/opt/test/image/fortinet.png",
+        "width": 160,
+        "height": 32,
+        "fixedSize": true,
+        "horizontal": "LEFT"
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 10
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.PngElement",
+        "path": "/Users/qiaoyunlai/opt/test/image/cover.png",
+        "width": 550,
+        "height": 400,
+        "fixedSize": true
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 70
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.TextElement",
+        "text": "Monthly Report October 2017",
+        "bold": true,
+        "italic": false,
+        "size": 16,
+        "colorHex": "#8d9161",
+        "leftPadding": 40
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 40
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.TextElement",
+        "text": "Prepared for",
+        "bold": false,
+        "italic": false,
+        "size": 10,
+        "leftPadding": 40
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 40
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.TextElement",
+        "text": "Fourteen Foods, United States of America",
+        "bold": true,
+        "italic": false,
+        "size": 10,
+        "colorHex": "#8d9161",
+        "leftPadding": 40
+      }
+    ]
+  },
+  {
+    "name":"Section_1",
+    "heading":{
+      "class":"com.joe.qiao.drreports.element.TextElement",
+      "text":"1  FortiCare 360 Monthly report",
+      "tocLevel":"FIRST"
+    },
+    "class":"com.joe.qiao.drreports.section.TOCSectional",
+    "elements":[
+
+    ],
+    "subSections":[
+      {
+        "name":"Section_1_1",
+        "heading":{
+          "class":"com.joe.qiao.drreports.element.TextElement",
+          "text":"1.1  Purpose",
+          "tocLevel":"SECOND"
+        },
+        "class":"com.joe.qiao.drreports.section.TOCSectional",
+        "elements":[
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/desc1_1.txt",
+            "leftPadding":20,
+            "rightPadding":20
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PdfElement",
+            "path": "/Users/qiaoyunlai/opt/test/image/pdffile.pdf",
+            "width" : 400,
+            "height": 600,
+            "fixedSize":true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Section_2",
+    "heading":{
+      "class":"com.joe.qiao.drreports.element.TextElement",
+      "text":"2  Analysis Details",
+      "tocLevel":"FIRST"
+    },
+    "class": "com.joe.qiao.drreports.section.TOCSectional",
+    "elements":[
+      {
+        "class": "com.joe.qiao.drreports.element.KeyValueNestElement",
+        "map": {
+          "Customer":"Fourteen Foods",
+          "Location":"AMER-PUBLISH - USA",
+          "Analysis Start Date":"1st October 2017",
+          "Duration":"30 Days",
+          "Number of Monitored Sites":"1",
+          "Number of FortiCare 360 Collectors":"1",
+          "Number of Contracted Fortinet Devices":"11"
+        }
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 10
+      }
+    ],
+    "subSections":[
+      {
+        "name":"Section_2_1",
+         "heading":{
+           "class":"com.joe.qiao.drreports.element.TextElement",
+           "text":"2.1  Device Inventory Hardware Details",
+           "tocLevel":"SECOND"
+         },
+        "class":"com.joe.qiao.drreports.section.TOCSectional",
+        "elements":[
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "The devices under management are as follows:"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.GapElement",
+            "horizontalGap": 10
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/section2_1.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Recommendations",
+            "bold":true,
+            "size":10,
+            "topPadding":3
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.GapElement",
+            "verticalGap": 10
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/desc2_1_recommend.txt",
+            "padding":1,
+            "leftPadding":4
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.GapElement",
+            "verticalGap": 10,
+            "horizontalGap":40
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/sec_2_1_observation.txt",
+            "size":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/image/section2_1_obs.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          }
+        ]
+        },
+      {
+        "name":"Section_2_2",
+        "heading":{
+          "class":"com.joe.qiao.drreports.element.TextElement",
+          "text":"2.2  Device Inventory Software Details",
+          "tocLevel":"SECOND"
+        },
+        "class":"com.joe.qiao.drreports.section.TOCSectional",
+        "elements":[
+          {
+            "class":"com.joe.qiao.drreports.element.TextElement",
+            "text":"The software versions of the devices under management are as follows:"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/2_2.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/2_2_remediation.txt"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/sec_2_1_observation.txt",
+            "size":10,
+            "bgColorHex":"#b3d6f2"
+          }
+        ]
+      }
+      
+    ]
+  },
+  {
+    "name": "Section_3",
+    "heading":{
+      "class":"com.joe.qiao.drreports.element.TextElement",
+      "text":"3  Device Utilization",
+      "tocLevel":"FIRST"
+    },
+    "class": "com.joe.qiao.drreports.section.TOCSectional",
+    "elements":[
+      {
+        "class": "com.joe.qiao.drreports.element.KeyValueNestElement",
+        "map": {
+          "Customer":"Fourteen Foods",
+          "Location":"AMER-PUBLISH - USA",
+          "Analysis Start Date":"1st October 2017",
+          "Duration":"30 Days",
+          "Number of Monitored Sites":"1",
+          "Number of FortiCare 360 Collectors":"1",
+          "Number of Contracted Fortinet Devices":"11"
+        }
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 10
+      }
+    ],
+    "subSections":[
+      {
+        "name":"Section_3_1",
+        "heading":{
+          "class":"com.joe.qiao.drreports.element.TextElement",
+          "text":"3.1  Device Uptime",
+          "tocLevel":"SECOND"
+        },
+        "class":"com.joe.qiao.drreports.section.TOCSectional",
+        "elements":[
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "The devices under management are as follows:"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.GapElement",
+            "horizontalGap": 10
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/section2_1.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Recommendations",
+            "bold":true,
+            "size":10,
+            "topPadding":3
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.GapElement",
+            "verticalGap": 10
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/desc2_1_recommend.txt",
+            "padding":1,
+            "leftPadding":4
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.GapElement",
+            "verticalGap": 10,
+            "horizontalGap":40
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/sec_2_1_observation.txt",
+            "size":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/image/section2_1_obs.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          }
+        ]
+      },
+      {
+        "name":"Section_3_2",
+        "heading":{
+          "class":"com.joe.qiao.drreports.element.TextElement",
+          "text":"3.2  CPU Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"com.joe.qiao.drreports.section.TOCSectional",
+        "elements":[
+          {
+            "class":"com.joe.qiao.drreports.element.TextElement",
+            "text":"The software versions of the devices under management are as follows:"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/2_2.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/2_2_remediation.txt"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/sec_2_1_observation.txt",
+            "size":10,
+            "bgColorHex":"#b3d6f2"
+          }
+        ]
+      },
+      {
+        "name":"Section_3_3",
+        "heading":{
+          "class":"com.joe.qiao.drreports.element.TextElement",
+          "text":"3.3  Memory Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"com.joe.qiao.drreports.section.TOCSectional",
+        "elements":[
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "The devices under management are as follows:"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.GapElement",
+            "horizontalGap": 10
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/section2_1.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Recommendations",
+            "bold":true,
+            "size":10,
+            "topPadding":3
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.GapElement",
+            "verticalGap": 10
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/desc2_1_recommend.txt",
+            "padding":1,
+            "leftPadding":4
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.GapElement",
+            "verticalGap": 10,
+            "horizontalGap":40
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/sec_2_1_observation.txt",
+            "size":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/image/section2_1_obs.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          }
+        ]
+      },
+      {
+        "name":"Section_3_4",
+        "heading":{
+          "class":"com.joe.qiao.drreports.element.TextElement",
+          "text":"3.4  Disk Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"com.joe.qiao.drreports.section.TOCSectional",
+        "elements":[
+          {
+            "class":"com.joe.qiao.drreports.element.TextElement",
+            "text":"The software versions of the devices under management are as follows:"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/2_2.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/2_2_remediation.txt"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/sec_2_1_observation.txt",
+            "size":10,
+            "bgColorHex":"#b3d6f2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Section_4",
+    "heading":{
+      "class":"com.joe.qiao.drreports.element.TextElement",
+      "text":"4  Interface Performance",
+      "tocLevel":"FIRST"
+    },
+    "class": "com.joe.qiao.drreports.section.TOCSectional",
+    "elements":[
+      {
+        "class": "com.joe.qiao.drreports.element.KeyValueNestElement",
+        "map": {
+          "Customer":"Fourteen Foods",
+          "Location":"AMER-PUBLISH - USA",
+          "Analysis Start Date":"1st October 2017",
+          "Duration":"30 Days",
+          "Number of Monitored Sites":"1",
+          "Number of FortiCare 360 Collectors":"1",
+          "Number of Contracted Fortinet Devices":"11"
+        }
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 10
+      }
+    ],
+    "subSections":[
+      {
+        "name":"Section_4_1",
+        "heading":{
+          "class":"com.joe.qiao.drreports.element.TextElement",
+          "text":"4.1  Interface Down Alerts",
+          "tocLevel":"SECOND"
+        },
+        "class":"com.joe.qiao.drreports.section.TOCSectional",
+        "elements":[
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "The devices under management are as follows:"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.GapElement",
+            "horizontalGap": 10
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/section2_1.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Recommendations",
+            "bold":true,
+            "size":10,
+            "topPadding":3
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.GapElement",
+            "verticalGap": 10
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/desc2_1_recommend.txt",
+            "padding":1,
+            "leftPadding":4
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.GapElement",
+            "verticalGap": 10,
+            "horizontalGap":40
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/sec_2_1_observation.txt",
+            "size":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/image/section2_1_obs.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          }
+        ]
+      },
+      {
+        "name":"Section_4_2",
+        "heading":{
+          "class":"com.joe.qiao.drreports.element.TextElement",
+          "text":"4.2  Interface Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"com.joe.qiao.drreports.section.TOCSectional",
+        "elements":[
+          {
+            "class":"com.joe.qiao.drreports.element.TextElement",
+            "text":"The software versions of the devices under management are as follows:"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/2_2.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/2_2_remediation.txt"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/sec_2_1_observation.txt",
+            "size":10,
+            "bgColorHex":"#b3d6f2"
+          }
+        ]
+      }
+
+    ]
+  },
+  {
+    "name": "Section_5",
+    "heading":{
+      "class":"com.joe.qiao.drreports.element.TextElement",
+      "text":"5  Firewall Session Counts",
+      "tocLevel":"FIRST"
+    },
+    "class": "com.joe.qiao.drreports.section.TOCSectional",
+    "elements":[
+      {
+        "class": "com.joe.qiao.drreports.element.KeyValueNestElement",
+        "map": {
+          "Customer":"Fourteen Foods",
+          "Location":"AMER-PUBLISH - USA",
+          "Analysis Start Date":"1st October 2017",
+          "Duration":"30 Days",
+          "Number of Monitored Sites":"1",
+          "Number of FortiCare 360 Collectors":"1",
+          "Number of Contracted Fortinet Devices":"11"
+        }
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 10
+      }
+    ],
+    "subSections":[
+    ]
+  },
+  {
+    "name": "Section_6",
+    "heading":{
+      "class":"com.joe.qiao.drreports.element.TextElement",
+      "text":"6  High Availability Performance",
+      "tocLevel":"FIRST"
+    },
+    "class": "com.joe.qiao.drreports.section.TOCSectional",
+    "elements":[
+      {
+        "class": "com.joe.qiao.drreports.element.KeyValueNestElement",
+        "map": {
+          "Customer":"Fourteen Foods",
+          "Location":"AMER-PUBLISH - USA",
+          "Analysis Start Date":"1st October 2017",
+          "Duration":"30 Days",
+          "Number of Monitored Sites":"1",
+          "Number of FortiCare 360 Collectors":"1",
+          "Number of Contracted Fortinet Devices":"11"
+        }
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 10
+      }
+    ],
+    "subSections":[
+    ]
+  },
+  {
+    "name": "Section_7",
+    "heading":{
+      "class":"com.joe.qiao.drreports.element.TextElement",
+      "text":"7  Other Device Environmental Warnings",
+      "tocLevel":"FIRST"
+    },
+    "class": "com.joe.qiao.drreports.section.TOCSectional",
+    "elements":[
+      {
+        "class": "com.joe.qiao.drreports.element.KeyValueNestElement",
+        "map": {
+          "Customer":"Fourteen Foods",
+          "Location":"AMER-PUBLISH - USA",
+          "Analysis Start Date":"1st October 2017",
+          "Duration":"30 Days",
+          "Number of Monitored Sites":"1",
+          "Number of FortiCare 360 Collectors":"1",
+          "Number of Contracted Fortinet Devices":"11"
+        }
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 10
+      }
+    ],
+    "subSections":[
+    ]
+  },
+  {
+    "name": "Section_8",
+    "heading":{
+      "class":"com.joe.qiao.drreports.element.TextElement",
+      "text":"8  Country Current Threat Intelligence",
+      "tocLevel":"FIRST"
+    },
+    "class": "com.joe.qiao.drreports.section.TOCSectional",
+    "elements":[
+      {
+        "class": "com.joe.qiao.drreports.element.KeyValueNestElement",
+        "map": {
+          "Customer":"Fourteen Foods",
+          "Location":"AMER-PUBLISH - USA",
+          "Analysis Start Date":"1st October 2017",
+          "Duration":"30 Days",
+          "Number of Monitored Sites":"1",
+          "Number of FortiCare 360 Collectors":"1",
+          "Number of Contracted Fortinet Devices":"11"
+        }
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 10
+      }
+    ],
+    "subSections":[
+    ]
+  },
+  {
+    "name": "Section_9",
+    "heading":{
+      "class":"com.joe.qiao.drreports.element.TextElement",
+      "text":"9  Security Observations",
+      "tocLevel":"FIRST"
+    },
+    "class": "com.joe.qiao.drreports.section.TOCSectional",
+    "elements":[
+      {
+        "class": "com.joe.qiao.drreports.element.KeyValueNestElement",
+        "map": {
+          "Customer":"Fourteen Foods",
+          "Location":"AMER-PUBLISH - USA",
+          "Analysis Start Date":"1st October 2017",
+          "Duration":"30 Days",
+          "Number of Monitored Sites":"1",
+          "Number of FortiCare 360 Collectors":"1",
+          "Number of Contracted Fortinet Devices":"11"
+        }
+      },
+      {
+        "class": "com.joe.qiao.drreports.element.GapElement",
+        "verticalGap": 10
+      }
+    ],
+    "subSections":[
+      {
+        "name":"Section_9_1",
+        "heading":{
+          "class":"com.joe.qiao.drreports.element.TextElement",
+          "text":"9.1  Top 10 Malware Detected",
+          "tocLevel":"SECOND"
+        },
+        "class":"com.joe.qiao.drreports.section.TOCSectional",
+        "elements":[
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "The devices under management are as follows:"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.GapElement",
+            "horizontalGap": 10
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/section2_1.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Recommendations",
+            "bold":true,
+            "size":10,
+            "topPadding":3
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.GapElement",
+            "verticalGap": 10
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/desc2_1_recommend.txt",
+            "padding":1,
+            "leftPadding":4
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.GapElement",
+            "verticalGap": 10,
+            "horizontalGap":40
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/sec_2_1_observation.txt",
+            "size":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/image/section2_1_obs.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          }
+        ]
+      },
+      {
+        "name":"Section_9_2",
+        "heading":{
+          "class":"com.joe.qiao.drreports.element.TextElement",
+          "text":"9.2  Top Devices by Malware Events",
+          "tocLevel":"SECOND"
+        },
+        "class":"com.joe.qiao.drreports.section.TOCSectional",
+        "elements":[
+          {
+            "class":"com.joe.qiao.drreports.element.TextElement",
+            "text":"The software versions of the devices under management are as follows:"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.PngElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/2_2.png",
+            "width": 500,
+            "height": 160,
+            "fixedSize": true
+          },
+          {
+            "class":"com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/2_2_remediation.txt"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "text": "Observations",
+            "bold":true,
+            "size":10,
+            "topPadding":3,
+            "bottomPadding":10,
+            "bgColorHex":"#b3d6f2"
+          },
+          {
+            "class": "com.joe.qiao.drreports.element.TextElement",
+            "path": "/Users/qiaoyunlai/opt/test/res/sec_2_1_observation.txt",
+            "size":10,
+            "bgColorHex":"#b3d6f2"
+          }
+        ]
+      }
+
+    ]
+  }
+
+]

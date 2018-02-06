@@ -1,4 +1,4 @@
-package com.joe.qiao.drreports;
+package com.joe.qiao.drreports.global;
 
 import com.sun.pdfview.PDFFile;
 import com.sun.pdfview.PDFPage;
@@ -15,7 +15,6 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.ReadableByteChannel;
 import java.util.ArrayList;
 import java.util.List;
-import javax.imageio.ImageIO;
 
 public class PDFToImageConverter {
 
