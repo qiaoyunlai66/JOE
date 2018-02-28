@@ -1,4 +1,4 @@
-package com.joe.qiao.datastructure;
+package com.joe.qiao.main.datastructure;
 
 /**
  * Created by Joe Qiao on 05/01/2018.

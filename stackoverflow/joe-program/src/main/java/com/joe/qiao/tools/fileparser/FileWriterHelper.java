@@ -129,7 +129,7 @@ public class FileWriterHelper {
      * @return
      * @throws IOException
      */
-    private static boolean objectWrite(File file, Object o) throws IOException {
+    public static boolean objectWrite(File file, Object o) throws IOException {
         FileOutputStream fileOutputStream=null;
         ObjectOutputStream objectOutputStream = null;
         try {

@@ -11,6 +11,8 @@ public class BikeMixin {
     private String name;
     @JsonIgnore
     private String value;
+    
+    private String mixin;
 
     public String getName() {
         return name;
@@ -26,5 +28,13 @@ public class BikeMixin {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public String getMixin() {
+        return mixin;
+    }
+
+    public void setMixin(String mixin) {
+        this.mixin = mixin;
     }
 }

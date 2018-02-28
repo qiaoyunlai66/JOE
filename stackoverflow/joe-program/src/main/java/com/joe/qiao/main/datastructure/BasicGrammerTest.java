@@ -1,4 +1,4 @@
-package com.joe.qiao.datastructure;
+package com.joe.qiao.main.datastructure;
 
 import com.joe.qiao.drreports.global.TOCLevel;
 

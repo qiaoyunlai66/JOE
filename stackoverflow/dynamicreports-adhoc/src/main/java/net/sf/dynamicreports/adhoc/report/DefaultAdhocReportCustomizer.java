@@ -190,7 +190,7 @@ public class DefaultAdhocReportCustomizer implements AdhocReportCustomizer {
 	protected DRIExpression<?> getFieldExpression(String name) {
 		DRIDataType<?, ?> type = getFieldType(name);
 		if (type != null) {
-			return DynamicReports.field(name, type).build();
+			//return DynamicReports.field(name, type).build();
 		}
 		return DynamicReports.field(name, Object.class).build();
 	}

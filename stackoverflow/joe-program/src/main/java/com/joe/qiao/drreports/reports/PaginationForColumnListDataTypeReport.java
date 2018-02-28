@@ -26,7 +26,6 @@ import com.joe.qiao.drreports.global.JRBeanCollectionPaginationDataSource;
 import net.sf.dynamicreports.examples.Templates;
 import net.sf.dynamicreports.report.exception.DRException;
 import net.sf.jasperreports.engine.JRDataSource;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,9 +35,9 @@ import static net.sf.dynamicreports.report.builder.DynamicReports.*;
 /**
  * @author Joe Qiao
  */
-public class ColumnListDataTypeReport {
+public class PaginationForColumnListDataTypeReport {
 
-	public ColumnListDataTypeReport() {
+	public PaginationForColumnListDataTypeReport() {
 		build();
 	}
 
@@ -134,6 +133,6 @@ public class ColumnListDataTypeReport {
 	}
 
 	public static void main(String[] args) {
-		new ColumnListDataTypeReport();
+		new PaginationForColumnListDataTypeReport();
 	}
 }

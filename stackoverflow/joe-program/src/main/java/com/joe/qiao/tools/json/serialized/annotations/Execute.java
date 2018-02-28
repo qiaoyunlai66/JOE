@@ -22,10 +22,10 @@ public class Execute {
     public static void main(String[] args) {
         Execute e = new Execute();
       //  e.testAnnotation();
-       // e.testMixin();
+        e.testMixin();
        // e.testAnnotationIntrospector();
        // e.noArgConstructorTest();
-        e.testList();
+        //e.testList();
     }
     private void testAnnotation(){
         Car car = new Car("Mercedes-Benz", "S500", 5, 250.0);

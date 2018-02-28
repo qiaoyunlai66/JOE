@@ -1,4 +1,4 @@
-package com.joe.qiao.operator;
+package com.joe.qiao.main.operator;
 
 /**
  * Created by Joe Qiao on 06/01/2018.

@@ -36,7 +36,9 @@
 		<module>dynamicreports-googlecharts</module>
 		<module>dynamicreports-examples</module>
         <module>joe-program</module>
-	</modules>
+        <module>joe-web</module>
+        <module>phoenix-web</module>
+    </modules>
  
 	<developers>
 		<developer>
