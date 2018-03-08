@@ -12,7 +12,7 @@ import static net.sf.dynamicreports.report.builder.DynamicReports.cmp;
  * @author Joe Qiao
  * @Date 05/02/2018.
  */
-public class HorizonalBuilder implements Element{
+public class HorizontalElement implements Element{
     List<Element> elements;
     @Override
     public ComponentBuilder build() {

@@ -1,10 +1,14 @@
 package com.joe.qiao.drreports.section;
 
+import com.joe.qiao.drreports.bean.PageMargin;
 import com.joe.qiao.drreports.bean.TOCCustomizeBean;
 import com.joe.qiao.drreports.core.Sectional;
 import com.joe.qiao.drreports.global.DRStyle;
 import com.joe.qiao.drreports.global.GlobalContext;
 import com.joe.qiao.drreports.global.TOCCustomize;
+import net.sf.dynamicreports.report.builder.MarginBuilder;
+
+import static net.sf.dynamicreports.report.builder.DynamicReports.margin;
 
 /**
  * @author Joe Qiao
@@ -17,6 +21,8 @@ public class GlobalStyleSectional implements Sectional{
     private DRStyle pngStyle;
     private String globalPath;
     private TOCCustomizeBean tocCustomize;
+    private PageMargin pageMargin;
+
     @Override
     public boolean integrate() {
         if(tocFirstLevelStyle!=null){
@@ -30,6 +36,22 @@ public class GlobalStyleSectional implements Sectional{
         }
         if(pngStyle!=null){
             GlobalContext.getGlobalContext().setPngStyle(pngStyle.getStyle());
+        }
+        if(pageMargin!=null){
+            MarginBuilder marginBuilder = margin();
+            if(pageMargin.getBottom()!=null){
+                marginBuilder.setBottom(pageMargin.getBottom());
+            }
+            if(pageMargin.getLeft()!=null){
+                marginBuilder.setLeft(pageMargin.getLeft());
+            }
+            if(pageMargin.getRight()!=null){
+                marginBuilder.setRight(pageMargin.getRight());
+            }
+            if(pageMargin.getTop()!=null){
+                marginBuilder.setTop(pageMargin.getTop());
+            }
+            GlobalContext.getGlobalContext().setPageMarginBuilder(marginBuilder);
         }
         GlobalContext.getGlobalContext().setGlobalPath(globalPath);
         GlobalContext.getGlobalContext().setTocCustomize(new TOCCustomize(tocCustomize));
@@ -81,5 +103,13 @@ public class GlobalStyleSectional implements Sectional{
 
     public void setPngStyle(DRStyle pngStyle) {
         this.pngStyle = pngStyle;
+    }
+
+    public PageMargin getPageMargin() {
+        return pageMargin;
+    }
+
+    public void setPageMargin(PageMargin pageMargin) {
+        this.pageMargin = pageMargin;
     }
 }

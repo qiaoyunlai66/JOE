@@ -31,7 +31,7 @@ public class TextElement implements Element {
     private Integer topPadding;
     private Integer bottomPadding;
     private TOCLevel tocLevel;
-    private String tocLable;
+    private String tocLabel;
     @Override
     public ComponentBuilder build() {
         TextFieldBuilder textBuilder = null;
@@ -58,8 +58,8 @@ public class TextElement implements Element {
                             break;
             }
             textBuilder.setTableOfContentsHeading(tocLevel.getLevel());
-            if(tocLable!=null){
-                tocLevel.getLevel().setLabel(tocLable);
+            if(tocLabel !=null){
+                tocLevel.getLevel().setLabel(tocLabel);
             }
         }else{
             styleBuilder.setParentStyle(GlobalContext.getGlobalContext().getDocumentTextStyle());
@@ -150,12 +150,12 @@ public class TextElement implements Element {
         this.tocLevel = tocLevel;
     }
 
-    public String getTocLable() {
-        return tocLable;
+    public String getTocLabel() {
+        return tocLabel;
     }
 
-    public void setTocLable(String tocLable) {
-        this.tocLable = tocLable;
+    public void setTocLabel(String tocLabel) {
+        this.tocLabel = tocLabel;
     }
 
     public String getBgColorHex() {

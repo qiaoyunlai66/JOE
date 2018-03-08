@@ -3,6 +3,8 @@ package com.joe.qiao.drreports.core;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.joe.qiao.drreports.element.*;
+import com.joe.qiao.drreports.element.image.PdfElement;
+import com.joe.qiao.drreports.element.image.PngElement;
 import net.sf.dynamicreports.report.builder.component.ComponentBuilder;
 
 /**
@@ -23,7 +25,9 @@ import net.sf.dynamicreports.report.builder.component.ComponentBuilder;
         @JsonSubTypes.Type(value = PdfElement.class, name = "Pdf"),
         @JsonSubTypes.Type(value = TextElement.class, name = "Text"),
         @JsonSubTypes.Type(value = FSTableElement.class, name = "FSTable"),
-        @JsonSubTypes.Type(value = FSChartElement.class, name = "FSChart")
+        @JsonSubTypes.Type(value = FSChartElement.class, name = "FSChart"),
+        @JsonSubTypes.Type(value = VerticalElement.class, name = "Vertical"),
+        @JsonSubTypes.Type(value = HorizontalElement.class, name = "Horizontal")
 })public interface Element {
        ComponentBuilder build();
 }

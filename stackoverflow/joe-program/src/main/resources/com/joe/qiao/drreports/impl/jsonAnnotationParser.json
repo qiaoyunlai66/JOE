@@ -5,21 +5,29 @@
       "bold": true,
       "size": 20,
       "colorHex": "#0e5891",
-      "padding": 20
+      "topPadding":10,
+      "bottomPadding":10
     },
     "tocSecondLevelStyle": {
       "bold": true,
       "size": 18,
       "colorHex": "#0e5891",
-      "leftPadding": 20
+      "topPadding": 20,
+      "bottomPadding":20
     },
     "documentTextStyle": {
       "size": 10,
-      "padding": 3,
       "leftPadding":20
     },
     "pngStyle":{
-      "horizontalImage":"CENTER"
+      "horizontalImage":"CENTER",
+      "showBorder":true
+    },
+    "pageMargin":{
+      "left":35,
+      "right":20,
+      "top":5,
+      "bottom":5
     },
     "tocCustomize":{
       "title":"Contents",
@@ -33,9 +41,11 @@
         "horizontal":"LEFT"
       },
       "tocHeadingStyle":{
+        "size":10,
         "leftPadding":40,
-        "rightPadding":40,
-        "bottomPadding":7
+        "bottomPadding":4,
+        "rightPadding":20,
+        "showBorder":true
       }
     },
     "globalPath":"/Users/qiaoyunlai/opt/test/drpath"
@@ -131,16 +141,20 @@
         "elements":[
           {
             "class": "Text",
-            "path": "desc1_1.txt",
-            "leftPadding":20,
-            "rightPadding":20
+            "path": "desc1_1.txt"
+          },
+          {
+            "class":"Gap",
+            "verticalGap":10
+          },
+          {
+            "class": "Text",
+            "text": "below is a pdf file"
           },
           {
             "class": "Pdf",
             "path": "pdffile.pdf",
-            "width" : 400,
-            "height": 600,
-            "fixedSize":true
+            "height":600
           }
         ]
       }
@@ -157,7 +171,20 @@
     "class": "TOC",
     "elements":[
       {
+        "class":"Gap",
+        "verticalGap":15
+      },
+      {
         "class": "KeyValueNest",
+        "keyStyle":{
+          "showBorder":true,
+          "leftPadding":7,
+          "bold":true
+        },
+        "valueStyle":{
+          "showBorder":true,
+          "leftPadding":7
+        },
         "map": {
           "Customer":"Fourteen Foods",
           "Location":"AMER-PUBLISH - USA",
@@ -170,7 +197,7 @@
       },
       {
         "class": "Gap",
-        "verticalGap": 10
+        "verticalGap": 20
       }
     ],
     "subSections":[
@@ -184,26 +211,27 @@
         "class":"TOC",
         "elements":[
           {
+            "class": "Gap",
+            "verticalGap": 20
+          },
+          {
             "class": "Text",
             "text": "The devices under management are as follows:"
           },
           {
             "class": "Gap",
-            "horizontalGap": 10
+            "verticalGap": 20
           },
           {
             "class": "Png",
             "path": "section2_1.png",
-            "width": 500,
-            "height": 160,
-            "fixedSize": true
+            "height":300
           },
           {
             "class": "Text",
             "text": "Recommendations",
             "bold":true,
-            "size":10,
-            "topPadding":3
+            "size":10
           },
           {
             "class":"Gap",
@@ -211,36 +239,53 @@
           },
           {
             "class": "Text",
-            "path": "desc2_1_recommend.txt",
-            "padding":1,
-            "leftPadding":4
+            "path": "desc2_1_recommend.txt"
           },
           {
             "class":"Gap",
-            "verticalGap": 10,
-            "horizontalGap":40
+            "verticalGap": 10
           },
           {
-            "class": "Text",
-            "text": "Observations",
-            "bold":true,
-            "size":10,
-            "topPadding":3,
-            "bottomPadding":10,
-            "bgColorHex":"#b3d6f2"
+            "class":"Horizontal",
+            "elements":[
+              {
+                "class":"Gap",
+                "horizontalGap":100
+              },
+              {
+                "class":"Vertical",
+                "elements":[
+                  {
+                    "class": "Text",
+                    "text": "Observations",
+                    "bold":true,
+                    "topPadding":3,
+                    "bottomPadding":10
+                  },
+                  {
+                    "class": "Text",
+                    "path": "sec_2_1_observation.txt"
+                  }
+                ],
+                "style":{
+                  "showBorder":true,
+                  "bgColorHex":"#b3d6f2"
+                }
+              }
+            ]
           },
           {
-            "class": "Text",
-            "path": "sec_2_1_observation.txt",
-            "size":10,
-            "bgColorHex":"#b3d6f2"
+            "class":"Gap",
+            "verticalGap":10
           },
           {
             "class": "Png",
             "path": "section2_1_obs.png",
-            "width": 500,
-            "height": 160,
-            "fixedSize": true
+            "height": 200
+          },
+          {
+            "class":"Gap",
+            "verticalGap":20
           }
         ]
         },
@@ -258,37 +303,60 @@
             "text":"The software versions of the devices under management are as follows:"
           },
           {
+            "class":"Gap",
+            "verticalGap":10
+          },
+          {
             "class": "Png",
             "path": "2_2.png",
-            "width": 500,
-            "height": 160,
-            "fixedSize": true
+            "height": 160
+          },
+          {
+            "class":"Text",
+            "text":"Recommendations",
+            "bold":true
+          },
+          {
+            "class":"Gap",
+            "verticalGap":10
           },
           {
             "class":"Text",
             "path": "2_2_remediation.txt"
           },
           {
-            "class": "Text",
-            "text": "Observations",
-            "bold":true,
-            "size":10,
-            "topPadding":3,
-            "bottomPadding":10,
-            "bgColorHex":"#b3d6f2"
-          },
-          {
-            "class": "Text",
-            "path": "sec_2_1_observation.txt",
-            "size":10,
-            "bgColorHex":"#b3d6f2"
+            "class":"Horizontal",
+            "elements":[
+              {
+                "class":"Gap",
+                "horizontalGap":100
+              },
+              {
+                "class":"Vertical",
+                "elements":[
+                  {
+                    "class": "Text",
+                    "text": "Observations",
+                    "bold":true,
+                    "topPadding":3,
+                    "bottomPadding":10
+                  },
+                  {
+                    "class": "Text",
+                    "path": "sec_2_2_observation.txt"
+                  }
+                ],
+                "style":{
+                  "showBorder":true,
+                  "bgColorHex":"#b3d6f2"
+                }
+              }
+            ]
           },
           {
             "class": "Png",
             "path": "section2_1_obs.png",
-            "width": 500,
-            "height": 160,
-            "fixedSize": true
+            "height": 160
           }
         ]
       }

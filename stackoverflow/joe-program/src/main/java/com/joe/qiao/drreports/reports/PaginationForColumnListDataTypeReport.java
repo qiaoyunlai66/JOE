@@ -24,6 +24,7 @@ package com.joe.qiao.drreports.reports;
 
 import com.joe.qiao.drreports.global.JRBeanCollectionPaginationDataSource;
 import net.sf.dynamicreports.examples.Templates;
+import net.sf.dynamicreports.report.builder.column.TextColumnBuilder;
 import net.sf.dynamicreports.report.exception.DRException;
 import net.sf.jasperreports.engine.JRDataSource;
 
@@ -36,7 +37,8 @@ import static net.sf.dynamicreports.report.builder.DynamicReports.*;
  * @author Joe Qiao
  */
 public class PaginationForColumnListDataTypeReport {
-
+    public final TextColumnBuilder<Integer> ROWNUMBERCOLUMN = col.reportRowNumberColumn("Rank").setFixedWidth(30);
+    
 	public PaginationForColumnListDataTypeReport() {
 		build();
 	}
@@ -46,6 +48,7 @@ public class PaginationForColumnListDataTypeReport {
 			report()
 			  .setTemplate(Templates.reportTemplate)
 			  .columns(
+			          ROWNUMBERCOLUMN,
 			  	col.column("Item",      "item",     type.stringType()),
 			  	col.column("Quantity",  "quantity", type.integerType()),
 			  	col.column("Comments",  "comments", type.listType()))
@@ -98,7 +101,7 @@ public class PaginationForColumnListDataTypeReport {
       data.setComments(comments);
       datasource.add(data);
 
-      return new JRBeanCollectionPaginationDataSource(datasource,1,2);
+      return new JRBeanCollectionPaginationDataSource(datasource,2,4);
      // return new JRBeanCollectionDataSource(datasource);
 	}
 

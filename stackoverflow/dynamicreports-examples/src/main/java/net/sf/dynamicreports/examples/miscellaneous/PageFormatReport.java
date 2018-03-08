@@ -54,7 +54,7 @@ public class PageFormatReport {
 			  .setPageFormat(PageType.A5, PageOrientation.LANDSCAPE)
 			  .setPageColumnsPerPage(3)
 			  .setPageColumnSpace(15)
-			  .setPageMargin(margin(20))
+			  .setPageMargin(margin(60))
 			  .columns(
 			  	itemColumn, quantityColumn, priceColumn)
 			  .title(Templates.createTitleComponent("PageFormat"))

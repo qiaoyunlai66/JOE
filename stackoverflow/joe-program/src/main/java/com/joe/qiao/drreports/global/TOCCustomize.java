@@ -1,6 +1,8 @@
 package com.joe.qiao.drreports.global;
 
 import com.joe.qiao.drreports.bean.TOCCustomizeBean;
+import net.sf.dynamicreports.report.builder.DynamicReports;
+import net.sf.dynamicreports.report.builder.FieldBuilder;
 import net.sf.dynamicreports.report.builder.component.ComponentBuilder;
 import net.sf.dynamicreports.report.builder.tableofcontents.TableOfContentsCustomizer;
 import org.apache.commons.lang.StringUtils;
@@ -41,10 +43,15 @@ public class TOCCustomize extends TableOfContentsCustomizer {
     @Override
     public void customize() {
         if(bean!=null&&bean.getTocHeadingStyle()!=null)headingStyle = bean.getTocHeadingStyle().getStyle();
-        super.customize();
+        this.init();
+        this.report.title(
+                new ComponentBuilder[]{this.title(), DynamicReports.cmp.filler().setFixedHeight(Integer.valueOf(20))}
+                )
+                .fields(new FieldBuilder[]{this.levelField, this.textField, this.referenceField, this.pageIndexField})
+                .detail(new ComponentBuilder[]{this.detailComponent()});
 //        report
 //                .title(
-//                        title(),
+                 //       title(),
 //                        cmp.filler().setFixedHeight(10))
 //                .fields(
 //                        levelField, textField, referenceField, pageIndexField)

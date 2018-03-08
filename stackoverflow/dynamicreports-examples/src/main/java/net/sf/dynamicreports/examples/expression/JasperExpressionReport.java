@@ -27,6 +27,7 @@ import static net.sf.dynamicreports.report.builder.DynamicReports.*;
 import java.math.BigDecimal;
 
 import net.sf.dynamicreports.examples.Templates;
+import net.sf.dynamicreports.report.builder.FieldBuilder;
 import net.sf.dynamicreports.report.builder.column.TextColumnBuilder;
 import net.sf.dynamicreports.report.builder.expression.JasperExpression;
 import net.sf.dynamicreports.report.datasource.DRDataSource;
@@ -49,14 +50,15 @@ public class JasperExpressionReport {
 			JasperExpression<BigDecimal> priceExpression = exp.jasperSyntax("new BigDecimal($F{quantity}).multiply($F{unitprice})", BigDecimal.class);
 			TextColumnBuilder<BigDecimal> priceColumn = col.column(priceExpression)
 				.setTitle(exp.jasperSyntaxText("Price"));
+            FieldBuilder fieldBuilder = field("quantity", Integer.class);
 
 			report()
 			  .setTemplate(Templates.reportTemplate)
 			  .fields(
-			  	field("quantity", Integer.class),
+                      fieldBuilder,
 			  	field("unitprice", BigDecimal.class))
 			  .columns(itemColumn, priceColumn)
-			  .title(Templates.createTitleComponent("JasperExpression"))
+			  .title(Templates.createTitleComponent("JasperExpression"),cmp.text(fieldBuilder))
 			  .pageFooter(Templates.footerComponent)
 			  .setDataSource(createDataSource())
 			  .show();
@@ -68,7 +70,8 @@ public class JasperExpressionReport {
 	private JRDataSource createDataSource() {
 		DRDataSource dataSource = new DRDataSource("item", "quantity", "unitprice");
 		dataSource.add("Book", 20, new BigDecimal(10));
-		return dataSource;
+        dataSource.add("Book", 30, new BigDecimal(10));
+        return dataSource;
 	}
 
 	public static void main(String[] args) {

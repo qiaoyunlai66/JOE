@@ -1,5 +1,6 @@
 package com.joe.qiao.drreports.global;
 
+import net.sf.dynamicreports.report.builder.MarginBuilder;
 import net.sf.dynamicreports.report.builder.style.StyleBuilder;
 
 /**
@@ -13,7 +14,8 @@ public class GlobalContext {
     private StyleBuilder pngStyle;
     private String globalPath;
     private TOCCustomize tocCustomize;
-    
+    private MarginBuilder pageMarginBuilder;
+
     private static GlobalContext globalContext;
     private GlobalContext(){}
     public static GlobalContext getGlobalContext(){
@@ -73,5 +75,13 @@ public class GlobalContext {
 
     public static void setGlobalContext(GlobalContext globalContext) {
         GlobalContext.globalContext = globalContext;
+    }
+
+    public MarginBuilder getPageMarginBuilder() {
+        return pageMarginBuilder;
+    }
+
+    public void setPageMarginBuilder(MarginBuilder pageMarginBuilder) {
+        this.pageMarginBuilder = pageMarginBuilder;
     }
 }

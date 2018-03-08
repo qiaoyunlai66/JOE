@@ -22,6 +22,8 @@ public class DRStyle {
     private Integer rightPadding;
     private Integer topPadding;
     private Integer bottomPadding;
+    private Boolean showBorder;
+    private String bgColorHex;
     private HorizontalTextAlignment horizontal;
     private HorizontalImageAlignment horizontalImage;
     public StyleBuilder getStyle(){
@@ -37,6 +39,8 @@ public class DRStyle {
         if(bottomPadding!=null)styleBuilder.setBottomPadding(bottomPadding);
         if(horizontal!=null)styleBuilder.setHorizontalTextAlignment(horizontal);
         if(horizontalImage!=null)styleBuilder.setHorizontalImageAlignment(horizontalImage);
+        if(bgColorHex!=null)styleBuilder.setBackgroundColor(Color.decode(bgColorHex));
+        if(Boolean.TRUE==showBorder)styleBuilder.setBorder(stl.pen1Point());
         return styleBuilder;
     }
     
@@ -126,5 +130,21 @@ public class DRStyle {
 
     public void setHorizontalImage(HorizontalImageAlignment horizontalImage) {
         this.horizontalImage = horizontalImage;
+    }
+
+    public Boolean getShowBorder() {
+        return showBorder;
+    }
+
+    public void setShowBorder(Boolean showBorder) {
+        this.showBorder = showBorder;
+    }
+
+    public String getBgColorHex() {
+        return bgColorHex;
+    }
+
+    public void setBgColorHex(String bgColorHex) {
+        this.bgColorHex = bgColorHex;
     }
 }

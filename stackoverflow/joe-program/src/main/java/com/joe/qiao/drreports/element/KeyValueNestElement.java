@@ -1,6 +1,7 @@
 package com.joe.qiao.drreports.element;
 
 import com.joe.qiao.drreports.core.Element;
+import com.joe.qiao.drreports.global.DRStyle;
 import net.sf.dynamicreports.report.builder.component.ComponentBuilder;
 import net.sf.dynamicreports.report.builder.component.HorizontalListBuilder;
 import net.sf.dynamicreports.report.builder.component.VerticalListBuilder;
@@ -17,7 +18,8 @@ import static net.sf.dynamicreports.report.builder.DynamicReports.stl;
  * @Date 24/01/2018.
  */
 public class KeyValueNestElement implements Element{
-    private ReportStyleBuilder borderedStyle = stl.style(stl.pen1Point()).setLeftPadding(5);
+    private DRStyle keyStyle;
+    private DRStyle valueStyle;
     private Map<String,String> map;
     @Override
     public ComponentBuilder build() {
@@ -35,7 +37,7 @@ public class KeyValueNestElement implements Element{
         if(value==null){
             value = "";
         }
-        horizontalList.add(cmp.text(key).setStyle(borderedStyle)).add(cmp.text(value).setStyle(borderedStyle));
+        horizontalList.add(cmp.text(key).setStyle(keyStyle.getStyle())).add(cmp.text(value).setStyle(valueStyle.getStyle()));
         return horizontalList;
     }
 
@@ -45,5 +47,21 @@ public class KeyValueNestElement implements Element{
 
     public void setMap(Map<String, String> map) {
         this.map = map;
+    }
+
+    public DRStyle getKeyStyle() {
+        return keyStyle;
+    }
+
+    public void setKeyStyle(DRStyle keyStyle) {
+        this.keyStyle = keyStyle;
+    }
+
+    public DRStyle getValueStyle() {
+        return valueStyle;
+    }
+
+    public void setValueStyle(DRStyle valueStyle) {
+        this.valueStyle = valueStyle;
     }
 }
