@@ -1,0 +1,50 @@
+[
+  {
+    "reportId": 1680757,
+    "maxRows": 12,
+    "printFormat": "PDF",
+    "infoText": "",
+    "customerName": "Super",
+    "customerId": 1,
+    "agentId": null,
+    "isRemoveChart": false,
+    "isShowRawEvent": false,
+    "timeRange": 2,
+    "timeUnit": "DAY",
+    "timeFrom": 1518149419563,
+    "timeTo": 1518153019563,
+    "triggerEventCountLimit": 12
+  },
+  {
+    "reportId": 1686546,
+    "maxRows": 13,
+    "printFormat": "PDF",
+    "infoText": "",
+    "customerName": "Super",
+    "customerId": 1,
+    "agentId": null,
+    "isRemoveChart": false,
+    "timeRange": 2,
+    "timeUnit": "Month",
+    "timeFrom": 1518149419663,
+    "timeTo": 1518153014563,
+    "isShowRawEvent": false,
+    "triggerEventCountLimit": 12
+  },
+  {
+    "reportId": 1786496,
+    "maxRows": 10,
+    "printFormat": "PDF",
+    "infoText": "",
+    "customerName": "Super",
+    "customerId": 1,
+    "agentId": null,
+    "timeRange": 10,
+    "timeUnit": "DAY",
+    "timeFrom": 1518149419562,
+    "timeTo": 1518153079564,
+    "isRemoveChart": false,
+    "isShowRawEvent": false,
+    "triggerEventCountLimit": 12
+  }
+]

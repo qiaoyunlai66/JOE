@@ -1,0 +1,1683 @@
+[
+  {
+    "class":"Global",
+    "tocFirstLevelStyle": {
+      "bold": true,
+      "size": 20,
+      "colorHex": "#0e5891",
+      "topPadding":10,
+      "bottomPadding":10
+    },
+    "tocSecondLevelStyle": {
+      "bold": true,
+      "size": 18,
+      "colorHex": "#0e5891",
+      "topPadding": 20,
+      "bottomPadding":20
+    },
+    "documentTextStyle": {
+      "size": 10
+    },
+    "pngStyle":{
+      "horizontalImage":"CENTER"
+    },
+    "tocCustomize":{
+      "title":"Contents",
+      "titleStyle":{
+        "size":18,
+        "bold":true,
+        "topPadding":20,
+        "leftPadding":40,
+        "rightPadding":40,
+        "colorHex":"#0e5891",
+        "horizontal":"LEFT"
+      },
+      "tocHeadingStyle":{
+        "size":9,
+        "bottomPadding":6
+      }
+    },
+    "pageMargin":{
+      "left":40,
+      "right":40,
+      "top":5,
+      "bottom":5
+    },
+    "globalPath":"/opt/phoenix/config/dynamicreports/globalpath"
+  },
+  {
+    "class":"CoverPage",
+    "elements": [
+      {
+        "class": "Gap",
+        "verticalGap": 80
+      },
+      {
+        "class":"Horizontal",
+        "elements":[
+            {
+              "class": "Gap",
+              "horizontalGap": 60
+            },
+            {
+              "class": "Png",
+              "path": "fortinet.png",
+              "width": 160,
+              "height": 32,
+              "fixedSize": true,
+              "horizontal": "LEFT"
+            }
+          ]
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 15
+      },
+      {
+        "class": "Png",
+        "path": "cover.png",
+        "height": 400,
+        "imageScale":"FILL_FRAME"
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 70
+      },
+      {
+        "class": "Text",
+        "text": "Monthly Report October 2017",
+        "bold": true,
+        "italic": false,
+        "size": 16,
+        "colorHex": "#8d9161",
+        "leftPadding": 40
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 40
+      },
+      {
+        "class": "Text",
+        "text": "Prepared for",
+        "bold": false,
+        "italic": false,
+        "size": 10,
+        "leftPadding": 40
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 10
+      },
+      {
+        "class": "Text",
+        "text": "Fourteen Foods, United States of America",
+        "bold": true,
+        "italic": false,
+        "size": 10,
+        "colorHex": "#8d9161",
+        "leftPadding": 40
+      }
+    ]
+  },
+  {
+    "name":"Section_1",
+    "class":"TOC",
+    "heading":{
+      "class":"Text",
+      "text":"1  FortiCare 360 Monthly report",
+      "tocLevel":"FIRST"
+    },
+    "class":"TOC",
+    "elements":[
+
+    ],
+    "subSections":[
+      {
+        "name":"Section_1_1",
+        "heading":{
+          "class":"Text",
+          "text":"1.1  Purpose",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class": "Text",
+            "path": "desc1_1.txt"
+          },
+          {
+            "class":"Gap",
+            "verticalGap":10
+          },
+          {
+            "class": "Text",
+            "text": "below is a pdf file"
+          },
+          {
+            "class": "Pdf",
+            "path": "pdffile.pdf",
+            "height":600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Section_2",
+    "class":"TOC",
+    "heading":{
+      "class":"Text",
+      "text":"2  Analysis Details",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Gap",
+        "verticalGap":15
+      },
+      {
+        "class": "KeyValueNest",
+        "keyStyle":{
+          "showBorder":true,
+          "leftPadding":7,
+          "bold":true
+        },
+        "valueStyle":{
+          "showBorder":true,
+          "leftPadding":7
+        },
+        "map": {
+          "Customer":"Fourteen Foods",
+          "Location":"AMER-PUBLISH - USA",
+          "Analysis Start Date":"1st October 2017",
+          "Duration":"30 Days",
+          "Number of Monitored Sites":"1",
+          "Number of FortiCare 360 Collectors":"1",
+          "Number of Contracted Fortinet Devices":"11"
+        }
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 20
+      }
+    ],
+    "subSections":[
+      {
+        "name":"Section_2_1",
+        "heading":{
+          "class":"Text",
+          "text":"2.1  Device Inventory Hardware Details",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class": "Gap",
+            "verticalGap": 20
+          },
+          {
+            "class": "Text",
+            "text": "The devices under management are as follows:"
+          },
+          {
+            "class": "Gap",
+            "verticalGap": 20
+          },
+          {
+            "class": "Png",
+            "path": "section2_1.png",
+            "height":300
+          },
+          {
+            "class": "Text",
+            "text": "Recommendations",
+            "bold":true,
+            "size":10
+          },
+          {
+            "class":"Gap",
+            "verticalGap": 10
+          },
+          {
+            "class": "Text",
+            "path": "desc2_1_recommend.txt"
+          },
+          {
+            "class":"Gap",
+            "verticalGap": 10
+          },
+          {
+            "class":"Horizontal",
+            "elements":[
+              {
+                "class":"Gap",
+                "horizontalGap":100
+              },
+              {
+                "class":"Vertical",
+                "elements":[
+                  {
+                    "class": "Text",
+                    "text": "Observations",
+                    "bold":true,
+                    "topPadding":3,
+                    "bottomPadding":10,
+                    "leftPadding":4
+                  },
+                  {
+                    "class": "Text",
+                    "path": "sec_2_1_observation.txt",
+                    "leftPadding":4
+                  }
+                ],
+                "style":{
+                  "showBorder":true,
+                  "bgColorHex":"#b3d6f2"
+                }
+              }
+            ]
+          },
+          {
+            "class":"Gap",
+            "verticalGap":10
+          },
+          {
+            "class": "Png",
+            "path": "section2_1_obs.png",
+            "height": 160
+          },
+          {
+            "class":"Gap",
+            "verticalGap":20
+          }
+        ]
+      },
+      {
+        "name":"Section_2_2",
+        "heading":{
+          "class":"Text",
+          "text":"2.2  Device Inventory Software Details",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The software versions of the devices under management are as follows:"
+          },
+          {
+            "class":"Gap",
+            "verticalGap":10
+          },
+          {
+            "class": "Png",
+            "path": "2_2.png",
+            "height": 160
+          },
+          {
+            "class":"Text",
+            "text":"Recommendations",
+            "bold":true
+          },
+          {
+            "class":"Gap",
+            "verticalGap":10
+          },
+          {
+            "class":"Text",
+            "path": "2_2_remediation.txt"
+          },
+          {
+            "class":"Horizontal",
+            "elements":[
+              {
+                "class":"Gap",
+                "horizontalGap":100
+              },
+              {
+                "class":"Vertical",
+                "elements":[
+                  {
+                    "class": "Text",
+                    "text": "Observations",
+                    "bold":true,
+                    "topPadding":3,
+                    "bottomPadding":10,
+                    "leftPadding":4
+                  },
+                  {
+                    "class": "Text",
+                    "path": "sec_2_2_observation.txt",
+                    "leftPadding":4
+                  }
+                ],
+                "style":{
+                  "showBorder":true,
+                  "bgColorHex":"#b3d6f2"
+                }
+              }
+            ]
+          },
+          {
+            "class":"Gap",
+            "verticalGap":200
+          },
+          {
+            "class": "Text",
+            "text": "Below is a report use default layout from OA",
+            "style":{
+              "size":20,
+              "fgColorHex":"#FF8E6F"
+            }
+          },
+          {
+            "class":"Gap",
+            "verticalGap":15
+          },
+          {
+            "name" : "Top device",
+            "class": "Report",
+            "report":{
+              "isReportService": true,
+              "id": 1680757,
+              "selectClause": " hostName,AVG(cpuUtil) ",
+              "orderByClause": "",
+              "reportWindow": 1,
+              "reportWindowUnit": "Hourly",
+              "timeFrom": null,
+              "timeTo": null,
+              "timeRangeRelative": true,
+              "eventFilters": [
+                {
+                  "groupBy": "hostName",
+                  "singleConstraint": " eventType = \"PH_DEV_MON_SYS_CPU_UTIL\" ",
+                  "singleConditions": [
+                    {
+                      "id": 0,
+                      "leftBrackets": "",
+                      "leftExpr": "eventType",
+                      "aggregationFunc": "FUNCTION",
+                      "isDistinct": false,
+                      "attribute": "1",
+                      "attributeName": "eventType",
+                      "attributeDisplayName": "Event Type",
+                      "aop": "=",
+                      "rightExpr": "",
+                      "aggregationFunc1": "FUNCTION",
+                      "isDistinct1": false,
+                      "definedValue1": "PH_DEV_MON_SYS_CPU_UTIL",
+                      "definedValue1DisplayName": "PH_DEV_MON_SYS_CPU_UTIL",
+                      "stringAnd": "",
+                      "aggregationFunc2": "FUNCTION",
+                      "isDistinct2": false,
+                      "definedValue2": "",
+                      "definedValue2DisplayName": "",
+                      "rightBrackets": "",
+                      "sop": "AND",
+                      "displayString": "eventType=PH_DEV_MON_SYS_CPU_UTIL",
+                      "inCompleted": false,
+                      "unUsed": false,
+                      "empty": false,
+                      "forCMDBReport": false,
+                      "valueRestrict": false
+                    }
+                  ]
+                }
+              ],
+              "dataCreationType": "SYSTEM",
+              "impactPos": null,
+              "description": "Ranks the devices by average cpu utilization over a window",
+              "name": "Top Devices By CPU Util",
+              "naturalId": "PH_Report_OVERALL_PERF_2",
+              "forCustIDs": null,
+              "baseline": false,
+              "rsSync": false,
+              "internalUse": false,
+              "custInclusive": true,
+              "custId": 1
+            },
+            "request":{
+              "maxRows": 10,
+              "printFormat": "PDF",
+              "infoText": "",
+              "customerName": "Super",
+              "customerId": 1,
+              "agentId": null,
+              "isRemoveChart": false,
+              "isShowRawEvent": false,
+              "triggerEventCountLimit": 10
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "useDefaultLayout":true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class":"TOC",
+    "name": "Section_3",
+    "heading":{
+      "class":"Text",
+      "text":"3  Device Utilization",
+      "tocLevel":"FIRST"
+    },
+    "elements":[
+    ],
+    "subSections":[
+      {
+        "name":"Section_3_1",
+        "heading":{
+          "class":"Text",
+          "text":"3.1  Device Uptime",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The table below illustrates the last reported uptime of each Fortinet device"
+          },
+          {
+            "name" : "all incidents",
+            "class": "Report",
+            "report":{
+              "id": 1676678
+            },
+            "request":{
+              "maxRows": 4,
+              "printFormat": "PDF",
+              "infoText": "",
+              "customerName": "Super",
+              "customerId": 1,
+              "agentId": null,
+              "isRemoveChart": false,
+              "isShowRawEvent": false,
+              "triggerEventCountLimit": 12
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "elements":[
+              {
+                "class": "Text",
+                "text": "Below is 4 records table from all incidents report",
+                "style":{
+                  "horizontalText":"CENTER",
+                  "size":18,
+                  "fgColorHex": "#FF8E6F"
+                }
+              },
+              {
+                "class":"Gap",
+                "verticalGap":15
+              },
+              {
+                "class":"Table",
+                "size":4
+              }
+            ]
+          },
+          {
+            "class":"Gap",
+            "verticalGap":15
+          },
+          {
+            "class":"Text",
+            "text":"Recommendations",
+            "bold":true
+          },
+          {
+            "class":"Gap",
+            "verticalGap":5
+          },
+          {
+            "class":"Text",
+            "text":"If any device has a reported uptime of less than 30 days and no downtime was planned ins  previous report, then it is recommended to review events such as hardware freezes, HA failover, and reboots by reviewing the following logs: crashlogs, comlogs."
+          },
+          {
+            "class":"Gap",
+            "verticalGap":10
+          },
+          {
+            "class":"Horizontal",
+            "elements":[
+              {
+                "class":"Gap",
+                "horizontalGap":100
+              },
+              {
+                "class":"Vertical",
+                "elements":[
+                  {
+                    "class": "Text",
+                    "text": "Observations",
+                    "bold":true,
+                    "topPadding":3,
+                    "bottomPadding":10,
+                    "leftPadding":4
+                  },
+                  {
+                    "class": "Text",
+                    "path": "sec_2_2_observation.txt",
+                    "leftPadding":4
+                  }
+                ],
+                "style":{
+                  "showBorder":true,
+                  "bgColorHex":"#b3d6f2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name":"Section_3_2",
+        "heading":{
+          "class":"Text",
+          "text":"3.2  CPU Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The graphs below illustrate the average and maximum CPU utilization trend over the last 30 days"
+          },
+          {
+            "name" : "Top VMs By CPU Utilization",
+            "class": "Report",
+            "report":{
+              "id": 1673768
+            },
+            "request":{
+              "maxRows": 4,
+              "printFormat": "PDF",
+              "infoText": "",
+              "customerName": "Super",
+              "customerId": 1,
+              "agentId": null,
+              "isRemoveChart": false,
+              "isShowRawEvent": false,
+              "triggerEventCountLimit": 12
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "elements":[
+              {
+                "class":"Text",
+                "text":"below is a format of report title and 3 chart with customized layout\n you can change design according your personal preference",
+                "style":{
+                  "horizontalText":"CENTER",
+                  "fgColorHex": "#FF8E6F",
+                  "size":15
+                }
+              },
+              {
+                "class":"Chart",
+                "chart":"BAR",
+                "index":0,
+                "showTitle":true,
+                "height":120,
+                "titleStyle":{
+                  "horizontalText":"CENTER"
+                }
+              },
+              {
+                "class":"Chart",
+                "chart":"STACKEDAREA",
+                "index":0,
+                "showTitle":true,
+                "height":110,
+                "titleStyle":{
+                  "horizontalText":"CENTER"
+                }
+              },
+              {
+                "class":"Chart",
+                "chart":"LEGEND",
+                "index":0,
+                "showTitle":true,
+                "height":170,
+                "titleStyle":{
+                  "horizontalText":"CENTER"
+                }
+              }
+            ]
+          },
+          {
+            "class":"Text",
+            "text":"The table below shows the 30 day CPU summary data values."
+          },
+          {
+            "name" : "Top VMs By CPU Utilization",
+            "class": "Report",
+            "report":{
+              "id": 1673768
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "elements":[
+              {
+                "class":"Text",
+                "text":"below is 4 records customize tables",
+                "style":{
+                  "horizontalText":"CENTER",
+                  "fgColorHex": "#FF8E6F",
+                  "size":15
+                }
+              },
+              {
+                "class":"Table",
+                "size":5
+              }
+            ]
+          },
+          {
+            "class":"Gap",
+            "verticalGap":15
+          },
+          {
+            "class":"Text",
+            "text":"If CPU utilization thresholds have been breached in the last 30 days the alert counts are summarized in the table below\n\n-No Event Data received this period.-"
+          },
+          {
+            "class":"Text",
+            "text":"Recommendations",
+            "bold":true
+          },
+          {
+            "class":"Gap",
+            "verticalGap":10
+          },
+          {
+            "class":"Text",
+            "text":"CPU Utilization is expected to follow a trend aligned to business schedules. Multiple high usage peaks that breach thresholds should be investigated for possible causes such as certain traffic peaks or specific traffic types, or even DDOS attacks; also by investigating CPU utilization per process with monitoring tools. "
+          },
+          {
+            "class":"Horizontal",
+            "elements":[
+              {
+                "class":"Gap",
+                "horizontalGap":100
+              },
+              {
+                "class":"Vertical",
+                "elements":[
+                  {
+                    "class": "Text",
+                    "text": "Observations",
+                    "bold":true,
+                    "topPadding":3,
+                    "bottomPadding":10,
+                    "leftPadding":4
+                  },
+                  {
+                    "class": "Text",
+                    "path": "sec_2_2_observation.txt",
+                    "leftPadding":4
+                  }
+                ],
+                "style":{
+                  "showBorder":true,
+                  "bgColorHex":"#b3d6f2"
+                }
+              }
+            ]
+          },
+          {
+            "class":"Gap",
+            "verticalGap":20
+          }
+        ]
+      },
+      {
+        "name":"Section_3_3",
+        "heading":{
+          "class":"Text",
+          "text":"3.3  Memory Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The graphs below illustrate the average and maximum Memory utilization trend over the last 30 days."
+          },
+          {
+            "name" : "Top device",
+            "class": "Report",
+            "report":{
+              "id": 1680757
+            },
+            "request":{
+              "maxRows": 10,
+              "printFormat": "PDF",
+              "infoText": "",
+              "customerName": "Super",
+              "customerId": 1,
+              "agentId": null,
+              "isRemoveChart": false,
+              "isShowRawEvent": false,
+              "triggerEventCountLimit": 10
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "elements":[
+              {
+                "class":"Text",
+                "text":"TOP DEVICE REPORT DATA\n--below is a format of report title and 3 chart with customized layout\n you can change design according your personal preference",
+                "style":{
+                  "horizontalText":"CENTER",
+                  "fgColorHex": "#FF8E6F",
+                  "size":15
+                }
+              },
+              {
+                "class":"Gap",
+                "verticalGap":20
+              },
+              {
+                "class": "ReportHorizontal",
+                "elements":[
+                  {
+                    "class":"Text",
+                    "text":"Report Title:     -",
+                    "style":{
+                      "horizontalText":"RIGHT",
+                      "size":15,
+                      "bold":true
+                    }
+                  },
+                  {
+                    "class": "ReportInfo",
+                    "reportInfo": "TITLE",
+                    "style":{
+                      "horizontalText":"LEFT",
+                      "size":15,
+                      "bold":true
+                    }
+                  }
+                ]
+              },
+              {
+                "class":"Gap",
+                "verticalGap":15
+              },
+              {
+                "class": "ReportHorizontal",
+                "elements":[
+                  {
+                    "class":"Text",
+                    "text":"REPORT TIME RANGE:     -",
+                    "style":{
+                      "horizontalText":"RIGHT",
+                      "size":15,
+                      "bold":true
+                    }
+                  },
+                  {
+                    "class": "ReportInfo",
+                    "reportInfo": "REPORT_TIME_RANGE",
+                    "style":{
+                      "horizontalText":"LEFT",
+                      "size":15,
+                      "bold":true
+                    }
+                  }
+                ]
+              },
+              {
+                "class":"Gap",
+                "verticalGap":15
+              },
+              {
+                "class":"ReportHorizontal",
+                "elements":[
+                  {
+                    "class":"ReportVertical",
+                    "elements":[
+                      {
+                        "class": "Chart",
+                        "chart": "BAR",
+                        "index": 0,
+                        "showTitle": true,
+                        "height": 100,
+                        "titleStyle": {
+                          "horizontalText": "CENTER"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "class": "Chart",
+                    "chart": "STACKEDAREA",
+                    "index": 0,
+                    "showTitle": true,
+                    "height": 120,
+                    "titleStyle": {
+                      "horizontalText": "CENTER"
+                    },
+                    "chartStyle":{
+                      "verticalImage":"BOTTOM"
+                    }
+                  }
+                ]
+              },
+              {
+                "class":"Chart",
+                "chart":"LEGEND",
+                "index":0,
+                "showTitle":true,
+                "height":170,
+                "titleStyle":{
+                  "horizontalText":"CENTER"
+                }
+              }
+            ]
+          },
+          {
+            "class":"Text",
+            "text":"The table below shows the 30 day Memory summary data values."
+          },
+          {
+            "name" : "Top Device",
+            "class": "Report",
+            "report":{
+              "id": 1680757
+            },
+            "request":{
+              "maxRows": 4,
+              "printFormat": "PDF",
+              "infoText": "",
+              "customerName": "Super",
+              "customerId": 1,
+              "agentId": null,
+              "isRemoveChart": false,
+              "isShowRawEvent": false,
+              "triggerEventCountLimit": 12
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "elements":[
+              {
+                "class": "Text",
+                "text": "Below is 4 records table from TOP DEVICE REPORT",
+                "style":{
+                  "horizontalText":"CENTER",
+                  "size":18,
+                  "fgColorHex": "#FF8E6F"
+                }
+              },
+              {
+                "class":"Gap",
+                "verticalGap":15
+              },
+              {
+                "class":"Table",
+                "size":4
+              }
+            ]
+          },
+          {
+            "class":"Gap",
+            "verticalGap":15
+          },
+          {
+            "class":"Text",
+            "text":"NOTE: A temporary system issue is preventing the collection of memory information. This has been resolved and will display in subsequent periods."
+          },
+          {
+            "class":"Text",
+            "text":"Recommendations",
+            "bold":true
+          },
+          {
+            "class":"Gap",
+            "verticalGap":10
+          },
+          {
+            "class":"Text",
+            "text":"CPU Utilization is expected to follow a trend aligned to business schedules. Multiple high usage peaks that breach thresholds should be investigated for possible causes such as certain traffic peaks or specific traffic types, or even DDOS attacks; also by investigating CPU utilization per process with monitoring tools. "
+          },
+          {
+            "class":"Horizontal",
+            "elements":[
+              {
+                "class":"Gap",
+                "horizontalGap":100
+              },
+              {
+                "class":"Vertical",
+                "elements":[
+                  {
+                    "class": "Text",
+                    "text": "Observations",
+                    "bold":true,
+                    "topPadding":3,
+                    "bottomPadding":10,
+                    "leftPadding":4
+                  },
+                  {
+                    "class": "Text",
+                    "path": "sec_2_2_observation.txt",
+                    "leftPadding":4
+                  }
+                ],
+                "style":{
+                  "showBorder":true,
+                  "bgColorHex":"#b3d6f2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name":"Section_3_4",
+        "heading":{
+          "class":"Text",
+          "text":"3.4  Disk Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The table below shows the current disk utilization and free disk values of the devices."
+          },
+          {
+            "name" : "Assigned users By Resolution Time",
+            "class": "Report",
+            "report":{
+              "id": 1676696
+            },
+            "request":{
+              "maxRows": 18,
+              "printFormat": "PDF",
+              "infoText": "",
+              "customerName": "Super",
+              "customerId": 1,
+              "agentId": null,
+              "isRemoveChart": false,
+              "isShowRawEvent": false,
+              "triggerEventCountLimit": 12
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "elements":[
+              {
+                "class": "Text",
+                "text": "Below is 12 records table of Assigned users By Resolution Time report",
+                "style":{
+                  "horizontalText":"CENTER",
+                  "size":18,
+                  "fgColorHex": "#FF8E6F"
+                }
+              },
+              {
+                "class":"Gap",
+                "verticalGap":15
+              },
+              {
+                "class":"Table",
+                "size":12
+              }
+            ]
+          },
+          {
+            "class":"Text",
+            "text":"Recommendations",
+            "bold":true
+          },
+          {
+            "class":"Gap",
+            "verticalGap":10
+          },
+          {
+            "class":"Text",
+            "text":"High disk utilization, or reduced free disk trends may be a result of device logging and log data storage; it is recommended to review logging configuration and retention policy."
+          },
+          {
+            "class":"Horizontal",
+            "elements":[
+              {
+                "class":"Gap",
+                "horizontalGap":100
+              },
+              {
+                "class":"Vertical",
+                "elements":[
+                  {
+                    "class": "Text",
+                    "text": "Observations",
+                    "bold":true,
+                    "topPadding":3,
+                    "bottomPadding":10,
+                    "leftPadding":4
+                  },
+                  {
+                    "class": "Text",
+                    "path": "sec_2_2_observation.txt",
+                    "leftPadding":4
+                  }
+                ],
+                "style":{
+                  "showBorder":true,
+                  "bgColorHex":"#b3d6f2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Section_4",
+    "heading":{
+      "class":"Text",
+      "text":"4  Interface Performance",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Text",
+        "text":"The data in this section represents the devices network interface behavior"
+      }
+    ],
+    "subSections":[
+      {
+        "name":"Section_4_1",
+        "heading":{
+          "class":"Text",
+          "text":"4.1  Interface Down Alerts",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The graphs below illustrate the interface down alert events trends over the last 30 days"
+          },
+          {
+            "name" : "Top device",
+            "class": "Report",
+            "report":{
+              "id": 1680757
+            },
+            "request":{
+              "maxRows": 10,
+              "printFormat": "PDF",
+              "infoText": "",
+              "customerName": "Super",
+              "customerId": 1,
+              "agentId": null,
+              "isRemoveChart": false,
+              "isShowRawEvent": false,
+              "triggerEventCountLimit": 10
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "elements":[
+              {
+                "class":"Gap",
+                "verticalGap":10
+              },
+              {
+                "class":"Horizontal",
+                "elements":[
+
+                ]
+              },
+              {
+                "class": "Chart",
+                "chart": "BAR",
+                "index": 0,
+                "showTitle": true,
+                "height": 100,
+                "titleStyle": {
+                  "horizontalText": "CENTER"
+                }
+              },
+              {
+                "class": "Chart",
+                "chart": "STACKEDAREA",
+                "index": 0,
+                "showTitle": true,
+                "height": 100,
+                "titleStyle": {
+                  "horizontalText": "CENTER"
+                }
+              },
+              {
+                "class":"Chart",
+                "chart":"LEGEND",
+                "index":0,
+                "showTitle":true,
+                "height":170,
+                "titleStyle":{
+                  "horizontalText":"CENTER"
+                }
+              }
+            ]
+          },
+          {
+            "class":"Gap",
+            "verticalGap":15
+          },
+          {
+            "class":"Text",
+            "text":"The table below shows the total interface down events per device over the last 30 days"
+          },
+          {
+            "class":"Gap",
+            "verticalGap":15
+          },
+          {
+            "name" : "Top Device",
+            "class": "Report",
+            "report":{
+              "id": 1680757
+            },
+            "request":{
+              "maxRows": 4,
+              "printFormat": "PDF",
+              "infoText": "",
+              "customerName": "Super",
+              "customerId": 1,
+              "agentId": null,
+              "isRemoveChart": false,
+              "isShowRawEvent": false,
+              "triggerEventCountLimit": 12
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "elements":[
+              {
+                "class":"Gap",
+                "verticalGap":15
+              },
+              {
+                "class":"Table",
+                "size":4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name":"Section_4_2",
+        "heading":{
+          "class":"Text",
+          "text":"4.2  Interface Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The table below illustrates the interfaces average In and Out utilization and average send and received bit rate values over the last 30 days."
+          },
+          {
+            "class": "Text",
+            "text": "Below is all incidents customize report",
+            "style":{
+              "size":20,
+              "fgColorHex":"#FF8E6F"
+            }
+          },
+          {
+            "name" : "all incidents",
+            "class": "Report",
+            "report":{
+              "isReportService": true,
+              "id": 1676678,
+              "selectClause": "phRecvTime,reptDevIpAddr,eventType,eventName,rawEventMsg",
+              "orderByClause": "",
+              "reportWindow": 10,
+              "reportWindowUnit": "Minute",
+              "timeFrom": 0,
+              "timeTo": 0,
+              "timeRangeRelative": true,
+              "eventFilters": [
+                {
+                  "groupBy": "",
+                  "singleConstraint": "",
+                  "singleConditions": []
+                }
+              ],
+              "dataCreationType": "SYSTEM",
+              "impactPos": 17,
+              "description": "",
+              "name": "Raw Messages",
+              "naturalId": "",
+              "displayType": "",
+              "forCustIDs": null,
+              "baseline": false,
+              "getAllResult": false,
+              "rsSync": false,
+              "internalUse": false,
+              "custInclusive": true,
+              "custId": 1
+            },
+            "request":{
+              "maxRows": 12,
+              "printFormat": "PDF",
+              "infoText": "",
+              "customerName": "Super",
+              "customerId": 1,
+              "agentId": null,
+              "isRemoveChart": false,
+              "isShowRawEvent": false,
+              "triggerEventCountLimit": 12
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "elements":[
+              {
+                "class":"Chart",
+                "chart":"STACKEDAREA",
+                "index":0,
+                "showTitle":true,
+                "width":300,
+                "height":100
+              }
+            ],
+            "useDefaultLayout":true
+          },
+          {
+            "class": "Text",
+            "text": "Below is system Top device customize report",
+            "style":{
+              "size":20,
+              "fgColorHex":"#FF8E6F"
+            }
+          },
+          {
+            "name" : "Assigned users By Resolution Time",
+            "class": "Report",
+            "report":{
+              "isReportService": true,
+              "id": 1676696,
+              "selectClause": "eventType,eventName,incidentSrc,incidentTarget,eventSeverityCat,incidentTicketStatus,incidentTicketUser,AVG(incidentResoTime)",
+              "orderByClause": "AVG(incidentResoTime) DESC",
+              "reportWindow": 1,
+              "reportWindowUnit": "Hourly",
+              "timeFrom": null,
+              "timeTo": null,
+              "timeRangeRelative": true,
+              "eventFilters": [
+                {
+                  "groupBy": "eventType,incidentSrc,incidentTarget,eventSeverityCat,incidentTicketStatus,incidentTicketUser",
+                  "singleConstraint": " phEventCategory = 1 ",
+                  "singleConditions": [
+                    {
+                      "id": 0,
+                      "leftBrackets": "",
+                      "leftExpr": "phEventCategory",
+                      "aggregationFunc": "FUNCTION",
+                      "isDistinct": false,
+                      "attribute": "16",
+                      "attributeName": "phEventCategory",
+                      "attributeDisplayName": "System Event Category",
+                      "aop": "=",
+                      "rightExpr": "",
+                      "aggregationFunc1": "FUNCTION",
+                      "isDistinct1": false,
+                      "definedValue1": "1",
+                      "definedValue1DisplayName": "1",
+                      "stringAnd": "",
+                      "aggregationFunc2": "FUNCTION",
+                      "isDistinct2": false,
+                      "definedValue2": "",
+                      "definedValue2DisplayName": "",
+                      "rightBrackets": "",
+                      "sop": "AND",
+                      "displayString": "phEventCategory=1",
+                      "inCompleted": false,
+                      "unUsed": false,
+                      "empty": false,
+                      "forCMDBReport": false,
+                      "valueRestrict": false
+                    }
+                  ]
+                }
+              ],
+              "dataCreationType": "SYSTEM",
+              "impactPos": null,
+              "description": "Incidents By Assigned Users and resolution time",
+              "name": "Incidents, Assigned Users By Resolution Time",
+              "naturalId": "PH_Report_Incident_10",
+              "forCustIDs": null,
+              "baseline": false,
+              "rsSync": false,
+              "internalUse": false,
+              "custInclusive": true,
+              "custId": 1
+            },
+            "request":{
+              "maxRows": 18,
+              "printFormat": "PDF",
+              "infoText": "",
+              "customerName": "Super",
+              "customerId": 1,
+              "agentId": null,
+              "isRemoveChart": false,
+              "isShowRawEvent": false,
+              "triggerEventCountLimit": 12
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "useDefaultLayout":true
+          },
+          {
+            "class":"Text",
+            "text":"Recommendations",
+            "bold":true
+          },
+          {
+            "class":"Gap",
+            "verticalGap":15
+          },
+          {
+            "class":"Text",
+            "text":"If any device has a reported uptime of less than 30 days and no downtime was planned ins  previous report, then it is recommended to review events such as hardware freezes, HA failover, and reboots by reviewing the following logs: crashlogs, comlogs."
+          },
+          {
+            "class":"Horizontal",
+            "elements":[
+              {
+                "class":"Gap",
+                "horizontalGap":100
+              },
+              {
+                "class":"Vertical",
+                "elements":[
+                  {
+                    "class": "Text",
+                    "text": "Observations",
+                    "bold":true,
+                    "topPadding":3,
+                    "bottomPadding":10,
+                    "leftPadding":4
+                  },
+                  {
+                    "class": "Text",
+                    "path": "sec_2_2_observation.txt",
+                    "leftPadding":4
+                  }
+                ],
+                "style":{
+                  "showBorder":true,
+                  "bgColorHex":"#b3d6f2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+
+    ]
+  },
+  {
+    "name": "Section_5",
+    "heading":{
+      "class":"Text",
+      "text":"5  Firewall Session Counts",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Text",
+        "text":"The table below illustrates lowest, average and maximum firewall session counts for each firewall device measured over the 30 day period"
+      },
+      {
+        "name" : "Top Device",
+        "class": "Report",
+        "report":{
+          "id": 1680757
+        },
+        "request":{
+          "maxRows": 8,
+          "printFormat": "PDF",
+          "infoText": "",
+          "customerName": "Super",
+          "customerId": 1,
+          "agentId": null,
+          "isRemoveChart": false,
+          "isShowRawEvent": false,
+          "triggerEventCountLimit": 12
+        },
+        "adapter":{
+          "class":"ReportAdapter"
+        },
+        "elements":[
+          {
+            "class":"Gap",
+            "verticalGap":15
+          },
+          {
+            "class":"Table",
+            "size":4
+          }
+        ]
+      },
+      {
+        "class":"Text",
+        "text":"Recommendations",
+        "bold":true
+      },
+      {
+        "class":"Gap",
+        "verticalGap":15
+      },
+      {
+        "class":"Text",
+        "text":"The measured session data for each device should be compared against the device’s specified performance data. If the measured session data is tending towards these performance limits, then the solution capacity should be reviewed together with your technical and sales representatives. Performance data is available on device datasheets."
+      },
+      {
+        "class":"Horizontal",
+        "elements":[
+          {
+            "class":"Gap",
+            "horizontalGap":100
+          },
+          {
+            "class":"Vertical",
+            "elements":[
+              {
+                "class": "Text",
+                "text": "Observations",
+                "bold":true,
+                "topPadding":3,
+                "bottomPadding":10,
+                "leftPadding":4
+              },
+              {
+                "class": "Text",
+                "path": "sec_2_2_observation.txt",
+                "leftPadding":4
+              }
+            ],
+            "style":{
+              "showBorder":true,
+              "bgColorHex":"#b3d6f2"
+            }
+          }
+        ]
+      }
+    ],
+    "subSections":[
+    ]
+  },
+  {
+    "name": "Section_6",
+    "heading":{
+      "class":"Text",
+      "text":"6  High Availability Performance",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Text",
+        "path":"section6_text.txt"
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 20
+      },
+      {
+        "class":"Text",
+        "text":"Recommendations",
+        "bold":true
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 20
+      },
+      {
+        "class":"Text",
+        "text":"If HA failover failover events are observed, especially if they occur regularly or on multiple devices it is recommended to investigate further by correlating network incidents and networks device failures that would cause a network failover."
+      },
+      {
+        "class":"Horizontal",
+        "elements":[
+          {
+            "class":"Gap",
+            "horizontalGap":100
+          },
+          {
+            "class":"Vertical",
+            "elements":[
+              {
+                "class": "Text",
+                "text": "Observations",
+                "bold":true,
+                "topPadding":3,
+                "bottomPadding":10,
+                "leftPadding":4
+              },
+              {
+                "class": "Text",
+                "path": "sec_2_2_observation.txt",
+                "leftPadding":4
+              }
+            ],
+            "style":{
+              "showBorder":true,
+              "bgColorHex":"#b3d6f2"
+            }
+          }
+        ]
+      }
+    ],
+    "subSections":[
+    ]
+  },
+  {
+    "name": "Section_7",
+    "heading":{
+      "class":"Text",
+      "text":"7  Other Device Environmental Warnings",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Text",
+        "path":"section7_text.txt"
+      }
+    ],
+    "subSections":[
+    ]
+  },
+  {
+    "name": "Section_8",
+    "heading":{
+      "class":"Text",
+      "text":"8  Country Current Threat Intelligence",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Text",
+        "text":"This section provides a summary of the Fortinet Threat Intelligence most relevant to the device location geography for the last 30 day period"
+      },
+      {
+        "class":"Png",
+        "path":"section8_chart.png",
+        "width":400,
+        "height":400,
+        "fixedSize":true
+      }
+    ],
+    "subSections":[
+    ]
+  },
+  {
+    "name": "Section_9",
+    "heading":{
+      "class":"Text",
+      "text":"9  Security Observations",
+      "tocLevel":"FIRST"
+    },
+    "class": "TOC",
+    "elements":[
+      {
+        "class":"Text",
+        "text":"This section provides a summary of the security issues detected by the Fortinet devices over the last 30 days."
+      }
+    ],
+    "subSections":[
+      {
+        "name":"Section_9_1",
+        "heading":{
+          "class":"Text",
+          "text":"9.1  Top 10 Malware Detected",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"-No Event Data received this period.-"
+          }
+        ]
+      },
+      {
+        "name":"Section_9_2",
+        "heading":{
+          "class":"Text",
+          "text":"9.2  Top Devices by Malware Events",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"-No Event Data received this period.-"
+          }
+        ]
+      }
+
+    ]
+  }
+]
