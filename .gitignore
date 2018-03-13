@@ -5,6 +5,7 @@
 /stackoverflow/dynamicreports-googlecharts/target
 /stackoverflow/.idea
 /stackoverflow/joe-program/log/
+/stackoverflow/out
 *.iml
 
 # 此为注释 – 将被 Git 忽略
