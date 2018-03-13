@@ -1,0 +1,8 @@
+<div ng-controller="aoHeaderController">
+ <nav class="navbar navbar-inverse ao-navbar">
+        <div id="logoDiv" class="navbar-header">
+            <!--<img class="ao-main-header-logo" alt="Logo" src="images/ao-logo.svg" type="image/svg+xml"/>-->
+            <img class="ao-main-header-logo" alt="Logo" ng-src="{{getLogoPath()}}" onerror="this.src='../resources/header/logo.png'"/>
+        </div>
+    </nav>
+</div>
