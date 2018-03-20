@@ -363,6 +363,16 @@ public enum LogMessage {
     PH_APPSERVER_CUSTOMIZE_BUILD_SVG_ERROR("Customize Build SVG Error"),
 
     /**
+     * Log normal
+     * @Author Joe Qiao
+     */
+    PH_APPSERVER_JOE_PROGRAM_NORMAL_ERROR("Joe Program normal Error"),
+    PH_APPSERVER_JOE_PROGRAM_NORMAL_WARN("Joe Program normal Warn"),
+    PH_APPSERVER_JOE_PROGRAM_NORMAL_INFO("Joe Program normal Info"),
+
+
+
+    /**
      * Next is what Xin does. 
      * 
      */

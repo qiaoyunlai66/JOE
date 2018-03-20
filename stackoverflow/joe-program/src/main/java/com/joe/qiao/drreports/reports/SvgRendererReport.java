@@ -22,7 +22,6 @@
 
 package com.joe.qiao.drreports.reports;
 
-import net.sf.dynamicreports.examples.Templates;
 import net.sf.dynamicreports.report.constant.ImageScale;
 import net.sf.dynamicreports.report.constant.PageOrientation;
 import net.sf.dynamicreports.report.constant.PageType;

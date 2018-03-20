@@ -48,8 +48,8 @@ public class PhLogger {
     
     
     private PhLogger(String name) {
-        logger = LogFactory.getLog(name);
-        sysLogger = Logger.getLogger(name);
+        logger = LogFactory.getLog(name);//apache log
+        sysLogger = Logger.getLogger(name); //log4j
     }
     
     private PhLogger(Class clazz) {

@@ -6,6 +6,8 @@ import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
 
 /**
  * Created by Joe Qiao on 04/01/2018.
@@ -65,6 +67,14 @@ public class FileReaderHelper {
         File file = new File(uri);
         return readFile(file);
       
+    }
+
+    public static InputStream getResourceAsStream(final ClassLoader loader, final String name) {
+        return (InputStream) AccessController.doPrivileged(new PrivilegedAction() {
+            public Object run() {
+                return loader != null?loader.getResourceAsStream(name):ClassLoader.getSystemResourceAsStream(name);
+            }
+        });
     }
     
     public static String getCurrentClassLoaderPath(){

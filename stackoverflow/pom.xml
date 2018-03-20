@@ -38,6 +38,7 @@
         <module>joe-program</module>
         <module>joe-web</module>
         <module>phoenix-web</module>
+        <module>testlog</module>
     </modules>
  
 	<developers>

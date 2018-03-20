@@ -43,6 +43,68 @@
       "top":5,
       "bottom":5
     },
+    "tableTemplate":{
+       "columnTitleStyle":{
+         "bold":true,
+         "bgColorHex":"#41536d",
+         "fgColorHex":"#f7f7f7",
+         "size":7,
+         "horizontalText":"LEFT",
+         "verticalText":"MIDDLE",
+         "padding":5
+       },
+      "columnStyle":{
+        "size":7,
+        "horizontalText":"LEFT",
+        "verticalText":"MIDDLE",
+        "padding":5
+      },
+      "detailStyle":{
+        "bgColorHex":"#c7c9cc",
+        "fgColorHex":"#f7f7f7"
+      },
+      "detailEvenRowStyle":{
+        "bgColorHex":"#959ba5",
+        "fgColorHex":"#f7f7f7"
+      },
+      "detailOddRowStyle":{
+        "bgColorHex":"#576579",
+        "fgColorHex":"#f7f7f7"
+      }
+    },
+    "customizeElements":{
+       "observations":{
+         "class":"Horizontal",
+         "elements":[
+           {
+             "class":"Gap",
+             "horizontalGap":100
+           },
+           {
+             "class":"Vertical",
+             "elements":[
+               {
+                 "class": "Text",
+                 "text": "Observations",
+                 "bold":true,
+                 "topPadding":3,
+                 "bottomPadding":10,
+                 "leftPadding":4
+               },
+               {
+                 "class": "Text",
+                 "path": "sec_2_1_observation.txt",
+                 "leftPadding":4
+               }
+             ],
+             "style":{
+               "showBorder":true,
+               "bgColorHex":"#b3d6f2"
+             }
+           }
+         ]
+       }
+    },
     "globalPath":"/opt/phoenix/config/dynamicreports/globalpath"
   },
   {
@@ -508,7 +570,7 @@
                 "style":{
                   "horizontalText":"CENTER",
                   "size":18,
-                  "fgColorHex": "#FF8E6F"
+                  "fgColorHex": "#41536d"
                 }
               },
               {
@@ -526,28 +588,57 @@
             "verticalGap":15
           },
           {
-            "class":"Text",
-            "text":"Recommendations",
-            "bold":true
+            "class":"Horizontal",
+            "elements":[
+              {
+                "class":"Gap",
+                "horizontalGap":25
+              },
+              {
+                "class":"Vertical",
+                "elements":[
+                  {
+                    "class":"Text",
+                    "text":"Recommendations",
+                    "bold":true,
+                    "topPadding":3,
+                    "bottomPadding":10,
+                    "style":{
+                      "fgColorHex":"#f7f7f7"
+                    }
+                  },
+                  {
+                    "class":"Text",
+                    "text":"If any device has a reported uptime of less than 30 days and no downtime was planned ins  previous report, then it is recommended to review events such as hardware freezes, HA failover, and reboots by reviewing the following logs: crashlogs, comlogs.",
+                    "Padding":4,
+                    "style":{
+                      "fgColorHex":"#f7f7f7"
+                    }
+                  }
+                ],
+                "style":{
+                  "showBorder":true,
+                  "bgColorHex":"#576579",
+                  "fgColorHex":"#f7f7f7",
+                  "padding":6
+                }
+              },
+              {
+                "class":"Gap",
+                "horizontalGap":25
+              }
+            ]
           },
           {
             "class":"Gap",
-            "verticalGap":5
-          },
-          {
-            "class":"Text",
-            "text":"If any device has a reported uptime of less than 30 days and no downtime was planned ins  previous report, then it is recommended to review events such as hardware freezes, HA failover, and reboots by reviewing the following logs: crashlogs, comlogs."
-          },
-          {
-            "class":"Gap",
-            "verticalGap":10
+            "verticalGap":20
           },
           {
             "class":"Horizontal",
             "elements":[
               {
                 "class":"Gap",
-                "horizontalGap":100
+                "horizontalGap":25
               },
               {
                 "class":"Vertical",
@@ -558,18 +649,29 @@
                     "bold":true,
                     "topPadding":3,
                     "bottomPadding":10,
-                    "leftPadding":4
+                    "leftPadding":4,
+                    "style":{
+                      "fgColorHex":"#f7f7f7"
+                    }
                   },
                   {
                     "class": "Text",
                     "path": "sec_2_2_observation.txt",
-                    "leftPadding":4
+                    "leftPadding":4,
+                    "style":{
+                      "fgColorHex":"#f7f7f7"
+                    }
                   }
                 ],
                 "style":{
                   "showBorder":true,
-                  "bgColorHex":"#b3d6f2"
+                  "bgColorHex":"#576579",
+                  "padding":6
                 }
+              },
+              {
+                "class":"Gap",
+                "horizontalGap":25
               }
             ]
           }

@@ -23,7 +23,6 @@
 package com.joe.qiao.drreports.reports;
 
 import com.joe.qiao.drreports.global.JRBeanCollectionPaginationDataSource;
-import net.sf.dynamicreports.examples.Templates;
 import net.sf.dynamicreports.report.builder.column.TextColumnBuilder;
 import net.sf.dynamicreports.report.exception.DRException;
 import net.sf.jasperreports.engine.JRDataSource;

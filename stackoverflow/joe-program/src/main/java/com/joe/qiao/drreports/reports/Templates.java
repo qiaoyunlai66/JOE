@@ -20,12 +20,7 @@
  * along with DynamicReports. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.sf.dynamicreports.examples;
-
-import static net.sf.dynamicreports.report.builder.DynamicReports.*;
-
-import java.awt.Color;
-import java.util.Locale;
+package com.joe.qiao.drreports.reports;
 
 import net.sf.dynamicreports.report.base.expression.AbstractValueFormatter;
 import net.sf.dynamicreports.report.builder.HyperLinkBuilder;
@@ -37,7 +32,11 @@ import net.sf.dynamicreports.report.builder.tableofcontents.TableOfContentsCusto
 import net.sf.dynamicreports.report.constant.HorizontalTextAlignment;
 import net.sf.dynamicreports.report.constant.VerticalTextAlignment;
 import net.sf.dynamicreports.report.definition.ReportParameters;
-import org.apache.commons.lang.StringUtils;
+
+import java.awt.*;
+import java.util.Locale;
+
+import static net.sf.dynamicreports.report.builder.DynamicReports.*;
 
 
 /**

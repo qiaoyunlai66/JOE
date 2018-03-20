@@ -22,20 +22,6 @@
             <version>2.6</version>
         </dependency>
         
-        <!--dynamicreports-examples-->
-        <!--<dependency>-->
-            <!--<groupId>joe.qiao.program</groupId>-->
-            <!--<artifactId>dynamicreports-examples</artifactId>-->
-            <!--<version>5.0.0</version>-->
-            <!--&lt;!&ndash;解决版本冲突的问题&ndash;&gt;-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<groupId>commons-logging</groupId>-->
-                    <!--<artifactId>commons-logging</artifactId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
-        <!--</dependency>-->
-        
         <!--JACKSON-->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -52,18 +38,6 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>2.9.3</version>
             </dependency>
-        
-            <!--@deprecated codehaus jackson-->
-            <!--<dependency>-->
-                <!--<groupId>org.codehaus.jackson</groupId>-->
-                <!--<artifactId>jackson-smile</artifactId>-->
-                <!--<version>1.9.12</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-                <!--<groupId>org.codehaus.jackson</groupId>-->
-                <!--<artifactId>jackson-mapper-asl</artifactId>-->
-                <!--<version>1.9.13</version>-->
-            <!--</dependency>-->
         <!--JACKSON-->
         
         <!--GSON-->
@@ -95,6 +69,45 @@
             <artifactId>dynamicreports-core</artifactId>
             <version>5.0.0</version>
         </dependency>
+
+        <!--this can be removed because we use jcl-over-slf4j for a bridge-->
+        <!--<dependency>-->
+            <!--<groupId>commons-logging</groupId>-->
+            <!--<artifactId>commons-logging</artifactId>-->
+            <!--<version>1.2</version>-->
+        <!--</dependency>-->
+
+        <!--slf4j.............-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4jVersion}</version>
+        </dependency>
+
+        <!--通过这个东西，将对slf4j接口的调用转换为对log4j的调用 会自动引用log4j 的jar包-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4jVersion}</version>
+        </dependency>
+
+        <!--桥接工具 你正在开发应用程序的其它依赖包已使用了 JCL(java commons-logging)日志方案 
+           用了和 commons-logging（org.apache.commons.logging）一样的包和方法，mvn会优先调用排在前面的
+           包和方法，所以这个依赖要写在前面-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4jVersion}</version>
+        </dependency>
+        <!---->
+        <!--&lt;!&ndash;java.util.logging（JUL）桥接器&ndash;&gt;-->
+        <!--<dependency>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--<artifactId>jul-to-slf4j</artifactId>-->
+        <!--<version>${slf4jVersion}</version>-->
+        <!--</dependency>-->
+
+        <!--slf4j.......... -->
         
         <!--httpClient-->
         <dependency>
@@ -136,50 +149,7 @@
             <artifactId>guava-retrying</artifactId>
             <version>2.0.0</version>
         </dependency>
-
-        <!--log4j 已经在slf4j中引用，无需重新引用-->
-        <!--<dependency>-->
-            <!--<groupId>log4j</groupId>-->
-            <!--<artifactId>log4j</artifactId>-->
-            <!--<version>1.2.17</version>-->
-        <!--</dependency>-->
         
-        <!-- commons-logging -->
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>1.2</version>
-        </dependency>
-
-        <!--slf4j.............-->
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4jVersion}</version>
-            </dependency>
-            
-            <!--通过这个东西，将对slf4j接口的调用转换为对log4j的调用 会自动引用log4j 的jar包-->
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-log4j12</artifactId>
-                <version>${slf4jVersion}</version>
-            </dependency>
-
-            <!--桥接工具 你正在开发应用程序的其它依赖包已使用了 JCL日志方案-->
-            <!--<dependency>-->
-                <!--<groupId>org.slf4j</groupId>-->
-                <!--<artifactId>jcl-over-slf4j</artifactId>-->
-                <!--<version>${slf4jVersion}</version>-->
-            <!--</dependency>-->
-    <!---->
-            <!--&lt;!&ndash;java.util.logging（JUL）桥接器&ndash;&gt;-->
-            <!--<dependency>-->
-                <!--<groupId>org.slf4j</groupId>-->
-                <!--<artifactId>jul-to-slf4j</artifactId>-->
-                <!--<version>${slf4jVersion}</version>-->
-            <!--</dependency>-->
-            
-        <!--slf4j.......... -->
     </dependencies>
     
    <properties>
