@@ -5,7 +5,7 @@ import com.joe.qiao.drreports.core.Manufacture;
 import com.joe.qiao.drreports.core.Sectional;
 import com.joe.qiao.drreports.section.CoverPageSectional;
 import com.joe.qiao.drreports.section.TOCSectional;
-import com.joe.qiao.tools.fileparser.FileReaderHelper;
+import com.joe.qiao.domain.fileparser.FileReaderHelper;
 import net.sf.dynamicreports.jasper.builder.JasperReportBuilder;
 import net.sf.dynamicreports.jasper.builder.export.JasperPdfExporterBuilder;
 import net.sf.dynamicreports.report.builder.component.ComponentBuilder;

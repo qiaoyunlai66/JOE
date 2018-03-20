@@ -5,7 +5,7 @@ import com.joe.qiao.drreports.core.Parser;
 import com.joe.qiao.drreports.core.Sectional;
 import com.joe.qiao.drreports.section.CoverPageSectional;
 import com.joe.qiao.drreports.section.TOCSectional;
-import com.joe.qiao.tools.json.JSONHelper;
+import com.joe.qiao.domain.json.JSONHelper;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;

@@ -1,6 +1,6 @@
 package com.joe.qiao.main.enumbasic;
 
-import com.joe.qiao.tools.json.JSONHelper;
+import com.joe.qiao.domain.json.JSONHelper;
 
 /**
  * @author Joe Qiao

@@ -2,10 +2,9 @@ package com.joe.qiao.main.FileParser;
 
 import com.joe.qiao.main.FileParser.bean.Animal;
 import com.joe.qiao.main.FileParser.bean.House;
-import com.joe.qiao.tools.fileparser.FileReaderHelper;
-import com.joe.qiao.tools.fileparser.FileWriterHelper;
+import com.joe.qiao.domain.fileparser.FileReaderHelper;
+import com.joe.qiao.domain.fileparser.FileWriterHelper;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URISyntaxException;
 

@@ -38,7 +38,6 @@
         <module>joe-program</module>
         <module>joe-web</module>
         <module>phoenix-web</module>
-        <module>testlog</module>
     </modules>
  
 	<developers>
@@ -74,6 +73,15 @@
 		<velocityVersion>1.7</velocityVersion>
 		<jsonVersion>20080701</jsonVersion>		
 	</properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>javax.javaee</groupId>
+            <artifactId>javaee</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
 	<dependencyManagement>
 		<dependencies>

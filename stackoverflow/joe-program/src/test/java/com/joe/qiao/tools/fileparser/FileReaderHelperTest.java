@@ -1,5 +1,6 @@
 package com.joe.qiao.tools.fileparser;
 
+import com.joe.qiao.domain.fileparser.FileReaderHelper;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

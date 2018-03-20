@@ -1,15 +1,5 @@
 package com.joe.qiao.cw.execute;
 
-import com.joe.qiao.cw.core.assist.CWRestOperator;
-import com.joe.qiao.cw.core.assist.RestParmeter;
-import com.joe.qiao.cw.devbean.Configuration;
-import com.joe.qiao.tools.json.JSONHelper;
-import org.apache.http.auth.AuthenticationException;
-
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.List;
-
 /**
  * @author Joe Qiao
  * @Date 16/01/2018.

@@ -3,8 +3,8 @@ package com.joe.qiao.drreports.element.image;
 
 import com.joe.qiao.drreports.global.DRStyle;
 import com.joe.qiao.drreports.global.GlobalContext;
-import com.joe.qiao.tools.framework.logging.LogMessage;
-import com.joe.qiao.tools.framework.logging.Pair;
+import com.joe.qiao.domain.framework.logging.LogMessage;
+import com.joe.qiao.domain.framework.logging.Pair;
 import net.sf.dynamicreports.report.builder.component.ComponentBuilder;
 import net.sf.dynamicreports.report.builder.component.ImageBuilder;
 import net.sf.jasperreports.engine.JRException;

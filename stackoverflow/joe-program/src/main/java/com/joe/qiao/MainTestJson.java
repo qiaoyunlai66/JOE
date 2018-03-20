@@ -1,10 +1,10 @@
 package com.joe.qiao;
 
 import com.joe.qiao.drreports.element.image.PngElement;
-import com.joe.qiao.tools.fileparser.FileReaderHelper;
-import com.joe.qiao.tools.json.JSONHelper;
-import com.joe.qiao.tools.json.Question;
-import com.joe.qiao.tools.json.Questions;
+import com.joe.qiao.domain.fileparser.FileReaderHelper;
+import com.joe.qiao.domain.json.JSONHelper;
+import com.joe.qiao.domain.json.Question;
+import com.joe.qiao.domain.json.Questions;
 
 import java.util.ArrayList;
 import java.util.List;

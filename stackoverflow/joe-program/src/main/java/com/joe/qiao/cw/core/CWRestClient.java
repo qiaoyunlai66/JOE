@@ -1,9 +1,9 @@
 package com.joe.qiao.cw.core;
 
 import com.joe.qiao.cw.core.assist.RestParmeter;
-import com.joe.qiao.tools.http.HttpBean;
-import com.joe.qiao.tools.http.HttpClientUtil;
-import com.joe.qiao.tools.http.JQHttpClient;
+import com.joe.qiao.domain.http.HttpBean;
+import com.joe.qiao.domain.http.HttpClientUtil;
+import com.joe.qiao.domain.http.JQHttpClient;
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.*;
 import org.apache.http.auth.AuthenticationException;

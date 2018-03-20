@@ -5,7 +5,7 @@ import static net.sf.dynamicreports.report.builder.DynamicReports.*;
 import com.joe.qiao.drreports.core.Element;
 import com.joe.qiao.drreports.global.GlobalContext;
 import com.joe.qiao.drreports.global.TOCLevel;
-import com.joe.qiao.tools.fileparser.FileReaderHelper;
+import com.joe.qiao.domain.fileparser.FileReaderHelper;
 import net.sf.dynamicreports.report.builder.component.ComponentBuilder;
 import net.sf.dynamicreports.report.builder.component.TextFieldBuilder;
 import net.sf.dynamicreports.report.builder.style.StyleBuilder;
