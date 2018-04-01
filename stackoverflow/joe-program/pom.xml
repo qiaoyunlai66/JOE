@@ -13,7 +13,7 @@
     <!--<groupId>joe.qiao.program</groupId>-->
     <version>1.0</version>
     <artifactId>joe-program</artifactId>
-    
+    <packaging>ejb</packaging>
     <dependencies>
         <!--commons-lang-->
         <dependency>
@@ -91,8 +91,8 @@
             <version>${slf4jVersion}</version>
         </dependency>
 
-        <!--桥接工具 你正在开发应用程序的其它依赖包已使用了 JCL(java commons-logging)日志方案 
-           用了和 commons-logging（org.apache.commons.logging）一样的包和方法，mvn会优先调用排在前面的
+        <!--桥接工具 你正在开发应用程序的其它依赖包已使用了 JCL(java commons-logging)日志方案. 
+           当用了和 commons-logging（org.apache.commons.logging）一样的包和方法，mvn会优先调用排在前面的
            包和方法，所以这个依赖要写在前面-->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -148,6 +148,20 @@
             <groupId>com.github.rholder</groupId>
             <artifactId>guava-retrying</artifactId>
             <version>2.0.0</version>
+        </dependency>
+
+        <!--activemq-->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>5.15.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bm</groupId>
+            <artifactId>ejb3unit</artifactId>
+            <version>2.0.0-RC-1</version>
+            <!--<scope>test</scope>-->
         </dependency>
         
     </dependencies>

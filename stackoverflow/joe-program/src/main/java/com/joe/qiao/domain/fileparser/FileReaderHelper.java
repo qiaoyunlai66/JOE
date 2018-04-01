@@ -1,5 +1,7 @@
 package com.joe.qiao.domain.fileparser;
 
+import com.joe.qiao.domain.framework.logging.PhLogger;
+
 import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -11,6 +13,8 @@ import java.security.PrivilegedAction;
  * Created by Joe Qiao on 04/01/2018.
  */
 public class FileReaderHelper {
+    
+    private static PhLogger logger = PhLogger.getLogger(FileReaderHelper.class);
 
     /**
      * @param fileName
@@ -24,6 +28,10 @@ public class FileReaderHelper {
     public static String getFromCurrentClassPath(String fileName, Class targetClass) throws URISyntaxException, IOException {
         //get current class load path
         URL url = targetClass.getResource(fileName);
+        if(url==null){
+            logger.info("Null "+fileName+" found");
+            return null;
+        }
         System.out.println("read from: "+url.getPath());
         URI uri = url.toURI();
         File file = new File(uri);

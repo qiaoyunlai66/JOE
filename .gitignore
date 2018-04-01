@@ -6,6 +6,7 @@
 /stackoverflow/.idea
 /stackoverflow/joe-program/log/
 /stackoverflow/out
+/stackoverflow/activemq-data
 *.iml
 
 # 此为注释 – 将被 Git 忽略

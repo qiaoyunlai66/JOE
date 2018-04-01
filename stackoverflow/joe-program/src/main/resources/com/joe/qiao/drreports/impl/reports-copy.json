@@ -1,0 +1,454 @@
+[
+  {
+    "class":"Global",
+    "tocFirstLevelStyle": {
+      "bold": true,
+      "size": 20,
+      "colorHex": "#0e5891",
+      "topPadding":10,
+      "bottomPadding":10
+    },
+    "tocSecondLevelStyle": {
+      "bold": true,
+      "size": 18,
+      "colorHex": "#0e5891",
+      "topPadding": 20,
+      "bottomPadding":20
+    },
+    "documentTextStyle": {
+      "size": 10
+    },
+    "pngStyle":{
+      "horizontalImage":"CENTER"
+    },
+    "tocCustomize":{
+      "title":"Contents",
+      "titleStyle":{
+        "size":18,
+        "bold":true,
+        "topPadding":20,
+        "leftPadding":40,
+        "rightPadding":40,
+        "colorHex":"#0e5891",
+        "horizontal":"LEFT"
+      },
+      "tocHeadingStyle":{
+        "size":9,
+        "bottomPadding":6
+      }
+    },
+    "pageMargin":{
+      "left":40,
+      "right":40,
+      "top":5,
+      "bottom":5
+    },
+    "tableTemplate":{
+       "columnTitleStyle":{
+         "bold":true,
+         "bgColorHex":"#41536d",
+         "fgColorHex":"#f7f7f7",
+         "size":7,
+         "horizontalText":"LEFT",
+         "verticalText":"MIDDLE",
+         "padding":5
+       },
+      "columnStyle":{
+        "size":7,
+        "horizontalText":"LEFT",
+        "verticalText":"MIDDLE",
+        "padding":5
+      },
+      "detailStyle":{
+        "bgColorHex":"#c7c9cc",
+        "fgColorHex":"#f7f7f7"
+      },
+      "detailEvenRowStyle":{
+        "bgColorHex":"#959ba5",
+        "fgColorHex":"#f7f7f7"
+      },
+      "detailOddRowStyle":{
+        "bgColorHex":"#576579",
+        "fgColorHex":"#f7f7f7"
+      }
+    },
+    "customizeElements":{
+       "observations":{
+         "class":"Horizontal",
+         "elements":[
+           {
+             "class":"Gap",
+             "horizontalGap":100
+           },
+           {
+             "class":"Vertical",
+             "elements":[
+               {
+                 "class": "Text",
+                 "text": "Observations",
+                 "bold":true,
+                 "topPadding":3,
+                 "bottomPadding":10,
+                 "leftPadding":4
+               },
+               {
+                 "class": "Text",
+                 "path": "sec_2_1_observation.txt",
+                 "leftPadding":4
+               }
+             ],
+             "style":{
+               "showBorder":true,
+               "bgColorHex":"#b3d6f2"
+             }
+           }
+         ]
+       }
+    },
+    "globalPath":"/opt/phoenix/config/dynamicreports/globalpath"
+  },
+  {
+    "class":"CoverPage",
+    "elements": [
+      {
+        "class": "Gap",
+        "verticalGap": 80
+      },
+      {
+        "class":"Horizontal",
+        "elements":[
+            {
+              "class": "Gap",
+              "horizontalGap": 60
+            },
+            {
+              "class": "Png",
+              "path": "fortinet.png",
+              "width": 160,
+              "height": 32,
+              "fixedSize": true,
+              "horizontal": "LEFT"
+            }
+          ]
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 15
+      },
+      {
+        "class": "Png",
+        "path": "cover.png",
+        "height": 400,
+        "imageScale":"FILL_FRAME"
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 70
+      },
+      {
+        "class": "Text",
+        "text": "Monthly Report October 2017",
+        "bold": true,
+        "italic": false,
+        "size": 16,
+        "colorHex": "#8d9161",
+        "leftPadding": 40
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 40
+      },
+      {
+        "class": "Text",
+        "text": "Prepared for",
+        "bold": false,
+        "italic": false,
+        "size": 10,
+        "leftPadding": 40
+      },
+      {
+        "class": "Gap",
+        "verticalGap": 10
+      },
+      {
+        "class": "Text",
+        "text": "Fourteen Foods, United States of America",
+        "bold": true,
+        "italic": false,
+        "size": 10,
+        "colorHex": "#8d9161",
+        "leftPadding": 40
+      }
+    ]
+  },
+  {
+    "class":"TOC",
+    "name": "Section_3",
+    "heading":{
+      "class":"Text",
+      "text":"3  Device Utilization",
+      "tocLevel":"FIRST"
+    },
+    "elements":[
+    ],
+    "subSections":[
+      {
+        "name":"Section_3_1",
+        "heading":{
+          "class":"Text",
+          "text":"3.1  Device Uptime",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The table below illustrates the last reported uptime of each Fortinet device"
+          },
+          {
+            "name" : "all incidents",
+            "class": "Report",
+            "report":{
+              "id": 1676678
+            },
+            "request":{
+              "maxRows": 4,
+              "printFormat": "PDF",
+              "infoText": "",
+              "customerName": "Super",
+              "customerId": 1,
+              "agentId": null,
+              "isRemoveChart": false,
+              "isShowRawEvent": false,
+              "triggerEventCountLimit": 12
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "elements":[
+              {
+                "class": "Text",
+                "text": "Below is 4 records table from all incidents report",
+                "style":{
+                  "horizontalText":"CENTER",
+                  "size":18,
+                  "fgColorHex": "#41536d"
+                }
+              },
+              {
+                "class":"Gap",
+                "verticalGap":15
+              },
+              {
+                "class":"Table",
+                "size":4
+              }
+            ]
+          },
+          {
+            "class":"Gap",
+            "verticalGap":15
+          },
+          {
+            "class":"Horizontal",
+            "elements":[
+              {
+                "class":"Gap",
+                "horizontalGap":25
+              },
+              {
+                "class":"Vertical",
+                "elements":[
+                  {
+                    "class":"Text",
+                    "text":"Recommendations",
+                    "bold":true,
+                    "topPadding":3,
+                    "bottomPadding":10,
+                    "style":{
+                      "fgColorHex":"#f7f7f7"
+                    }
+                  },
+                  {
+                    "class":"Text",
+                    "text":"If any device has a reported uptime of less than 30 days and no downtime was planned ins  previous report, then it is recommended to review events such as hardware freezes, HA failover, and reboots by reviewing the following logs: crashlogs, comlogs.",
+                    "Padding":4,
+                    "style":{
+                      "fgColorHex":"#f7f7f7"
+                    }
+                  }
+                ],
+                "style":{
+                  "showBorder":true,
+                  "bgColorHex":"#464c58",
+                  "fgColorHex":"#f7f7f7",
+                  "padding":6
+                }
+              },
+              {
+                "class":"Gap",
+                "horizontalGap":25
+              }
+            ]
+          },
+          {
+            "class":"Gap",
+            "verticalGap":20
+          },
+          {
+            "class":"Horizontal",
+            "elements":[
+              {
+                "class":"Gap",
+                "horizontalGap":25
+              },
+              {
+                "class":"Vertical",
+                "elements":[
+                  {
+                    "class": "Text",
+                    "text": "Observations",
+                    "bold":true,
+                    "topPadding":3,
+                    "bottomPadding":10,
+                    "leftPadding":4,
+                    "style":{
+                      "fgColorHex":"#f7f7f7"
+                    }
+                  },
+                  {
+                    "class": "Text",
+                    "path": "sec_2_2_observation.txt",
+                    "leftPadding":4,
+                    "style":{
+                      "fgColorHex":"#f7f7f7"
+                    }
+                  }
+                ],
+                "style":{
+                  "showBorder":true,
+                  "bgColorHex":"#464c58",
+                  "padding":6
+                }
+              },
+              {
+                "class":"Gap",
+                "horizontalGap":25
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name":"Section_3_2",
+        "heading":{
+          "class":"Text",
+          "text":"3.2  CPU Utilization",
+          "tocLevel":"SECOND"
+        },
+        "class":"TOC",
+        "elements":[
+          {
+            "class":"Text",
+            "text":"The graphs below illustrate the average and maximum CPU utilization trend over the last 30 days"
+          },
+          {
+            "name" : "Top VMs By CPU Utilization",
+            "class": "Report",
+            "report":{
+              "id": 1673768
+            },
+            "request":{
+              "maxRows": 4,
+              "printFormat": "PDF",
+              "infoText": "",
+              "customerName": "Super",
+              "customerId": 1,
+              "agentId": null,
+              "isRemoveChart": false,
+              "isShowRawEvent": false,
+              "triggerEventCountLimit": 12
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "elements":[
+              {
+                "class":"Text",
+                "text":"below is a format of report title and 3 chart with customized layout\n you can change design according your personal preference",
+                "style":{
+                  "horizontalText":"CENTER",
+                  "size":15,
+                  "fgColorHex": "#41536d"
+                }
+              },
+              {
+                "class":"Chart",
+                "chart":"BAR",
+                "index":0,
+                "showTitle":true,
+                "height":120,
+                "titleStyle":{
+                  "horizontalText":"CENTER"
+                }
+              },
+              {
+                "class":"Chart",
+                "chart":"STACKEDAREA",
+                "index":0,
+                "showTitle":true,
+                "height":110,
+                "titleStyle":{
+                  "horizontalText":"CENTER"
+                }
+              },
+              {
+                "class":"Gap",
+                "verticalGap":20
+              },
+              {
+                "class":"Chart",
+                "chart":"LEGEND",
+                "index":0,
+                "showTitle":true,
+                "height":170,
+                "titleStyle":{
+                  "horizontalText":"CENTER"
+                }
+              }
+            ]
+          },
+          {
+            "class":"Text",
+            "text":"The table below shows the 30 day CPU summary data values."
+          },
+          {
+            "name" : "Top VMs By CPU Utilization",
+            "class": "Report",
+            "report":{
+              "id": 1673768
+            },
+            "adapter":{
+              "class":"ReportAdapter"
+            },
+            "elements":[
+              {
+                "class":"Text",
+                "text":"below is 4 records customize tables",
+                "style":{
+                  "horizontalText":"CENTER",
+                  "fgColorHex": "#41536d",
+                  "size":15
+                }
+              },
+              {
+                "class":"Table",
+                "size":5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

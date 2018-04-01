@@ -73,36 +73,34 @@
       }
     },
     "customizeElements":{
-       "observations":{
-         "class":"Horizontal",
+       "recommendations":{
+         "class":"Vertical",
          "elements":[
            {
-             "class":"Gap",
-             "horizontalGap":100
+             "class":"Text",
+             "text":"Recommendations",
+             "bold":true,
+             "topPadding":3,
+             "bottomPadding":10,
+             "style":{
+               "fgColorHex":"#f7f7f7"
+             }
            },
            {
-             "class":"Vertical",
-             "elements":[
-               {
-                 "class": "Text",
-                 "text": "Observations",
-                 "bold":true,
-                 "topPadding":3,
-                 "bottomPadding":10,
-                 "leftPadding":4
-               },
-               {
-                 "class": "Text",
-                 "path": "sec_2_1_observation.txt",
-                 "leftPadding":4
-               }
-             ],
+             "class":"Text",
+             "text":"{PLACEHOLDER}",
+             "Padding":4,
              "style":{
-               "showBorder":true,
-               "bgColorHex":"#b3d6f2"
+               "fgColorHex":"#f7f7f7"
              }
            }
-         ]
+         ],
+         "style":{
+           "showBorder":true,
+           "bgColorHex":"#576579",
+           "fgColorHex":"#f7f7f7",
+           "padding":6
+         }
        }
     },
     "globalPath":"/opt/phoenix/config/dynamicreports/globalpath"
@@ -262,6 +260,43 @@
       {
         "class": "Gap",
         "verticalGap": 20
+      },
+      {
+        "name" : "CMDB report",
+        "class": "Report",
+        "request":{
+          "reportId":1684200,
+          "maxRows": 4,
+          "printFormat": "PDF",
+          "infoText": "",
+          "customerName": "Super",
+          "customerId": 1,
+          "agentId": null,
+          "isRemoveChart": false,
+          "isShowRawEvent": false,
+          "triggerEventCountLimit": 12
+        },
+        "adapter":{
+          "class":"cmdbReportAdapter"
+        },
+        "elements":[
+          {
+            "class": "Text",
+            "text": "Below is CMDB reports from id 1684200",
+            "style":{
+              "horizontalText":"CENTER",
+              "size":18,
+              "fgColorHex": "#41536d"
+            }
+          },
+          {
+            "class":"Gap",
+            "verticalGap":15
+          },
+          {
+            "class":"Table"
+          }
+        ]
       }
     ],
     "subSections":[
@@ -440,66 +475,67 @@
           {
             "name" : "Top device",
             "class": "Report",
-            "report":{
-              "isReportService": true,
-              "id": 1680757,
-              "selectClause": " hostName,AVG(cpuUtil) ",
-              "orderByClause": "",
-              "reportWindow": 1,
-              "reportWindowUnit": "Hourly",
-              "timeFrom": null,
-              "timeTo": null,
-              "timeRangeRelative": true,
-              "eventFilters": [
-                {
-                  "groupBy": "hostName",
-                  "singleConstraint": " eventType = \"PH_DEV_MON_SYS_CPU_UTIL\" ",
-                  "singleConditions": [
-                    {
-                      "id": 0,
-                      "leftBrackets": "",
-                      "leftExpr": "eventType",
-                      "aggregationFunc": "FUNCTION",
-                      "isDistinct": false,
-                      "attribute": "1",
-                      "attributeName": "eventType",
-                      "attributeDisplayName": "Event Type",
-                      "aop": "=",
-                      "rightExpr": "",
-                      "aggregationFunc1": "FUNCTION",
-                      "isDistinct1": false,
-                      "definedValue1": "PH_DEV_MON_SYS_CPU_UTIL",
-                      "definedValue1DisplayName": "PH_DEV_MON_SYS_CPU_UTIL",
-                      "stringAnd": "",
-                      "aggregationFunc2": "FUNCTION",
-                      "isDistinct2": false,
-                      "definedValue2": "",
-                      "definedValue2DisplayName": "",
-                      "rightBrackets": "",
-                      "sop": "AND",
-                      "displayString": "eventType=PH_DEV_MON_SYS_CPU_UTIL",
-                      "inCompleted": false,
-                      "unUsed": false,
-                      "empty": false,
-                      "forCMDBReport": false,
-                      "valueRestrict": false
-                    }
-                  ]
-                }
-              ],
-              "dataCreationType": "SYSTEM",
-              "impactPos": null,
-              "description": "Ranks the devices by average cpu utilization over a window",
-              "name": "Top Devices By CPU Util",
-              "naturalId": "PH_Report_OVERALL_PERF_2",
-              "forCustIDs": null,
-              "baseline": false,
-              "rsSync": false,
-              "internalUse": false,
-              "custInclusive": true,
-              "custId": 1
-            },
             "request":{
+              "reportId":1680757,
+              "report":{
+                "isReportService": true,
+                "id": 1680757,
+                "selectClause": " hostName,AVG(cpuUtil) ",
+                "orderByClause": "",
+                "reportWindow": 1,
+                "reportWindowUnit": "Hourly",
+                "timeFrom": null,
+                "timeTo": null,
+                "timeRangeRelative": true,
+                "eventFilters": [
+                  {
+                    "groupBy": "hostName",
+                    "singleConstraint": " eventType = \"PH_DEV_MON_SYS_CPU_UTIL\" ",
+                    "singleConditions": [
+                      {
+                        "id": 0,
+                        "leftBrackets": "",
+                        "leftExpr": "eventType",
+                        "aggregationFunc": "FUNCTION",
+                        "isDistinct": false,
+                        "attribute": "1",
+                        "attributeName": "eventType",
+                        "attributeDisplayName": "Event Type",
+                        "aop": "=",
+                        "rightExpr": "",
+                        "aggregationFunc1": "FUNCTION",
+                        "isDistinct1": false,
+                        "definedValue1": "PH_DEV_MON_SYS_CPU_UTIL",
+                        "definedValue1DisplayName": "PH_DEV_MON_SYS_CPU_UTIL",
+                        "stringAnd": "",
+                        "aggregationFunc2": "FUNCTION",
+                        "isDistinct2": false,
+                        "definedValue2": "",
+                        "definedValue2DisplayName": "",
+                        "rightBrackets": "",
+                        "sop": "AND",
+                        "displayString": "eventType=PH_DEV_MON_SYS_CPU_UTIL",
+                        "inCompleted": false,
+                        "unUsed": false,
+                        "empty": false,
+                        "forCMDBReport": false,
+                        "valueRestrict": false
+                      }
+                    ]
+                  }
+                ],
+                "dataCreationType": "SYSTEM",
+                "impactPos": null,
+                "description": "Ranks the devices by average cpu utilization over a window",
+                "name": "Top Devices By CPU Util",
+                "naturalId": "PH_Report_OVERALL_PERF_2",
+                "forCustIDs": null,
+                "baseline": false,
+                "rsSync": false,
+                "internalUse": false,
+                "custInclusive": true,
+                "custId": 1
+              },
               "maxRows": 10,
               "printFormat": "PDF",
               "infoText": "",
@@ -511,7 +547,7 @@
               "triggerEventCountLimit": 10
             },
             "adapter":{
-              "class":"ReportAdapter"
+              "class":"queryReportAdapter"
             },
             "useDefaultLayout":true
           }
@@ -546,10 +582,8 @@
           {
             "name" : "all incidents",
             "class": "Report",
-            "report":{
-              "id": 1676678
-            },
             "request":{
+              "reportId":1676678,
               "maxRows": 4,
               "printFormat": "PDF",
               "infoText": "",
@@ -561,7 +595,7 @@
               "triggerEventCountLimit": 12
             },
             "adapter":{
-              "class":"ReportAdapter"
+              "class":"queryReportAdapter"
             },
             "elements":[
               {
@@ -592,7 +626,7 @@
             "elements":[
               {
                 "class":"Gap",
-                "horizontalGap":25
+                "verticalGap":15
               },
               {
                 "class":"Vertical",
@@ -693,10 +727,8 @@
           {
             "name" : "Top VMs By CPU Utilization",
             "class": "Report",
-            "report":{
-              "id": 1673768
-            },
             "request":{
+              "reportId":1673768,
               "maxRows": 4,
               "printFormat": "PDF",
               "infoText": "",
@@ -708,7 +740,7 @@
               "triggerEventCountLimit": 12
             },
             "adapter":{
-              "class":"ReportAdapter"
+              "class":"queryReportAdapter"
             },
             "elements":[
               {
@@ -759,11 +791,11 @@
           {
             "name" : "Top VMs By CPU Utilization",
             "class": "Report",
-            "report":{
-              "id": 1673768
+            "request":{
+              "reportId": 1673768
             },
             "adapter":{
-              "class":"ReportAdapter"
+              "class":"queryReportAdapter"
             },
             "elements":[
               {
@@ -855,10 +887,8 @@
           {
             "name" : "Top device",
             "class": "Report",
-            "report":{
-              "id": 1680757
-            },
             "request":{
+              "reportId":1680757,
               "maxRows": 10,
               "printFormat": "PDF",
               "infoText": "",
@@ -870,7 +900,7 @@
               "triggerEventCountLimit": 10
             },
             "adapter":{
-              "class":"ReportAdapter"
+              "class":"queryReportAdapter"
             },
             "elements":[
               {
@@ -992,10 +1022,8 @@
           {
             "name" : "Top Device",
             "class": "Report",
-            "report":{
-              "id": 1680757
-            },
             "request":{
+              "reportId":1680757,
               "maxRows": 4,
               "printFormat": "PDF",
               "infoText": "",
@@ -1007,7 +1035,7 @@
               "triggerEventCountLimit": 12
             },
             "adapter":{
-              "class":"ReportAdapter"
+              "class":"queryReportAdapter"
             },
             "elements":[
               {
@@ -1099,10 +1127,8 @@
           {
             "name" : "Assigned users By Resolution Time",
             "class": "Report",
-            "report":{
-              "id": 1676696
-            },
             "request":{
+              "reportId":1676696,
               "maxRows": 18,
               "printFormat": "PDF",
               "infoText": "",
@@ -1114,7 +1140,7 @@
               "triggerEventCountLimit": 12
             },
             "adapter":{
-              "class":"ReportAdapter"
+              "class":"queryReportAdapter"
             },
             "elements":[
               {
@@ -1215,10 +1241,8 @@
           {
             "name" : "Top device",
             "class": "Report",
-            "report":{
-              "id": 1680757
-            },
             "request":{
+              "reportId":1680757,
               "maxRows": 10,
               "printFormat": "PDF",
               "infoText": "",
@@ -1230,7 +1254,7 @@
               "triggerEventCountLimit": 10
             },
             "adapter":{
-              "class":"ReportAdapter"
+              "class":"queryReportAdapter"
             },
             "elements":[
               {
@@ -1290,10 +1314,8 @@
           {
             "name" : "Top Device",
             "class": "Report",
-            "report":{
-              "id": 1680757
-            },
             "request":{
+              "reportId":1680757,
               "maxRows": 4,
               "printFormat": "PDF",
               "infoText": "",
@@ -1305,7 +1327,7 @@
               "triggerEventCountLimit": 12
             },
             "adapter":{
-              "class":"ReportAdapter"
+              "class":"queryReportAdapter"
             },
             "elements":[
               {
@@ -1344,38 +1366,39 @@
           {
             "name" : "all incidents",
             "class": "Report",
-            "report":{
-              "isReportService": true,
-              "id": 1676678,
-              "selectClause": "phRecvTime,reptDevIpAddr,eventType,eventName,rawEventMsg",
-              "orderByClause": "",
-              "reportWindow": 10,
-              "reportWindowUnit": "Minute",
-              "timeFrom": 0,
-              "timeTo": 0,
-              "timeRangeRelative": true,
-              "eventFilters": [
-                {
-                  "groupBy": "",
-                  "singleConstraint": "",
-                  "singleConditions": []
-                }
-              ],
-              "dataCreationType": "SYSTEM",
-              "impactPos": 17,
-              "description": "",
-              "name": "Raw Messages",
-              "naturalId": "",
-              "displayType": "",
-              "forCustIDs": null,
-              "baseline": false,
-              "getAllResult": false,
-              "rsSync": false,
-              "internalUse": false,
-              "custInclusive": true,
-              "custId": 1
-            },
             "request":{
+              "reportId":1676678,
+              "report":{
+                "isReportService": true,
+                "id": 1676678,
+                "selectClause": "phRecvTime,reptDevIpAddr,eventType,eventName,rawEventMsg",
+                "orderByClause": "",
+                "reportWindow": 10,
+                "reportWindowUnit": "Minute",
+                "timeFrom": 0,
+                "timeTo": 0,
+                "timeRangeRelative": true,
+                "eventFilters": [
+                  {
+                    "groupBy": "",
+                    "singleConstraint": "",
+                    "singleConditions": []
+                  }
+                ],
+                "dataCreationType": "SYSTEM",
+                "impactPos": 17,
+                "description": "",
+                "name": "Raw Messages",
+                "naturalId": "",
+                "displayType": "",
+                "forCustIDs": null,
+                "baseline": false,
+                "getAllResult": false,
+                "rsSync": false,
+                "internalUse": false,
+                "custInclusive": true,
+                "custId": 1
+              },
               "maxRows": 12,
               "printFormat": "PDF",
               "infoText": "",
@@ -1387,7 +1410,7 @@
               "triggerEventCountLimit": 12
             },
             "adapter":{
-              "class":"ReportAdapter"
+              "class":"queryReportAdapter"
             },
             "elements":[
               {
@@ -1412,66 +1435,67 @@
           {
             "name" : "Assigned users By Resolution Time",
             "class": "Report",
-            "report":{
-              "isReportService": true,
-              "id": 1676696,
-              "selectClause": "eventType,eventName,incidentSrc,incidentTarget,eventSeverityCat,incidentTicketStatus,incidentTicketUser,AVG(incidentResoTime)",
-              "orderByClause": "AVG(incidentResoTime) DESC",
-              "reportWindow": 1,
-              "reportWindowUnit": "Hourly",
-              "timeFrom": null,
-              "timeTo": null,
-              "timeRangeRelative": true,
-              "eventFilters": [
-                {
-                  "groupBy": "eventType,incidentSrc,incidentTarget,eventSeverityCat,incidentTicketStatus,incidentTicketUser",
-                  "singleConstraint": " phEventCategory = 1 ",
-                  "singleConditions": [
-                    {
-                      "id": 0,
-                      "leftBrackets": "",
-                      "leftExpr": "phEventCategory",
-                      "aggregationFunc": "FUNCTION",
-                      "isDistinct": false,
-                      "attribute": "16",
-                      "attributeName": "phEventCategory",
-                      "attributeDisplayName": "System Event Category",
-                      "aop": "=",
-                      "rightExpr": "",
-                      "aggregationFunc1": "FUNCTION",
-                      "isDistinct1": false,
-                      "definedValue1": "1",
-                      "definedValue1DisplayName": "1",
-                      "stringAnd": "",
-                      "aggregationFunc2": "FUNCTION",
-                      "isDistinct2": false,
-                      "definedValue2": "",
-                      "definedValue2DisplayName": "",
-                      "rightBrackets": "",
-                      "sop": "AND",
-                      "displayString": "phEventCategory=1",
-                      "inCompleted": false,
-                      "unUsed": false,
-                      "empty": false,
-                      "forCMDBReport": false,
-                      "valueRestrict": false
-                    }
-                  ]
-                }
-              ],
-              "dataCreationType": "SYSTEM",
-              "impactPos": null,
-              "description": "Incidents By Assigned Users and resolution time",
-              "name": "Incidents, Assigned Users By Resolution Time",
-              "naturalId": "PH_Report_Incident_10",
-              "forCustIDs": null,
-              "baseline": false,
-              "rsSync": false,
-              "internalUse": false,
-              "custInclusive": true,
-              "custId": 1
-            },
             "request":{
+              "reportId":1676696,
+              "report":{
+                "isReportService": true,
+                "id": 1676696,
+                "selectClause": "eventType,eventName,incidentSrc,incidentTarget,eventSeverityCat,incidentTicketStatus,incidentTicketUser,AVG(incidentResoTime)",
+                "orderByClause": "AVG(incidentResoTime) DESC",
+                "reportWindow": 1,
+                "reportWindowUnit": "Hourly",
+                "timeFrom": null,
+                "timeTo": null,
+                "timeRangeRelative": true,
+                "eventFilters": [
+                  {
+                    "groupBy": "eventType,incidentSrc,incidentTarget,eventSeverityCat,incidentTicketStatus,incidentTicketUser",
+                    "singleConstraint": " phEventCategory = 1 ",
+                    "singleConditions": [
+                      {
+                        "id": 0,
+                        "leftBrackets": "",
+                        "leftExpr": "phEventCategory",
+                        "aggregationFunc": "FUNCTION",
+                        "isDistinct": false,
+                        "attribute": "16",
+                        "attributeName": "phEventCategory",
+                        "attributeDisplayName": "System Event Category",
+                        "aop": "=",
+                        "rightExpr": "",
+                        "aggregationFunc1": "FUNCTION",
+                        "isDistinct1": false,
+                        "definedValue1": "1",
+                        "definedValue1DisplayName": "1",
+                        "stringAnd": "",
+                        "aggregationFunc2": "FUNCTION",
+                        "isDistinct2": false,
+                        "definedValue2": "",
+                        "definedValue2DisplayName": "",
+                        "rightBrackets": "",
+                        "sop": "AND",
+                        "displayString": "phEventCategory=1",
+                        "inCompleted": false,
+                        "unUsed": false,
+                        "empty": false,
+                        "forCMDBReport": false,
+                        "valueRestrict": false
+                      }
+                    ]
+                  }
+                ],
+                "dataCreationType": "SYSTEM",
+                "impactPos": null,
+                "description": "Incidents By Assigned Users and resolution time",
+                "name": "Incidents, Assigned Users By Resolution Time",
+                "naturalId": "PH_Report_Incident_10",
+                "forCustIDs": null,
+                "baseline": false,
+                "rsSync": false,
+                "internalUse": false,
+                "custInclusive": true,
+                "custId": 1
+              },
               "maxRows": 18,
               "printFormat": "PDF",
               "infoText": "",
@@ -1483,7 +1507,7 @@
               "triggerEventCountLimit": 12
             },
             "adapter":{
-              "class":"ReportAdapter"
+              "class":"queryReportAdapter"
             },
             "useDefaultLayout":true
           },
@@ -1552,10 +1576,8 @@
       {
         "name" : "Top Device",
         "class": "Report",
-        "report":{
-          "id": 1680757
-        },
         "request":{
+          "reportId":1680757,
           "maxRows": 8,
           "printFormat": "PDF",
           "infoText": "",
@@ -1567,7 +1589,7 @@
           "triggerEventCountLimit": 12
         },
         "adapter":{
-          "class":"ReportAdapter"
+          "class":"queryReportAdapter"
         },
         "elements":[
           {

@@ -17,14 +17,15 @@
             <groupId>joe.qiao.program</groupId>
             <artifactId>joe-program</artifactId>
             <version>1.0</version>
+            <type>ejb</type>
         </dependency>
         
     <!--java ee-->
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>7.0</version>
-            <scope>provided</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax</groupId>-->
+            <!--<artifactId>javaee-api</artifactId>-->
+            <!--<version>7.0</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
     </dependencies>
 </project>
