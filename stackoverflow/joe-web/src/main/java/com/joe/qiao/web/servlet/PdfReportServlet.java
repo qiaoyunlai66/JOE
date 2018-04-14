@@ -1,4 +1,4 @@
-package com.joe.qiao.drreports.reportservlet;
+package com.joe.qiao.web.servlet;
 
 import com.joe.qiao.drreports.reports.ServletForBarChartReport;
 import net.sf.dynamicreports.report.exception.DRException;

@@ -13,16 +13,16 @@
     
     <servlet>
         <servlet-name>HelloWorldExample</servlet-name>
-        <servlet-class>HelloWorldExample</servlet-class>
+        <servlet-class>com.joe.qiao.web.servlet.HelloWorldExample</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>HelloWorldExample</servlet-name>
-        <url-pattern>/servlets/servlet/HelloWorldExample</url-pattern>
+        <url-pattern>/servlets/servlet/com.joe.qiao.web.servlet.HelloWorldExample</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>PdfReportServlet</servlet-name>
-        <servlet-class>com.joe.qiao.drreports.reportservlet.PdfReportServlet</servlet-class>
+        <servlet-class>com.joe.qiao.web.servlet.PdfReportServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>PdfReportServlet</servlet-name>

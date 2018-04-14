@@ -17,8 +17,17 @@
             <groupId>joe.qiao.program</groupId>
             <artifactId>joe-program</artifactId>
             <version>1.0</version>
-            <type>ejb</type>
+            <!-- compile(默认) 和 provided : compile是编译时会把jar包放在classpath目录下。
+              provided 是编译时不会吧jar包放在classpath目录下，因为容器默认提供，避免jar包冲突-->
+            <scope>provided</scope>
         </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>joe.qiao.program</groupId>-->
+            <!--<artifactId>joe-ejb</artifactId>-->
+            <!--<version>1.0</version>-->
+            <!--<type>ejb</type>-->
+        <!--</dependency>-->
         
     <!--java ee-->
         <!--<dependency>-->

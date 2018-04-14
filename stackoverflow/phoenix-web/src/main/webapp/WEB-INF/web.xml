@@ -12,17 +12,17 @@
     </welcome-file-list>
     
     <!--<servlet>-->
-        <!--<servlet-name>HelloWorldExample</servlet-name>-->
-        <!--<servlet-class>HelloWorldExample</servlet-class>-->
+        <!--<servlet-ncom.joe.qiao.web.servlet.HelloWorldExamplemple</servlet-name>-->
+        <!--<servlet-clcom.joe.qiao.web.servlet.HelloWorldExamplemple</servlet-class>-->
     <!--</servlet>-->
     <!--<servlet-mapping>-->
-        <!--<servlet-name>HelloWorldExample</servlet-name>-->
-        <!--<url-pattern>/servlets/servlet/HelloWorldExample</url-pattern>-->
+        <!--<servlet-ncom.joe.qiao.web.servlet.HelloWorldExamplemple</servlet-name>-->
+        <!--<url-pattern>/servlets/servcom.joe.qiao.web.servlet.HelloWorldExamplemple</url-pattern>-->
     <!--</servlet-mapping>-->
 
     <!--<servlet>-->
         <!--<servlet-name>PdfReportServlet</servlet-name>-->
-        <!--<servlet-class>com.joe.qiao.drreports.reportservlet.PdfReportServlet</servlet-class>-->
+        <!--<servlet-clcom.joe.qiao.web.servlet.PdfReportServletvlet</servlet-class>-->
     <!--</servlet>-->
     <!--<servlet-mapping>-->
         <!--<servlet-name>PdfReportServlet</servlet-name>-->

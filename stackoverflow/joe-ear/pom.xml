@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>joe.qiao.program</groupId>
+        <artifactId>stackoverflow</artifactId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>joe-ear</artifactId>
+    <packaging>ear</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>joe-web</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>joe-ejb</artifactId>
+            <version>${project.version}</version>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>joe-program</artifactId>
+            <version>${project.version}</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+
+    <!--打包 ear-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.3.1</version>
+                <configuration>
+                    <!--<packagingIncludes>META-INF/**,**/*.jar,**/*.war</packagingIncludes>-->
+                    <displayName>Joe Management EAR</displayName>
+                    <description>Joe Management EAR</description>
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <version>5</version>
+                    <modules>
+                        <webModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>joe-web</artifactId>
+                            <!--<contextRoot>/phoenix</contextRoot>-->
+                            <bundleFileName>joe-web-${project.version}.war</bundleFileName>
+                        </webModule>
+                        <ejbModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>joe-ejb</artifactId>
+                            <bundleFileName>joe-ejb-${project.version}.jar</bundleFileName>
+                            <!--将jar包的信息包括到application xml中去-->
+                            <!--<includeInApplicationXml>true</includeInApplicationXml>-->
+                        </ejbModule>
+                        <jarModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>joe-program</artifactId>
+                            <bundleDir>/lib</bundleDir>
+                        </jarModule>
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -38,6 +38,9 @@
         <module>joe-program</module>
         <module>joe-web</module>
         <module>phoenix-web</module>
+        <module>joe-ejb</module>
+        <module>joe-ear</module>
+        <module>ejb-client</module>
     </modules>
  
 	<developers>
